@@ -1,4 +1,5 @@
 import Image from "next/image";
+import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { LanguageSwitcher } from "@/components/language-switcher";
@@ -6,6 +7,12 @@ import { ProjectGallery } from "@/components/project-gallery";
 import { Reveal } from "@/components/reveal";
 import { getLanguage, t } from "@/data/site-content";
 import { getPortfolioContent, getProjectBySlug } from "@/lib/portfolio-content";
+import {
+  getSiteUrl,
+  SEO_DEFAULT_DESCRIPTION,
+  SEO_LINKEDIN_URL,
+  SEO_PERSON_NAME
+} from "@/lib/seo";
 
 type ProjectPageProps = {
   params: {
@@ -60,6 +67,55 @@ const labels = {
 };
 export const dynamic = "force-dynamic";
 
+export async function generateMetadata({
+  params
+}: ProjectPageProps): Promise<Metadata> {
+  const content = await getPortfolioContent();
+  const project = getProjectBySlug(content.projects, params.slug);
+  const siteUrl = getSiteUrl();
+
+  if (!project) {
+    return {
+      title: "Projet Introuvable",
+      description: SEO_DEFAULT_DESCRIPTION,
+      robots: {
+        index: false,
+        follow: false
+      }
+    };
+  }
+
+  const title = `${project.title} | Projet de ${SEO_PERSON_NAME}`;
+  const description = project.shortDescription.fr;
+  const projectPath = `/projects/${project.slug}`;
+
+  return {
+    title,
+    description,
+    alternates: {
+      canonical: projectPath
+    },
+    openGraph: {
+      type: "article",
+      url: `${siteUrl}${projectPath}`,
+      title,
+      description,
+      images: [
+        {
+          url: project.coverImage,
+          alt: `${project.title} - ${SEO_PERSON_NAME}`
+        }
+      ]
+    },
+    twitter: {
+      card: "summary_large_image",
+      title,
+      description,
+      images: [project.coverImage]
+    }
+  };
+}
+
 export default async function ProjectPage({
   params,
   searchParams
@@ -67,13 +123,41 @@ export default async function ProjectPage({
   const language = getLanguage(searchParams?.lang);
   const content = await getPortfolioContent();
   const project = getProjectBySlug(content.projects, params.slug);
+  const siteUrl = getSiteUrl();
 
   if (!project) {
     notFound();
   }
 
+  const projectStructuredData = {
+    "@context": "https://schema.org",
+    "@type": "CreativeWork",
+    name: project.title,
+    description: t(project.description, language),
+    url: `${siteUrl}/projects/${project.slug}`,
+    image: [
+      `${siteUrl}${project.coverImage}`,
+      ...project.images.slice(0, 2).map((image) => `${siteUrl}${image.src}`)
+    ],
+    inLanguage: language === "fr" ? "fr-FR" : "en-US",
+    author: {
+      "@type": "Person",
+      name: SEO_PERSON_NAME,
+      sameAs: SEO_LINKEDIN_URL
+    },
+    about: t(project.category, language),
+    keywords: project.technologies.join(", ")
+  };
+
   return (
-    <main className="pb-20 pt-6 sm:pt-10">
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(projectStructuredData)
+        }}
+      />
+      <main className="pb-20 pt-6 sm:pt-10">
       <section className="section-shell flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
         <Link
           href={`/?lang=${language}`}
@@ -229,6 +313,7 @@ export default async function ProjectPage({
           </div>
         </Reveal>
       </section>
-    </main>
+      </main>
+    </>
   );
 }

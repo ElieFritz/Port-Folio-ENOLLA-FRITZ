@@ -1,4 +1,5 @@
 import Image from "next/image";
+import type { Metadata } from "next";
 import Link from "next/link";
 import { AboutSection } from "@/components/about-section";
 import { LanguageSwitcher } from "@/components/language-switcher";
@@ -8,6 +9,12 @@ import { Reveal } from "@/components/reveal";
 import type { ShowcaseSection } from "@/data/site-content";
 import { getLanguage, t } from "@/data/site-content";
 import { getPortfolioContent } from "@/lib/portfolio-content";
+import {
+  getSiteUrl,
+  SEO_DEFAULT_DESCRIPTION,
+  SEO_LINKEDIN_URL,
+  SEO_PERSON_NAME
+} from "@/lib/seo";
 
 type HomePageProps = {
   searchParams?: {
@@ -16,6 +23,36 @@ type HomePageProps = {
 };
 
 export const dynamic = "force-dynamic";
+
+const siteUrl = getSiteUrl();
+
+export const metadata: Metadata = {
+  title: "Portfolio Executif | Marketing, Communication & Growth B2B",
+  description: SEO_DEFAULT_DESCRIPTION,
+  alternates: {
+    canonical: "/"
+  },
+  openGraph: {
+    type: "website",
+    url: siteUrl,
+    title: `${SEO_PERSON_NAME} | Portfolio Executif Marketing, Communication & Growth B2B`,
+    description: SEO_DEFAULT_DESCRIPTION,
+    images: [
+      {
+        url: "/images/profile/enolla-cv-profile.jpg",
+        width: 828,
+        height: 1035,
+        alt: `${SEO_PERSON_NAME} - Portfolio Executif`
+      }
+    ]
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: `${SEO_PERSON_NAME} | Portfolio Executif`,
+    description: SEO_DEFAULT_DESCRIPTION,
+    images: ["/images/profile/enolla-cv-profile.jpg"]
+  }
+};
 
 function normalizeExternalLink(value?: string) {
   if (!value || !value.startsWith("http")) {
@@ -99,6 +136,41 @@ export default async function HomePage({ searchParams }: HomePageProps) {
   const language = getLanguage(searchParams?.lang);
   const content = await getPortfolioContent();
   const { contactEmail, homePageContent, projects } = content;
+  const collectionPageStructuredData = {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Person",
+        name: SEO_PERSON_NAME,
+        url: siteUrl,
+        sameAs: [SEO_LINKEDIN_URL],
+        image: `${siteUrl}${homePageContent.hero.profileImage?.src ?? "/images/profile/enolla-cv-profile.jpg"}`,
+        jobTitle: "Responsable Marketing, Communication & Growth B2B"
+      },
+      {
+        "@type": "CollectionPage",
+        name: `${SEO_PERSON_NAME} - Portfolio`,
+        url: siteUrl,
+        description: SEO_DEFAULT_DESCRIPTION,
+        inLanguage: language === "fr" ? "fr-FR" : "en-US",
+        author: {
+          "@type": "Person",
+          name: SEO_PERSON_NAME,
+          url: SEO_LINKEDIN_URL
+        }
+      },
+      {
+        "@type": "ItemList",
+        name: "Portfolio Projects",
+        itemListElement: projects.map((project, index) => ({
+          "@type": "ListItem",
+          position: index + 1,
+          url: `${siteUrl}/projects/${project.slug}`,
+          name: project.title
+        }))
+      }
+    ]
+  };
   const portfolioLabel =
     language === "fr" ? "Portfolio Executif" : "Executive Portfolio";
   const certificationCtaLabel =
@@ -140,7 +212,14 @@ export default async function HomePage({ searchParams }: HomePageProps) {
   );
 
   return (
-    <main className="pb-20 pt-6 sm:pt-10">
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(collectionPageStructuredData)
+        }}
+      />
+      <main className="pb-20 pt-6 sm:pt-10">
       <section className="section-shell">
         <div className="ambient-stroke glass-panel hero-sheen relative overflow-hidden rounded-[36px] px-6 py-8 sm:px-10 sm:py-12 lg:px-14 lg:py-16">
           <div className="floating-orb left-[-4rem] top-[8rem] h-36 w-36" />
@@ -535,6 +614,7 @@ export default async function HomePage({ searchParams }: HomePageProps) {
           ))}
         </div>
       </section>
-    </main>
+      </main>
+    </>
   );
 }
