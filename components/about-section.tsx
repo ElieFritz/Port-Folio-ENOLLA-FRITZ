@@ -3,7 +3,6 @@ import Link from "next/link";
 import { Reveal } from "@/components/reveal";
 import type {
   AboutSection as AboutSectionContent,
-  ContentImage,
   Language
 } from "@/data/site-content";
 import { t } from "@/data/site-content";
@@ -11,15 +10,10 @@ import { t } from "@/data/site-content";
 type AboutSectionProps = {
   section: AboutSectionContent;
   language: Language;
-  profileImage?: ContentImage;
 };
 
-export function AboutSection({
-  section,
-  language,
-  profileImage
-}: AboutSectionProps) {
-  const displayImage = section.image ?? profileImage;
+export function AboutSection({ section, language }: AboutSectionProps) {
+  const displayImage = section.image;
 
   return (
     <section className="section-shell mt-14">

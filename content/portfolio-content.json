@@ -239,6 +239,13 @@
         "fr": "Presentation de mon positionnement, de mes contacts directs et de mes preuves de credibilite pour recruteurs et decideurs.",
         "en": "A clear presentation of my positioning, direct contacts, and credibility proof points for recruiters and decision-makers."
       },
+      "image": {
+        "src": "/images/profile/enolla-about.jpg",
+        "alt": {
+          "fr": "Portrait detaille de Enolla Elie Fritz Delangue",
+          "en": "Detailed portrait of Enolla Elie Fritz Delangue"
+        }
+      },
       "bio": {
         "fr": "Je combine marketing, communication corporate, developpement commercial B2B et base technique en administration systemes & reseaux afin de piloter des projets avec une vision plus complete, plus rigoureuse et plus orientee resultats.",
         "en": "I combine marketing, corporate communication, B2B business development, and systems & network foundations to lead projects with a broader, more rigorous, and more results-driven perspective."

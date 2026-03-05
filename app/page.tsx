@@ -271,7 +271,6 @@ export default async function HomePage({ searchParams }: HomePageProps) {
         <AboutSection
           section={homePageContent.aboutSection}
           language={language}
-          profileImage={homePageContent.hero.profileImage}
         />
       ) : null}
 
