@@ -274,7 +274,7 @@ export default async function HomePage({ searchParams }: HomePageProps) {
         />
       ) : null}
 
-      <section className="section-shell mt-8 grid gap-4 md:grid-cols-3">
+      <section className="section-shell section-break mt-8 grid gap-4 md:grid-cols-3">
         {homePageContent.strategicSignals.map((signal, index) => (
           <Reveal key={signal.en} delay={index * 0.08}>
             <div className="ambient-stroke soft-pulse rounded-[24px] border border-white/10 bg-white/[0.04] p-5">
@@ -289,7 +289,7 @@ export default async function HomePage({ searchParams }: HomePageProps) {
         ))}
       </section>
 
-      <section className="section-shell mt-16">
+      <section className="section-shell section-break mt-16">
         <Reveal>
           <div className="mb-8 flex flex-col gap-4 md:flex-row md:items-end md:justify-between">
             <div>
@@ -323,7 +323,7 @@ export default async function HomePage({ searchParams }: HomePageProps) {
         </div>
       </section>
 
-      <section className="section-shell mt-16">
+      <section className="section-shell section-break mt-16">
         <Reveal>
           <div className="ambient-stroke glass-panel hero-sheen relative rounded-[32px] p-6 sm:p-8">
             <div className="grid gap-8 lg:grid-cols-[0.95fr_1.05fr]">
@@ -372,7 +372,7 @@ export default async function HomePage({ searchParams }: HomePageProps) {
       </section>
 
       {homePageContent.experienceSection ? (
-        <section className="section-shell mt-16">
+        <section className="section-shell section-break mt-16">
           <Reveal>
             <div className="mb-8 flex flex-col gap-4 md:flex-row md:items-end md:justify-between">
               <div>
@@ -427,7 +427,7 @@ export default async function HomePage({ searchParams }: HomePageProps) {
       ) : null}
 
       {homePageContent.educationSection ? (
-        <section className="section-shell mt-16">
+        <section className="section-shell section-break mt-16">
           <Reveal>
             <div className="mb-8 flex flex-col gap-4 md:flex-row md:items-end md:justify-between">
               <div>
@@ -509,7 +509,7 @@ export default async function HomePage({ searchParams }: HomePageProps) {
         />
       ) : null}
 
-      <section id="projects" className="section-shell mt-16">
+      <section id="projects" className="section-shell section-break mt-16">
         <Reveal>
           <div className="mb-8 flex flex-col gap-4 md:flex-row md:items-end md:justify-between">
             <div>

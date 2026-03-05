@@ -94,6 +94,19 @@ body {
   }
 }
 
+@keyframes separator-glow {
+  0%,
+  100% {
+    opacity: 0.55;
+    transform: translateX(-50%) scaleX(0.96);
+  }
+
+  50% {
+    opacity: 0.95;
+    transform: translateX(-50%) scaleX(1.04);
+  }
+}
+
 ::selection {
   background: rgba(74, 222, 255, 0.22);
   color: rgb(var(--ink));
@@ -142,6 +155,49 @@ a {
 .section-shell {
   margin: 0 auto;
   width: min(1180px, calc(100% - 2rem));
+}
+
+.section-break {
+  position: relative;
+  isolation: isolate;
+}
+
+.section-break::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: -2.35rem;
+  height: 1px;
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    rgba(74, 222, 255, 0.2) 18%,
+    rgba(148, 163, 184, 0.34) 50%,
+    rgba(74, 222, 255, 0.2) 82%,
+    transparent 100%
+  );
+  pointer-events: none;
+}
+
+.section-break::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: -3.1rem;
+  width: min(45vw, 320px);
+  height: 70px;
+  border-radius: 9999px;
+  background: radial-gradient(
+    ellipse at center,
+    rgba(74, 222, 255, 0.24) 0%,
+    rgba(59, 130, 246, 0.12) 40%,
+    rgba(4, 10, 26, 0) 72%
+  );
+  filter: blur(14px);
+  transform: translateX(-50%);
+  animation: separator-glow 8s ease-in-out infinite;
+  pointer-events: none;
 }
 
 .floating-orb {
@@ -217,7 +273,8 @@ a {
   .soft-pulse,
   .hero-sheen::after,
   .kinetic-title,
-  .breathing-panel {
+  .breathing-panel,
+  .section-break::after {
     animation: none;
   }
 }

@@ -157,7 +157,7 @@ export function MediaShowcaseSection({
   language
 }: MediaShowcaseSectionProps) {
   return (
-    <section className="section-shell mt-16">
+    <section className="section-shell section-break mt-16">
       <Reveal>
         <div className="mb-8 flex flex-col gap-4 md:flex-row md:items-end md:justify-between">
           <div>

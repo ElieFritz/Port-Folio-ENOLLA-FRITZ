@@ -16,7 +16,7 @@ export function AboutSection({ section, language }: AboutSectionProps) {
   const displayImage = section.image;
 
   return (
-    <section className="section-shell mt-14">
+    <section className="section-shell section-break mt-14">
       <Reveal>
         <div className="ambient-stroke glass-panel hero-sheen relative overflow-hidden rounded-[34px] p-5 sm:p-7 lg:p-8">
           <div className="floating-orb left-[-2rem] top-[20%] h-24 w-24" />
