@@ -7,12 +7,12 @@
         "en": "ENOLLA ELIE FRITZ DELANGUE"
       },
       "title": {
-        "fr": "Responsable Marketing, Communication & Growth B2B",
-        "en": "B2B Marketing, Communication & Growth Manager"
+        "fr": "Responsable Marketing & Commercial | Nemalia",
+        "en": "Head of Marketing & Sales | Nemalia"
       },
       "description": {
-        "fr": "J'aide les entreprises a gagner en visibilite, credibilite et revenus en orchestrant marketing, communication corporate et acquisition B2B. Mon approche relie strategie, execution terrain et pilotage par les resultats.",
-        "en": "I help companies increase visibility, credibility, and revenue by orchestrating marketing, corporate communication, and B2B acquisition. My approach connects strategy, field execution, and results-driven steering."
+        "fr": "Je pilote la strategie marketing et commerciale de Nemalia: repositionnement de marque, structuration d'offre, campagnes digitales et developpement du reseau de distribution. Mon approche relie strategie, execution terrain et acceleration business.",
+        "en": "I lead Nemalia's marketing and commercial strategy: brand repositioning, offer structuring, digital campaigns, and distribution network development. My approach connects strategy, field execution, and business acceleration."
       },
       "primaryCta": {
         "fr": "Decouvrir mes realisations",
@@ -600,8 +600,38 @@
       },
       "items": [
         {
+          "company": "Nemalia",
+          "period": "2026 - Present",
+          "role": {
+            "fr": "Responsable Marketing & Commercial",
+            "en": "Head of Marketing & Sales"
+          },
+          "summary": {
+            "fr": "Pilotage de la strategie marketing et commerciale de la marque Nemalia, avec pour mission de renforcer son positionnement, structurer son developpement et accelerer sa performance business.",
+            "en": "Leading Nemalia's marketing and commercial strategy, with a mission to strengthen brand positioning, structure growth, and accelerate business performance."
+          },
+          "highlights": [
+            {
+              "fr": "Definition et deploiement de la strategie marketing 360 et repositionnement de la plateforme de communication.",
+              "en": "Defining and deploying the 360 marketing strategy and repositioning the brand communication platform."
+            },
+            {
+              "fr": "Structuration de l'offre commerciale: routines, produits heros, parcours clients et outils de vente.",
+              "en": "Structuring the commercial offer: routines, hero products, customer journeys, and sales tools."
+            },
+            {
+              "fr": "Pilotage des campagnes digitales, activations terrain, influence et trade marketing.",
+              "en": "Leading digital campaigns, field activations, influencer marketing, and trade marketing."
+            },
+            {
+              "fr": "Developpement du reseau de distribution et prospection de points de vente partenaires.",
+              "en": "Developing the distribution network and prospecting partner retail locations."
+            }
+          ]
+        },
+        {
           "company": "Lumina Africa",
-          "period": "Juin 2025 - Present",
+          "period": "Juin 2025 - 2026",
           "role": {
             "fr": "Responsable Marketing & Communication",
             "en": "Marketing & Communication Manager"

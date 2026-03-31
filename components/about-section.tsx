@@ -10,23 +10,24 @@ import { t } from "@/data/site-content";
 type AboutSectionProps = {
   section: AboutSectionContent;
   language: Language;
+  id?: string;
 };
 
-export function AboutSection({ section, language }: AboutSectionProps) {
+export function AboutSection({ section, language, id }: AboutSectionProps) {
   const displayImage = section.image;
 
   return (
-    <section className="section-shell section-break mt-14">
+    <section id={id} className="section-shell section-break mt-14">
       <Reveal>
-        <div className="ambient-stroke glass-panel hero-sheen relative overflow-hidden rounded-[34px] p-5 sm:p-7 lg:p-8">
+        <div className="ambient-stroke glass-panel relative overflow-hidden rounded-[32px] p-5 sm:p-7 lg:p-8">
           <div className="floating-orb left-[-2rem] top-[20%] h-24 w-24" />
           <div className="floating-orb floating-orb--slow right-[12%] top-[-2rem] h-32 w-32" />
 
           <div className="grid gap-6 lg:grid-cols-[0.42fr_0.58fr]">
             <div className="space-y-5">
               {displayImage ? (
-                <div className="ambient-stroke glass-panel breathing-panel relative overflow-hidden rounded-[28px] p-3">
-                  <div className="relative overflow-hidden rounded-[22px] border border-white/10">
+                <div className="ambient-stroke glass-panel relative overflow-hidden rounded-3xl p-3">
+                  <div className="relative overflow-hidden rounded-2xl border border-white/8">
                     <Image
                       src={displayImage.src}
                       alt={t(displayImage.alt, language)}
@@ -48,8 +49,8 @@ export function AboutSection({ section, language }: AboutSectionProps) {
               <div className="grid gap-3 sm:grid-cols-3 lg:grid-cols-1">
                 {section.contactPoints.map((item) => {
                   const content = (
-                    <div className="rounded-[22px] border border-white/10 bg-white/[0.04] px-4 py-4 transition-colors duration-300 hover:border-cyan-300/30">
-                      <p className="text-[11px] font-semibold uppercase tracking-[0.28em] text-cyan-200">
+                    <div className="rounded-2xl border border-white/8 bg-white/[0.03] px-4 py-4 transition-colors duration-300 hover:border-accent/20">
+                      <p className="text-[11px] font-semibold uppercase tracking-[0.28em] text-accent">
                         {t(item.label, language)}
                       </p>
                       <p className="mt-3 text-sm font-medium leading-7 text-slate-200">
@@ -80,7 +81,7 @@ export function AboutSection({ section, language }: AboutSectionProps) {
                 </p>
               </div>
 
-              <div className="rounded-[28px] border border-white/10 bg-white/[0.04] p-6">
+              <div className="rounded-3xl border border-white/8 bg-white/[0.03] p-6">
                 <p className="text-base leading-8 text-slate-200 sm:text-lg">
                   {t(section.bio, language)}
                 </p>
@@ -94,7 +95,7 @@ export function AboutSection({ section, language }: AboutSectionProps) {
                   {section.badges.map((badge) => (
                     <span
                       key={badge.en}
-                      className="soft-pulse rounded-full border border-cyan-300/10 bg-white/5 px-4 py-2 text-sm font-semibold text-slate-100"
+                      className="rounded-full border border-accent/10 bg-white/[0.04] px-4 py-2 text-sm font-semibold text-slate-100 transition-colors duration-300 hover:border-accent/25"
                     >
                       {t(badge, language)}
                     </span>

@@ -170,12 +170,12 @@ export const defaultHomePageContent: HomePageContent = {
       en: "ENOLLA ELIE FRITZ DELANGUE"
     },
     title: {
-      fr: "Responsable Marketing & Communication Corporate",
-      en: "Corporate Marketing & Communication Manager"
+      fr: "Responsable Marketing & Commercial | Nemalia",
+      en: "Head of Marketing & Sales | Nemalia"
     },
     description: {
-      fr: "Expert en marketing, communication et developpement d'affaires B2B avec une double competence technologique et manageriale. Ingenieur en administration systemes et reseaux, diplome d'un Master 2 en Marketing & Communication d'entreprise, avec un MBA en cours, je pilote des strategies de croissance, de marque et de partenariats en reliant vision business et execution operationnelle.",
-      en: "Marketing, communication, and B2B business development leader with a dual technical and managerial profile. Trained in systems and network administration, holding a Master's degree in corporate marketing and communication, with an MBA in progress, I lead growth, brand, and partnership strategies by connecting business vision to operational execution."
+      fr: "Je pilote la strategie marketing et commerciale de Nemalia: repositionnement de marque, structuration d'offre, campagnes digitales et developpement du reseau de distribution. Mon approche relie strategie, execution terrain et acceleration business.",
+      en: "I lead Nemalia's marketing and commercial strategy: brand repositioning, offer structuring, digital campaigns, and distribution network development. My approach connects strategy, field execution, and business acceleration."
     },
     primaryCta: {
       fr: "Decouvrir Mes Realisations",
@@ -476,8 +476,38 @@ export const defaultHomePageContent: HomePageContent = {
     },
     items: [
       {
+        company: "Nemalia",
+        period: "2026 - Present",
+        role: {
+          fr: "Responsable Marketing & Commercial",
+          en: "Head of Marketing & Sales"
+        },
+        summary: {
+          fr: "Pilotage de la strategie marketing et commerciale de la marque Nemalia, avec pour mission de renforcer son positionnement, structurer son developpement et accelerer sa performance business.",
+          en: "Leading Nemalia's marketing and commercial strategy, with a mission to strengthen brand positioning, structure growth, and accelerate business performance."
+        },
+        highlights: [
+          {
+            fr: "Definition et deploiement de la strategie marketing 360 et repositionnement de la plateforme de communication.",
+            en: "Defining and deploying the 360 marketing strategy and repositioning the brand communication platform."
+          },
+          {
+            fr: "Structuration de l'offre commerciale: routines, produits heros, parcours clients et outils de vente.",
+            en: "Structuring the commercial offer: routines, hero products, customer journeys, and sales tools."
+          },
+          {
+            fr: "Pilotage des campagnes digitales, activations terrain, influence et trade marketing.",
+            en: "Leading digital campaigns, field activations, influencer marketing, and trade marketing."
+          },
+          {
+            fr: "Developpement du reseau de distribution et prospection de points de vente partenaires.",
+            en: "Developing the distribution network and prospecting partner retail locations."
+          }
+        ]
+      },
+      {
         company: "Lumina Africa",
-        period: "Juin 2025 - Present",
+        period: "Juin 2025 - 2026",
         role: {
           fr: "Responsable Marketing & Communication",
           en: "Marketing & Communication Manager"

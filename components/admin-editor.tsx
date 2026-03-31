@@ -167,7 +167,7 @@ export function AdminEditor({
   return (
     <div className="grid gap-6 xl:grid-cols-[0.38fr_0.62fr]">
       <section className="space-y-6">
-        <div className="ambient-stroke glass-panel rounded-[28px] p-6">
+        <div className="ambient-stroke glass-panel rounded-3xl p-6">
           <p className="eyebrow">Admin Console</p>
           <h1 className="mt-3 font-display text-3xl font-semibold text-white">
             Portfolio Content Control
@@ -179,23 +179,23 @@ export function AdminEditor({
           <div className="mt-6 flex flex-wrap gap-3">
             <a
               href="/?lang=fr"
-              className="rounded-full bg-cyan-300 px-4 py-2 text-sm font-semibold text-slate-950 transition-transform duration-300 hover:-translate-y-0.5"
+              className="rounded-full bg-accent px-4 py-2 text-sm font-semibold text-slate-950 transition-transform duration-300 hover:-translate-y-0.5"
             >
               Open Portfolio
             </a>
             <a
               href="/?lang=en"
-              className="rounded-full border border-white/10 px-4 py-2 text-sm font-semibold text-white transition-colors duration-300 hover:border-cyan-300/40 hover:text-cyan-200"
+              className="rounded-full border border-white/10 px-4 py-2 text-sm font-semibold text-white transition-colors duration-300 hover:border-accent/40 hover:text-accent"
             >
               Open English View
             </a>
           </div>
         </div>
 
-        <div className="ambient-stroke glass-panel rounded-[28px] p-6">
+        <div className="ambient-stroke glass-panel rounded-3xl p-6">
           <p className="eyebrow">Persistence</p>
           <div className="mt-4 rounded-3xl border border-white/10 bg-slate-950/50 p-4">
-            <p className="text-xs font-semibold uppercase tracking-[0.28em] text-cyan-200">
+            <p className="text-xs font-semibold uppercase tracking-[0.28em] text-accent">
               Content File
             </p>
             <p className="mt-3 break-all text-sm leading-7 text-slate-200">
@@ -209,11 +209,11 @@ export function AdminEditor({
           </p>
         </div>
 
-        <div className="ambient-stroke glass-panel rounded-[28px] p-6">
+        <div className="ambient-stroke glass-panel rounded-3xl p-6">
           <p className="eyebrow">Current Scope</p>
           <div className="mt-4 grid gap-4 sm:grid-cols-2 xl:grid-cols-1">
             <div className="rounded-3xl border border-white/10 bg-white/[0.04] p-4">
-              <p className="text-xs font-semibold uppercase tracking-[0.28em] text-cyan-200">
+              <p className="text-xs font-semibold uppercase tracking-[0.28em] text-accent">
                 Projects
               </p>
               <p className="mt-3 text-3xl font-display font-semibold text-white">
@@ -221,7 +221,7 @@ export function AdminEditor({
               </p>
             </div>
             <div className="rounded-3xl border border-white/10 bg-white/[0.04] p-4">
-              <p className="text-xs font-semibold uppercase tracking-[0.28em] text-cyan-200">
+              <p className="text-xs font-semibold uppercase tracking-[0.28em] text-accent">
                 JSON Status
               </p>
               <p className="mt-3 text-sm leading-7 text-slate-200">
@@ -233,7 +233,7 @@ export function AdminEditor({
           </div>
         </div>
 
-        <div className="ambient-stroke glass-panel rounded-[28px] p-6">
+        <div className="ambient-stroke glass-panel rounded-3xl p-6">
           <p className="eyebrow">Project Map</p>
           <div className="mt-4 space-y-3">
             {projectSummaries.map((project) => (
@@ -244,7 +244,7 @@ export function AdminEditor({
                 <p className="font-display text-lg font-semibold text-white">
                   {project.title}
                 </p>
-                <p className="mt-1 text-xs uppercase tracking-[0.24em] text-cyan-200">
+                <p className="mt-1 text-xs uppercase tracking-[0.24em] text-accent">
                   {project.slug}
                 </p>
                 <p className="mt-3 break-all text-sm leading-6 text-slate-300">
@@ -260,7 +260,7 @@ export function AdminEditor({
           </div>
         </div>
 
-        <div className="ambient-stroke glass-panel rounded-[28px] p-6">
+        <div className="ambient-stroke glass-panel rounded-3xl p-6">
           <p className="eyebrow">Image Rules</p>
           <div className="mt-4 rounded-3xl border border-white/10 bg-white/[0.04] p-4 text-sm leading-7 text-slate-300">
             Keep image paths aligned with{" "}
@@ -272,7 +272,7 @@ export function AdminEditor({
         </div>
       </section>
 
-      <section className="ambient-stroke glass-panel rounded-[28px] p-4 sm:p-6">
+      <section className="ambient-stroke glass-panel rounded-3xl p-4 sm:p-6">
         <div className="flex flex-col gap-4 border-b border-white/10 pb-5 sm:flex-row sm:items-center sm:justify-between">
           <div>
             <p className="eyebrow">JSON Workspace</p>
@@ -286,14 +286,14 @@ export function AdminEditor({
               type="button"
               onClick={handleReload}
               disabled={isReloading}
-              className="rounded-full border border-white/10 px-4 py-2 text-sm font-semibold text-white transition-colors duration-300 hover:border-cyan-300/40 hover:text-cyan-200 disabled:cursor-not-allowed disabled:opacity-60"
+              className="rounded-full border border-white/10 px-4 py-2 text-sm font-semibold text-white transition-colors duration-300 hover:border-accent/40 hover:text-accent disabled:cursor-not-allowed disabled:opacity-60"
             >
               {isReloading ? "Reloading..." : "Reload"}
             </button>
             <button
               type="button"
               onClick={handleReset}
-              className="rounded-full border border-white/10 px-4 py-2 text-sm font-semibold text-white transition-colors duration-300 hover:border-cyan-300/40 hover:text-cyan-200"
+              className="rounded-full border border-white/10 px-4 py-2 text-sm font-semibold text-white transition-colors duration-300 hover:border-accent/40 hover:text-accent"
             >
               Reset Draft
             </button>
@@ -301,7 +301,7 @@ export function AdminEditor({
               type="button"
               onClick={handleSave}
               disabled={isSaving}
-              className="rounded-full bg-cyan-300 px-4 py-2 text-sm font-semibold text-slate-950 transition-transform duration-300 hover:-translate-y-0.5 disabled:cursor-not-allowed disabled:opacity-70"
+              className="rounded-full bg-accent px-4 py-2 text-sm font-semibold text-slate-950 transition-transform duration-300 hover:-translate-y-0.5 disabled:cursor-not-allowed disabled:opacity-70"
             >
               {isSaving ? "Saving..." : "Save Content"}
             </button>
@@ -320,7 +320,7 @@ export function AdminEditor({
           value={draft}
           onChange={(event) => setDraft(event.target.value)}
           spellCheck={false}
-          className="mt-5 min-h-[780px] w-full rounded-[24px] border border-white/10 bg-slate-950/70 p-5 font-mono text-sm leading-7 text-slate-100 outline-none ring-0 transition-colors duration-300 placeholder:text-slate-500 focus:border-cyan-300/40"
+          className="mt-5 min-h-[780px] w-full rounded-3xl border border-white/10 bg-slate-950/70 p-5 font-mono text-sm leading-7 text-slate-100 outline-none ring-0 transition-colors duration-300 placeholder:text-slate-500 focus:border-accent/40"
           aria-label="Portfolio content JSON editor"
         />
       </section>

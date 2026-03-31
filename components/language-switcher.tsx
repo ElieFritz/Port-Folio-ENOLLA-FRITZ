@@ -23,7 +23,7 @@ export function LanguageSwitcher({
           href={`${pathname}?lang=${option.value}`}
           className={`rounded-full px-3 py-2 text-xs font-semibold uppercase tracking-[0.28em] transition-colors duration-300 ${
             option.value === language
-              ? "bg-cyan-300 text-slate-950"
+              ? "bg-accent text-slate-950"
               : "text-slate-300 hover:text-white"
           }`}
         >

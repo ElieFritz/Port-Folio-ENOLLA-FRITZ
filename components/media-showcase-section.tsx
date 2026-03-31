@@ -10,6 +10,7 @@ import { t } from "@/data/site-content";
 type MediaShowcaseSectionProps = {
   section: ShowcaseSection;
   language: Language;
+  standalone?: boolean;
 };
 
 const labels = {
@@ -112,7 +113,7 @@ function renderShowcaseMedia(item: ShowcaseItem, language: Language) {
       <motion.div
         whileHover={{ scale: 1.015 }}
         transition={{ duration: 0.35 }}
-        className="relative aspect-[5/4] w-full overflow-hidden rounded-[22px] bg-slate-950"
+        className="relative aspect-[5/4] w-full overflow-hidden rounded-2xl bg-slate-950"
       >
         <iframe
           src={embedUrl}
@@ -154,8 +155,58 @@ function renderShowcaseMedia(item: ShowcaseItem, language: Language) {
 
 export function MediaShowcaseSection({
   section,
-  language
+  language,
+  standalone = true
 }: MediaShowcaseSectionProps) {
+  const grid = (
+    <div className="grid gap-6 md:grid-cols-2 xl:grid-cols-3">
+      {section.items.map((item, index) => (
+        <Reveal
+          key={`${item.video?.src ?? item.image?.src ?? item.title.en}-${index}`}
+          delay={index * 0.07}
+        >
+          <motion.article
+            className="ambient-stroke glass-panel group relative h-full overflow-hidden rounded-3xl p-3"
+            whileHover={{ y: -6, rotateX: 1 }}
+            transition={{ duration: 0.3 }}
+          >
+            <div className="relative overflow-hidden rounded-3xl border border-white/10">
+              {renderShowcaseMedia(item, language)}
+              {item.tag ? (
+                <div className="absolute left-4 top-4 rounded-full border border-white/10 bg-slate-950/70 px-3 py-2 text-[11px] font-semibold uppercase tracking-[0.24em] text-accent backdrop-blur">
+                  {t(item.tag, language)}
+                </div>
+              ) : null}
+            </div>
+
+            <div className="space-y-4 px-3 pb-3 pt-5">
+              <h3 className="font-display text-2xl font-semibold text-white">
+                {t(item.title, language)}
+              </h3>
+              <p className="text-sm leading-7 text-slate-300">
+                {t(item.description, language)}
+              </p>
+              {item.link ? (
+                <Link
+                  href={item.link}
+                  target="_blank"
+                  rel="noreferrer"
+                  className="inline-flex rounded-full border border-white/10 px-4 py-2 text-sm font-semibold text-white transition-colors duration-300 hover:border-accent/40 hover:text-accent"
+                >
+                  {t(labels.openLink, language)}
+                </Link>
+              ) : null}
+            </div>
+          </motion.article>
+        </Reveal>
+      ))}
+    </div>
+  );
+
+  if (!standalone) {
+    return grid;
+  }
+
   return (
     <section className="section-shell section-break mt-16">
       <Reveal>
@@ -172,48 +223,7 @@ export function MediaShowcaseSection({
         </div>
       </Reveal>
 
-      <div className="grid gap-6 md:grid-cols-2 xl:grid-cols-3">
-        {section.items.map((item, index) => (
-          <Reveal
-            key={`${item.video?.src ?? item.image?.src ?? item.title.en}-${index}`}
-            delay={index * 0.07}
-          >
-            <motion.article
-              className="ambient-stroke glass-panel breathing-panel hero-sheen group relative h-full overflow-hidden rounded-[28px] p-3"
-              whileHover={{ y: -10, rotateX: 2 }}
-              transition={{ duration: 0.32 }}
-            >
-              <div className="relative overflow-hidden rounded-[22px] border border-white/10">
-                {renderShowcaseMedia(item, language)}
-                {item.tag ? (
-                  <div className="absolute left-4 top-4 rounded-full border border-white/10 bg-slate-950/70 px-3 py-2 text-[11px] font-semibold uppercase tracking-[0.24em] text-cyan-200 backdrop-blur">
-                    {t(item.tag, language)}
-                  </div>
-                ) : null}
-              </div>
-
-              <div className="space-y-4 px-3 pb-3 pt-5">
-                <h3 className="font-display text-2xl font-semibold text-white">
-                  {t(item.title, language)}
-                </h3>
-                <p className="text-sm leading-7 text-slate-300">
-                  {t(item.description, language)}
-                </p>
-                {item.link ? (
-                  <Link
-                    href={item.link}
-                    target="_blank"
-                    rel="noreferrer"
-                    className="inline-flex rounded-full border border-white/10 px-4 py-2 text-sm font-semibold text-white transition-colors duration-300 hover:border-cyan-300/40 hover:text-cyan-200"
-                  >
-                    {t(labels.openLink, language)}
-                  </Link>
-                ) : null}
-              </div>
-            </motion.article>
-          </Reveal>
-        ))}
-      </div>
+      {grid}
     </section>
   );
 }

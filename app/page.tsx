@@ -2,10 +2,14 @@ import Image from "next/image";
 import type { Metadata } from "next";
 import Link from "next/link";
 import { AboutSection } from "@/components/about-section";
+import { ContactSection } from "@/components/contact-section";
+import { Footer } from "@/components/footer";
 import { LanguageSwitcher } from "@/components/language-switcher";
-import { MediaShowcaseSection } from "@/components/media-showcase-section";
+import { MediaShowcaseTabs } from "@/components/media-showcase-tabs";
+import { Navbar } from "@/components/navbar";
 import { ProjectCard } from "@/components/project-card";
 import { Reveal } from "@/components/reveal";
+import { ScrollToTop } from "@/components/scroll-to-top";
 import type { ShowcaseSection } from "@/data/site-content";
 import { getLanguage, t } from "@/data/site-content";
 import { getPortfolioContent } from "@/lib/portfolio-content";
@@ -22,12 +26,10 @@ type HomePageProps = {
   };
 };
 
-export const dynamic = "force-dynamic";
-
 const siteUrl = getSiteUrl();
 
 export const metadata: Metadata = {
-  title: "Portfolio Executif | Marketing, Communication & Growth B2B",
+  title: "Portfolio Executif | Marketing & Commercial | Nemalia",
   description: SEO_DEFAULT_DESCRIPTION,
   alternates: {
     canonical: "/"
@@ -35,7 +37,7 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     url: siteUrl,
-    title: `${SEO_PERSON_NAME} | Portfolio Executif Marketing, Communication & Growth B2B`,
+    title: `${SEO_PERSON_NAME} | Responsable Marketing & Commercial | Nemalia`,
     description: SEO_DEFAULT_DESCRIPTION,
     images: [
       {
@@ -145,7 +147,7 @@ export default async function HomePage({ searchParams }: HomePageProps) {
         url: siteUrl,
         sameAs: [SEO_LINKEDIN_URL],
         image: `${siteUrl}${homePageContent.hero.profileImage?.src ?? "/images/profile/enolla-cv-profile.jpg"}`,
-        jobTitle: "Responsable Marketing, Communication & Growth B2B"
+        jobTitle: "Responsable Marketing & Commercial | Nemalia"
       },
       {
         "@type": "CollectionPage",
@@ -219,9 +221,10 @@ export default async function HomePage({ searchParams }: HomePageProps) {
           __html: JSON.stringify(collectionPageStructuredData)
         }}
       />
-      <main className="pb-20 pt-6 sm:pt-10">
+      <Navbar language={language} />
+      <main className="pb-20 pt-24 sm:pt-28">
       <section className="section-shell">
-        <div className="ambient-stroke glass-panel hero-sheen relative overflow-hidden rounded-[36px] px-6 py-8 sm:px-10 sm:py-12 lg:px-14 lg:py-16">
+        <div className="ambient-stroke glass-panel hero-sheen relative overflow-hidden rounded-[32px] px-6 py-10 sm:px-10 sm:py-14 lg:px-14 lg:py-18">
           <div className="floating-orb left-[-4rem] top-[8rem] h-36 w-36" />
           <div className="floating-orb floating-orb--slow right-[8%] top-[-2rem] h-44 w-44" />
           <div className="floating-orb bottom-[-3rem] right-[22%] h-28 w-28" />
@@ -247,13 +250,13 @@ export default async function HomePage({ searchParams }: HomePageProps) {
                 <div className="flex flex-wrap gap-3">
                   <Link
                     href="#projects"
-                    className="rounded-full bg-cyan-300 px-5 py-3 text-sm font-semibold text-slate-950 transition-transform duration-300 hover:-translate-y-0.5"
+                    className="rounded-full bg-accent px-5 py-3 text-sm font-semibold text-slate-950 transition-all duration-300 hover:-translate-y-0.5 hover:shadow-glow"
                   >
                     {t(homePageContent.hero.primaryCta, language)}
                   </Link>
                   <Link
                     href={`mailto:${contactEmail}`}
-                    className="rounded-full border border-white/10 px-5 py-3 text-sm font-semibold text-white transition-colors duration-300 hover:border-cyan-300/40 hover:text-cyan-200"
+                    className="rounded-full border border-white/10 px-5 py-3 text-sm font-semibold text-white transition-colors duration-300 hover:border-accent/40 hover:text-accent"
                   >
                     {t(homePageContent.hero.secondaryCta, language)}
                   </Link>
@@ -272,7 +275,7 @@ export default async function HomePage({ searchParams }: HomePageProps) {
                           target={isExternal ? "_blank" : undefined}
                           rel={isExternal ? "noreferrer" : undefined}
                           download={isDownload ? true : undefined}
-                          className="rounded-full border border-cyan-300/30 bg-cyan-300/10 px-5 py-3 text-sm font-semibold text-cyan-100 transition-colors duration-300 hover:bg-cyan-300/20"
+                          className="rounded-full border border-accent/25 bg-accent/10 px-5 py-3 text-sm font-semibold text-amber-100 transition-colors duration-300 hover:bg-accent/20"
                         >
                           {t(link.label, language)}
                         </Link>
@@ -286,9 +289,9 @@ export default async function HomePage({ searchParams }: HomePageProps) {
                     {homePageContent.hero.proofMetrics.map((metric) => (
                       <div
                         key={`${metric.value}-${metric.label.en}`}
-                        className="rounded-[22px] border border-white/10 bg-white/[0.04] px-4 py-4"
+                        className="rounded-2xl border border-white/10 bg-white/[0.04] px-4 py-4"
                       >
-                        <p className="font-display text-3xl font-semibold text-cyan-200">
+                        <p className="font-display text-3xl font-semibold text-accent">
                           {metric.value}
                         </p>
                         <p className="mt-2 text-xs uppercase tracking-[0.2em] text-slate-300">
@@ -304,8 +307,8 @@ export default async function HomePage({ searchParams }: HomePageProps) {
             <Reveal delay={0.12}>
                 <div className="space-y-4">
                   {homePageContent.hero.profileImage ? (
-                    <div className="ambient-stroke glass-panel breathing-panel hero-sheen relative overflow-hidden rounded-[28px] p-3">
-                      <div className="relative overflow-hidden rounded-[22px] border border-white/10">
+                    <div className="ambient-stroke glass-panel relative overflow-hidden rounded-3xl p-3">
+                      <div className="relative overflow-hidden rounded-2xl border border-white/10">
                         <Image
                         src={homePageContent.hero.profileImage.src}
                         alt={t(homePageContent.hero.profileImage.alt, language)}
@@ -316,7 +319,7 @@ export default async function HomePage({ searchParams }: HomePageProps) {
                         priority
                       />
                       <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-slate-950 via-slate-950/30 to-transparent px-5 py-5">
-                        <p className="text-xs font-semibold uppercase tracking-[0.28em] text-cyan-200">
+                        <p className="text-xs font-semibold uppercase tracking-[0.28em] text-accent/80">
                           {portfolioLabel}
                         </p>
                         <p className="mt-2 text-base font-semibold text-white">
@@ -331,7 +334,7 @@ export default async function HomePage({ searchParams }: HomePageProps) {
                   {homePageContent.supportCards.map((card) => (
                     <div
                       key={card.title.en}
-                      className="ambient-stroke hero-sheen relative rounded-[28px] border border-white/10 bg-white/5 p-6"
+                      className="ambient-stroke relative rounded-3xl border border-white/10 bg-white/5 p-6"
                     >
                       <p className="eyebrow">{t(card.title, language)}</p>
                       <p className="mt-3 text-sm leading-7 text-slate-300">
@@ -348,27 +351,31 @@ export default async function HomePage({ searchParams }: HomePageProps) {
 
       {homePageContent.aboutSection ? (
         <AboutSection
+          id="about"
           section={homePageContent.aboutSection}
           language={language}
         />
       ) : null}
 
-      <section className="section-shell section-break mt-8 grid gap-4 md:grid-cols-3">
-        {homePageContent.strategicSignals.map((signal, index) => (
-          <Reveal key={signal.en} delay={index * 0.08}>
-            <div className="ambient-stroke soft-pulse rounded-[24px] border border-white/10 bg-white/[0.04] p-5">
-              <p className="text-sm font-semibold uppercase tracking-[0.22em] text-slate-400">
-                0{index + 1}
-              </p>
-              <p className="mt-4 text-base leading-7 text-slate-200">
+      <section className="section-break mt-8 overflow-hidden">
+        <div className="flex animate-ticker gap-6 whitespace-nowrap py-4">
+          {[...homePageContent.strategicSignals, ...homePageContent.strategicSignals].map((signal, index) => (
+            <div
+              key={`signal-${index}`}
+              className="inline-flex shrink-0 items-center gap-3 rounded-full border border-white/10 bg-white/[0.03] px-6 py-3"
+            >
+              <span className="text-xs font-semibold text-accent">
+                {String(((index % homePageContent.strategicSignals.length) + 1)).padStart(2, "0")}
+              </span>
+              <span className="text-sm font-medium text-slate-200">
                 {t(signal, language)}
-              </p>
+              </span>
             </div>
-          </Reveal>
-        ))}
+          ))}
+        </div>
       </section>
 
-      <section className="section-shell section-break mt-16">
+      <section id="expertise" className="section-shell section-break mt-16">
         <Reveal>
           <div className="mb-8 flex flex-col gap-4 md:flex-row md:items-end md:justify-between">
             <div>
@@ -383,17 +390,19 @@ export default async function HomePage({ searchParams }: HomePageProps) {
           </div>
         </Reveal>
 
-        <div className="grid gap-6 md:grid-cols-2 xl:grid-cols-5">
+        <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
           {homePageContent.expertise.items.map((item, index) => (
             <Reveal key={item.title.en} delay={index * 0.06}>
-              <div className="ambient-stroke glass-panel hero-sheen relative h-full rounded-[28px] p-6">
-                <p className="text-xs font-semibold uppercase tracking-[0.28em] text-cyan-200">
-                  0{index + 1}
-                </p>
-                <h3 className="mt-4 font-display text-2xl font-semibold text-white">
+              <div className="ambient-stroke glass-panel relative h-full rounded-3xl p-6">
+                <div className="mb-4 flex h-10 w-10 items-center justify-center rounded-2xl border border-accent/20 bg-accent/10">
+                  <span className="font-display text-sm font-bold text-accent">
+                    0{index + 1}
+                  </span>
+                </div>
+                <h3 className="font-display text-xl font-semibold text-white">
                   {t(item.title, language)}
                 </h3>
-                <p className="mt-4 text-sm leading-7 text-slate-300">
+                <p className="mt-3 text-sm leading-7 text-slate-300">
                   {t(item.description, language)}
                 </p>
               </div>
@@ -404,7 +413,7 @@ export default async function HomePage({ searchParams }: HomePageProps) {
 
       <section className="section-shell section-break mt-16">
         <Reveal>
-          <div className="ambient-stroke glass-panel hero-sheen relative rounded-[32px] p-6 sm:p-8">
+            <div className="ambient-stroke glass-panel relative rounded-[32px] p-6 sm:p-8">
             <div className="grid gap-8 lg:grid-cols-[0.95fr_1.05fr]">
               <div>
                 <p className="eyebrow">
@@ -421,8 +430,8 @@ export default async function HomePage({ searchParams }: HomePageProps) {
               <div className="grid gap-4 md:grid-cols-3">
                 {homePageContent.certifications.items.map((item, index) => (
                   <Reveal key={item.title.en} delay={index * 0.08}>
-                    <div className="soft-pulse rounded-[24px] border border-white/10 bg-white/[0.04] p-5">
-                      <p className="text-xs font-semibold uppercase tracking-[0.28em] text-cyan-200">
+                    <div className="rounded-3xl border border-white/10 bg-white/[0.04] p-5 transition-colors duration-300 hover:border-accent/20">
+                      <p className="text-xs font-semibold uppercase tracking-[0.28em] text-accent">
                         M0{index + 1}
                       </p>
                       <h3 className="mt-4 font-display text-xl font-semibold text-white">
@@ -436,7 +445,7 @@ export default async function HomePage({ searchParams }: HomePageProps) {
                           href={item.link}
                           target="_blank"
                           rel="noreferrer"
-                          className="mt-4 inline-flex rounded-full border border-cyan-300/30 px-4 py-2 text-xs font-semibold uppercase tracking-[0.18em] text-cyan-200 transition-colors duration-300 hover:bg-cyan-300/10"
+                          className="mt-4 inline-flex rounded-full border border-accent/25 px-4 py-2 text-xs font-semibold uppercase tracking-[0.18em] text-accent transition-colors duration-300 hover:bg-accent/10"
                         >
                           {certificationCtaLabel}
                         </Link>
@@ -451,7 +460,7 @@ export default async function HomePage({ searchParams }: HomePageProps) {
       </section>
 
       {homePageContent.experienceSection ? (
-        <section className="section-shell section-break mt-16">
+        <section id="experience" className="section-shell section-break mt-16">
           <Reveal>
             <div className="mb-8 flex flex-col gap-4 md:flex-row md:items-end md:justify-between">
               <div>
@@ -471,17 +480,17 @@ export default async function HomePage({ searchParams }: HomePageProps) {
           <div className="grid gap-6 xl:grid-cols-2">
             {homePageContent.experienceSection.items.map((item, index) => (
               <Reveal key={`${item.company}-${item.period}`} delay={index * 0.08}>
-                <div className="ambient-stroke glass-panel hero-sheen relative h-full rounded-[28px] p-6">
+                <div className="ambient-stroke glass-panel relative h-full rounded-3xl p-6">
                   <div className="flex flex-col gap-3 border-b border-white/10 pb-5 sm:flex-row sm:items-start sm:justify-between">
                     <div>
                       <p className="font-display text-2xl font-semibold text-white">
                         {item.company}
                       </p>
-                      <p className="mt-2 text-sm font-semibold uppercase tracking-[0.22em] text-cyan-200">
+                      <p className="mt-2 text-sm font-semibold uppercase tracking-[0.22em] text-accent">
                         {t(item.role, language)}
                       </p>
                     </div>
-                    <p className="text-xs font-semibold uppercase tracking-[0.22em] text-slate-400">
+                    <p className="text-xs font-semibold uppercase tracking-[0.22em] text-slate-300">
                       {item.period}
                     </p>
                   </div>
@@ -526,14 +535,14 @@ export default async function HomePage({ searchParams }: HomePageProps) {
           <div className="grid gap-6 md:grid-cols-2 xl:grid-cols-3">
             {homePageContent.educationSection.items.map((item, index) => (
               <Reveal key={`${item.institution}-${item.period}`} delay={index * 0.08}>
-                <div className="ambient-stroke glass-panel h-full rounded-[28px] p-6">
-                  <p className="text-xs font-semibold uppercase tracking-[0.22em] text-slate-400">
+                <div className="ambient-stroke glass-panel h-full rounded-3xl p-6">
+                  <p className="text-xs font-semibold uppercase tracking-[0.22em] text-slate-300">
                     {item.period}
                   </p>
                   <h3 className="mt-4 font-display text-2xl font-semibold text-white">
                     {item.institution}
                   </h3>
-                  <p className="mt-4 text-base font-semibold leading-7 text-cyan-200">
+                  <p className="mt-4 text-base font-semibold leading-7 text-accent">
                     {t(item.degree, language)}
                   </p>
                   <p className="mt-3 text-sm leading-7 text-slate-300">
@@ -546,47 +555,20 @@ export default async function HomePage({ searchParams }: HomePageProps) {
         </section>
       ) : null}
 
-      {managedPagesSection ? (
-        <MediaShowcaseSection
-          section={managedPagesSection}
-          language={language}
-        />
-      ) : null}
+      {(() => {
+        const showcaseSections = [
+          managedPagesSection,
+          flyersSection,
+          motionSection,
+          contractProofSection,
+          trainingSessionSection,
+          systemsNetworkSection
+        ].filter((s): s is NonNullable<typeof s> => s !== null);
 
-      {flyersSection ? (
-        <MediaShowcaseSection
-          section={flyersSection}
-          language={language}
-        />
-      ) : null}
-
-      {motionSection ? (
-        <MediaShowcaseSection
-          section={motionSection}
-          language={language}
-        />
-      ) : null}
-
-      {contractProofSection ? (
-        <MediaShowcaseSection
-          section={contractProofSection}
-          language={language}
-        />
-      ) : null}
-
-      {trainingSessionSection ? (
-        <MediaShowcaseSection
-          section={trainingSessionSection}
-          language={language}
-        />
-      ) : null}
-
-      {systemsNetworkSection ? (
-        <MediaShowcaseSection
-          section={systemsNetworkSection}
-          language={language}
-        />
-      ) : null}
+        return showcaseSections.length > 0 ? (
+          <MediaShowcaseTabs sections={showcaseSections} language={language} />
+        ) : null;
+      })()}
 
       <section id="projects" className="section-shell section-break mt-16">
         <Reveal>
@@ -614,7 +596,11 @@ export default async function HomePage({ searchParams }: HomePageProps) {
           ))}
         </div>
       </section>
+
+      <ContactSection language={language} contactEmail={contactEmail} />
       </main>
+      <Footer language={language} contactEmail={contactEmail} />
+      <ScrollToTop />
     </>
   );
 }

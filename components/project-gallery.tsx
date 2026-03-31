@@ -82,7 +82,7 @@ export function ProjectGallery({
         </div>
 
         <div className="md:hidden">
-          <div className="mb-3 flex items-center justify-between text-xs uppercase tracking-[0.28em] text-slate-400">
+          <div className="mb-3 flex items-center justify-between text-xs uppercase tracking-[0.28em] text-slate-300">
             <span>{t(labels.swipeGallery, language)}</span>
             <span>
               {galleryImages.length} {t(labels.frames, language)}

@@ -12,6 +12,7 @@ const config = {
         ink: "rgb(var(--ink) / <alpha-value>)",
         muted: "rgb(var(--muted) / <alpha-value>)",
         accent: "rgb(var(--accent) / <alpha-value>)",
+        "accent-secondary": "rgb(var(--accent-secondary) / <alpha-value>)",
         aura: "rgb(var(--aura) / <alpha-value>)"
       },
       fontFamily: {
@@ -20,11 +21,11 @@ const config = {
       },
       backgroundImage: {
         "hero-radial":
-          "radial-gradient(circle at top right, rgba(57, 189, 255, 0.18), transparent 35%), radial-gradient(circle at 20% 20%, rgba(84, 128, 255, 0.16), transparent 40%), linear-gradient(135deg, rgba(8, 15, 36, 0.98), rgba(4, 10, 26, 0.98))"
+          "radial-gradient(ellipse at 70% 10%, rgba(212, 175, 85, 0.08), transparent 50%), radial-gradient(ellipse at 20% 80%, rgba(99, 140, 220, 0.06), transparent 50%), linear-gradient(180deg, rgba(8, 10, 18, 0.99), rgba(12, 15, 26, 0.99))"
       },
       boxShadow: {
-        glow: "0 24px 80px rgba(15, 118, 255, 0.22)",
-        glass: "0 30px 90px rgba(3, 8, 20, 0.45)"
+        glow: "0 20px 60px rgba(212, 175, 85, 0.12)",
+        glass: "0 24px 68px rgba(0, 0, 0, 0.4)"
       }
     }
   },

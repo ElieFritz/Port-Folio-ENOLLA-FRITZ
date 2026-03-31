@@ -15,12 +15,8 @@ type ProjectCardProps = {
 
 const labels = {
   techMarkers: {
-    fr: "axes",
-    en: "delivery markers"
-  },
-  hoverPreview: {
-    fr: "Apercu Hover",
-    en: "Hover Preview"
+    fr: "compétences",
+    en: "skills"
   },
   viewCaseStudy: {
     fr: "Voir La Realisation",
@@ -35,16 +31,16 @@ const labels = {
 export function ProjectCard({ project, index, language }: ProjectCardProps) {
   return (
     <motion.article
-      className="ambient-stroke glass-panel hero-sheen group relative overflow-hidden rounded-[28px] p-4"
+      className="ambient-stroke glass-panel group relative overflow-hidden rounded-3xl p-4"
       initial={{ opacity: 0, y: 36 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, amount: 0.2 }}
-      transition={{ duration: 0.7, delay: index * 0.08 }}
-      whileHover={{ y: -8 }}
+      transition={{ duration: 0.65, delay: index * 0.08 }}
+      whileHover={{ y: -6 }}
     >
-      <div className="relative overflow-hidden rounded-3xl">
+      <div className="relative overflow-hidden rounded-2xl">
         <div className="absolute inset-0 z-10 bg-gradient-to-t from-slate-950 via-slate-950/25 to-transparent" />
-        <motion.div whileHover={{ scale: 1.06 }} transition={{ duration: 0.6 }}>
+        <motion.div whileHover={{ scale: 1.04 }} transition={{ duration: 0.55 }}>
           <Image
             src={project.coverImage}
             alt={`${project.title} cover preview`}
@@ -54,13 +50,6 @@ export function ProjectCard({ project, index, language }: ProjectCardProps) {
             className="aspect-[5/4] w-full object-cover object-center"
             priority={index < 2}
           />
-        </motion.div>
-        <motion.div
-          className="absolute bottom-4 left-4 z-20 rounded-full border border-white/15 bg-slate-950/70 px-3 py-2 text-[11px] font-semibold uppercase tracking-[0.28em] text-cyan-200 backdrop-blur"
-          initial={{ opacity: 0.88 }}
-          whileHover={{ x: 6, opacity: 1 }}
-        >
-          {t(labels.hoverPreview, language)}
         </motion.div>
       </div>
 
@@ -75,7 +64,7 @@ export function ProjectCard({ project, index, language }: ProjectCardProps) {
         <div className="space-y-3">
           <Link
             href={`/projects/${project.slug}?lang=${language}`}
-            className="inline-flex items-center gap-2 font-display text-2xl font-semibold text-white transition-colors duration-300 hover:text-cyan-200"
+            className="inline-flex items-center gap-2 font-display text-2xl font-semibold text-white transition-colors duration-300 hover:text-accent"
           >
             {project.title}
             <span aria-hidden="true">-&gt;</span>
@@ -89,7 +78,7 @@ export function ProjectCard({ project, index, language }: ProjectCardProps) {
           {project.technologies.map((technology) => (
             <span
               key={technology}
-              className="rounded-full border border-cyan-300/10 bg-white/5 px-3 py-1 text-xs font-semibold text-slate-200"
+              className="rounded-full border border-accent/10 bg-white/[0.04] px-3 py-1 text-xs font-semibold text-slate-200"
             >
               {technology}
             </span>
@@ -99,7 +88,7 @@ export function ProjectCard({ project, index, language }: ProjectCardProps) {
         <div className="flex flex-wrap gap-3 pt-2">
           <Link
             href={`/projects/${project.slug}?lang=${language}`}
-            className="rounded-full bg-cyan-300 px-4 py-2 text-sm font-semibold text-slate-950 transition-transform duration-300 hover:-translate-y-0.5"
+            className="rounded-full bg-accent px-4 py-2 text-sm font-semibold text-slate-950 transition-all duration-300 hover:-translate-y-0.5 hover:shadow-glow"
           >
             {t(labels.viewCaseStudy, language)}
           </Link>
@@ -107,7 +96,7 @@ export function ProjectCard({ project, index, language }: ProjectCardProps) {
             href={project.website}
             target="_blank"
             rel="noreferrer"
-            className="rounded-full border border-white/10 px-4 py-2 text-sm font-semibold text-white transition-colors duration-300 hover:border-cyan-300/40 hover:text-cyan-200"
+            className="rounded-full border border-white/10 px-4 py-2 text-sm font-semibold text-white transition-colors duration-300 hover:border-accent/40 hover:text-accent"
           >
             {t(labels.visitSite, language)}
           </Link>

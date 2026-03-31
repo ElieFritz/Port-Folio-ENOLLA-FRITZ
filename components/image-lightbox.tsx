@@ -120,8 +120,8 @@ export function ImageLightbox({
               setTouchStart(null);
             }}
           >
-            <div className="ambient-stroke glass-panel overflow-hidden rounded-[30px] p-3">
-              <div className="relative aspect-[16/10] overflow-hidden rounded-[24px] border border-white/10">
+            <div className="ambient-stroke glass-panel overflow-hidden rounded-[32px] p-3">
+              <div className="relative aspect-[16/10] overflow-hidden rounded-3xl border border-white/10">
                 <Image
                   key={activeImage.src}
                   src={activeImage.src}
@@ -176,7 +176,7 @@ export function ImageLightbox({
                   onClick={() => setActiveIndex(index)}
                   className={`h-2.5 rounded-full transition-all ${
                     index === activeIndex
-                      ? "w-10 bg-cyan-300"
+                      ? "w-10 bg-accent"
                       : "w-2.5 bg-white/30 hover:bg-white/50"
                   }`}
                   aria-label={`${t(labels.viewImage, language)} ${index + 1}`}

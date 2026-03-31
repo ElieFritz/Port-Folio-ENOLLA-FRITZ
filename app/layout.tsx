@@ -87,13 +87,14 @@ const personStructuredData = {
   url: siteUrl,
   image: `${siteUrl}${profileImagePath}`,
   sameAs: [SEO_LINKEDIN_URL],
-  jobTitle: "Responsable Marketing, Communication & Growth B2B",
+  jobTitle: "Responsable Marketing & Commercial | Nemalia",
   knowsAbout: [
     "Marketing B2B",
+    "Strategie commerciale",
     "Communication corporate",
     "Growth marketing",
-    "Lead generation",
-    "Business development"
+    "Business development",
+    "Trade marketing"
   ]
 };
 
@@ -128,7 +129,7 @@ export default function RootLayout({
           }}
         />
         <div className="fixed inset-0 -z-10 bg-hero-radial" />
-        <div className="fixed inset-0 -z-10 opacity-60 [background-image:linear-gradient(rgba(148,163,184,0.05)_1px,transparent_1px),linear-gradient(90deg,rgba(148,163,184,0.05)_1px,transparent_1px)] [background-size:72px_72px]" />
+        <div className="fixed inset-0 -z-10 opacity-30 [background-image:linear-gradient(rgba(148,160,184,0.04)_1px,transparent_1px),linear-gradient(90deg,rgba(148,160,184,0.04)_1px,transparent_1px)] [background-size:80px_80px]" />
         {children}
       </body>
     </html>
