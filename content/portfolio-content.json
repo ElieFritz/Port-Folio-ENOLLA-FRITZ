@@ -1122,6 +1122,96 @@
   },
   "projects": [
     {
+      "slug": "nemalia-crm",
+      "title": "nemalia-crm.vercel.app",
+      "website": "https://nemalia-crm.vercel.app",
+      "category": {
+        "fr": "Logiciel CRM & Operations Omnicanales",
+        "en": "CRM & Omnichannel Operations Software"
+      },
+      "shortDescription": {
+        "fr": "CRM sur-mesure concu pour piloter la performance commerciale, le booking, le POS et les operations omnicanales de Nemalia.",
+        "en": "Custom-built CRM designed to drive commercial performance, booking, POS, and omnichannel operations for Nemalia."
+      },
+      "description": {
+        "fr": "Conception et deploiement d'un outil CRM interne complet pour Nemalia, integrant gestion des contacts, pipeline commercial, systeme de booking, point de vente et pilotage des operations omnicanales.",
+        "en": "Design and deployment of a full internal CRM tool for Nemalia, integrating contact management, sales pipeline, booking system, point of sale, and omnichannel operations management."
+      },
+      "role": {
+        "fr": "Responsable Marketing & Commercial — Concepteur produit, architecte fonctionnel, pilotage du developpement",
+        "en": "Marketing & Commercial Director — Product designer, functional architect, development lead"
+      },
+      "results": {
+        "fr": "Centralisation des donnees clients, automatisation du suivi commercial, reduction du temps de gestion operationnelle et meilleure visibilite sur les KPI business.",
+        "en": "Centralized customer data, automated sales follow-up, reduced operational management time, and better visibility on business KPIs."
+      },
+      "technologies": [
+        "Next.js",
+        "TypeScript",
+        "TailwindCSS",
+        "Prisma",
+        "PostgreSQL",
+        "NextAuth",
+        "Framer Motion"
+      ],
+      "coverImage": "/images/projects/nemalia-crm/cover.jpg",
+      "heroImage": "/images/projects/nemalia-crm/cover.jpg",
+      "images": [
+        {
+          "src": "/images/projects/nemalia-crm/screen-1.jpg",
+          "alt": {
+            "fr": "Dashboard principal du CRM Nemalia",
+            "en": "Nemalia CRM main dashboard"
+          },
+          "caption": {
+            "fr": "Vue d'ensemble des KPI commerciaux et de l'activite en temps reel",
+            "en": "Real-time overview of commercial KPIs and activity"
+          }
+        },
+        {
+          "src": "/images/projects/nemalia-crm/screen-2.jpg",
+          "alt": {
+            "fr": "Module de booking et gestion des reservations",
+            "en": "Booking and reservation management module"
+          },
+          "caption": {
+            "fr": "Systeme de reservation integre pour les operations terrain",
+            "en": "Integrated booking system for field operations"
+          }
+        }
+      ],
+      "challenge": {
+        "fr": "Nemalia operait sans outil centralise : les donnees clients, le suivi commercial et les operations etaient disperses entre tableurs, emails et outils tiers non connectes.",
+        "en": "Nemalia operated without a centralized tool: customer data, sales tracking, and operations were scattered across spreadsheets, emails, and disconnected third-party tools."
+      },
+      "strategy": {
+        "fr": "Concevoir un outil unifie couvrant l'ensemble du cycle commercial — du premier contact a la vente, en passant par le booking et le suivi post-achat — avec une interface pensee pour l'equipe terrain.",
+        "en": "Design a unified tool covering the entire commercial cycle — from first contact to sale, through booking and post-purchase follow-up — with an interface built for field teams."
+      },
+      "execution": {
+        "fr": "Developpement full-stack en Next.js avec base PostgreSQL, authentification securisee, modules CRM (contacts, pipeline, taches), POS, booking, et tableaux de bord analytics — deploye sur Vercel.",
+        "en": "Full-stack Next.js development with PostgreSQL, secure authentication, CRM modules (contacts, pipeline, tasks), POS, booking, and analytics dashboards — deployed on Vercel."
+      },
+      "outcome": {
+        "fr": "L'equipe Nemalia dispose desormais d'un outil unique pour piloter l'ensemble de son activite commerciale, avec une reduction significative du temps de gestion et une meilleure prise de decision basee sur les donnees.",
+        "en": "The Nemalia team now has a single tool to manage all commercial activity, with significant reduction in management time and better data-driven decision making."
+      },
+      "metrics": [
+        {
+          "fr": "Donnees clients centralisees en un point unique",
+          "en": "Customer data centralized in one single source"
+        },
+        {
+          "fr": "Pipeline commercial visible et pilotable en temps reel",
+          "en": "Sales pipeline visible and manageable in real time"
+        },
+        {
+          "fr": "Operations omnicanales unifiees (CRM + POS + Booking)",
+          "en": "Unified omnichannel operations (CRM + POS + Booking)"
+        }
+      ]
+    },
+    {
       "slug": "lumina-africa",
       "title": "luminafrica.online",
       "website": "https://luminafrica.online",

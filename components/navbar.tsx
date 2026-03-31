@@ -13,8 +13,7 @@ const navItems = {
   about: { fr: "À Propos", en: "About" },
   expertise: { fr: "Expertise", en: "Expertise" },
   experience: { fr: "Parcours", en: "Experience" },
-  showcase: { fr: "Réalisations", en: "Showcase" },
-  projects: { fr: "Projets", en: "Projects" },
+  projects: { fr: "Réalisations", en: "Portfolio" },
   contact: { fr: "Contact", en: "Contact" }
 };
 
