@@ -37,6 +37,7 @@
 html{scroll-behavior:smooth}
 html.lenis{scroll-behavior:auto}
 body{background:var(--bg);color:var(--ink);font-family:var(--f-body);font-size:16px;line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+#app{overflow-x:clip} /* fly-in gallery thumbs must not widen the mobile layout; clip (not hidden) keeps the sticky nav */
 body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:60;background:var(--bg)}
 a{color:inherit}
 img{display:block;max-width:100%}
