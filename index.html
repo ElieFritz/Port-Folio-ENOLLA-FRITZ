@@ -1,0 +1,1050 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Fritz ENOLLA</title>
+<meta property="og:title" content="Fritz ENOLLA · Responsable Marketing &amp; Commercial">
+<meta property="og:description" content="Marketing, communication et tech : campagnes terrain, digital, influence et développement commercial. Douala &amp; remote.">
+<meta property="og:image" content="assets/portrait.jpg">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="assets/face.jpg">
+<style>html{color-scheme:light}body{margin:0;font-size:14px}img{max-width:100%}[hidden]{display:none!important}:root{padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}</style>
+</head>
+<body>
+
+<meta name="claude:viewport-fit-sides" content="cover">
+<meta name="description" content="Fritz ENOLLA, Responsable Marketing & Commercial. Profil marketing, communication et tech basé à Douala.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,300..700&family=Geist:wght@400;500;600&family=Inter:wght@400;500;600&display=swap">
+<style>
+/* Layout: one centred column on a pale studio ground; white cards, one black band for proof, black pills for actions (after EMANI). */
+:root{
+  --bg:#f6f6f5; --surface:#ffffff; --chip:#efefee; --ink:#121212; --ink-2:#4f4f4f; --ink-3:#8a8a8a;
+  --line:rgba(18,18,18,.09); --dark:#0c0c0c; --dark-2:#1b1b1b; --on-dark:#f4f4f2; --on-dark-2:#a3a3a0;
+  --green:#12b33f; --rose:#f6d9e2; --rose-ink:#9b2c55; --navy:#14213a; --sand:#efe6d8; --sage:#e3ebe2;
+  --f-display:"Bricolage Grotesque", "Arial Narrow", system-ui, sans-serif;
+  --f-title:"Geist", "Inter", system-ui, sans-serif;
+  --f-body:"Inter", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --r-sm:12px; --r-md:18px; --r-lg:28px; --r-pill:999px;
+  --wrap:1120px;
+  color-scheme:light;
+}
+*{box-sizing:border-box}
+[hidden]{display:none!important}
+html{scroll-behavior:smooth}
+html.lenis{scroll-behavior:auto}
+body{background:var(--bg);color:var(--ink);font-family:var(--f-body);font-size:16px;line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:60;background:var(--bg)}
+a{color:inherit}
+img{display:block;max-width:100%}
+.wrap{max-width:var(--wrap);margin-inline:auto;padding-left:max(20px,env(safe-area-inset-left,0px));padding-right:max(20px,env(safe-area-inset-right,0px))}
+h1,h2,h3{margin:0;text-wrap:balance}
+p{margin:0}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+:focus-visible{outline:2px solid var(--ink);outline-offset:3px;border-radius:6px}
+
+/* language switch: French by default */
+#app [data-l="en"]{display:none!important}
+#app.en [data-l="fr"]{display:none!important}
+#app.en [data-l="en"]{display:revert!important}
+#app.en .hl .row>[data-l="en"]{display:inline-block!important}
+
+/* ---------- nav ---------- */
+.nav{position:sticky;top:calc(env(safe-area-inset-top,0px) + 14px);z-index:50;display:flex;justify-content:center;padding-inline:max(12px,env(safe-area-inset-left,0px)) max(12px,env(safe-area-inset-right,0px));margin-top:14px}
+.nav-in{display:flex;align-items:center;gap:6px;background:rgba(255,255,255,.62);backdrop-filter:blur(16px) saturate(1.4);-webkit-backdrop-filter:blur(16px) saturate(1.4);border:1px solid rgba(255,255,255,.8);box-shadow:0 6px 24px -10px rgba(0,0,0,.18);border-radius:32px;padding:7px;max-width:100%}
+.brand{font-family:var(--f-title);font-weight:600;font-size:15px;letter-spacing:-.02em;padding:6px 12px;text-decoration:none;white-space:nowrap}
+.nav-links{display:flex;gap:2px}
+.nav-links a{font-size:14px;color:var(--ink-2);text-decoration:none;padding:7px 11px;border-radius:20px;transition:background .2s,color .2s;white-space:nowrap}
+.nav-links a:hover{background:var(--chip);color:var(--ink)}
+.lang{display:flex;background:var(--chip);border-radius:20px;padding:3px}
+.lang button{font:600 12px/1 var(--f-body);letter-spacing:.04em;border:0;background:transparent;color:var(--ink-3);padding:7px 9px;border-radius:16px;cursor:pointer}
+.lang button[aria-pressed="true"]{background:var(--surface);color:var(--ink);box-shadow:0 1px 3px rgba(0,0,0,.12)}
+.btn{display:inline-flex;align-items:center;gap:10px;font:500 15px/1 var(--f-body);text-decoration:none;border-radius:var(--r-pill);border:0;cursor:pointer;transition:transform .25s cubic-bezier(.2,.8,.2,1),box-shadow .25s,background .2s}
+.btn-dark{background:var(--ink);color:#fff;padding:9px 18px 9px 9px}
+.btn-dark:hover{transform:translateY(-2px);box-shadow:0 12px 24px -12px rgba(0,0,0,.55)}
+.btn-light{background:var(--surface);color:var(--ink);padding:14px 20px;border:1px solid var(--line)}
+.btn-light:hover{transform:translateY(-2px);box-shadow:0 10px 22px -14px rgba(0,0,0,.35)}
+.btn-sm{padding:9px 14px;font-size:14px}
+.nav .btn-sm{background:var(--ink);color:#fff}
+.av{width:34px;height:34px;border-radius:50%;object-fit:cover;border:2px solid rgba(255,255,255,.9)}
+@media (max-width:820px){.nav-links{display:none}}
+
+/* ---------- hero ---------- */
+.hero{padding-block:72px 40px;text-align:center}
+.status{display:inline-flex;align-items:center;gap:10px;background:var(--surface);border:1px solid var(--line);border-radius:24px;padding:9px 15px 9px 11px;font-size:14px;color:var(--ink-2)}
+.pulse{position:relative;width:10px;height:10px}
+.pulse i{position:absolute;inset:0;border-radius:50%;background:var(--green)}
+.pulse i+i{animation:ping 1.8s cubic-bezier(0,0,.2,1) infinite}
+@keyframes ping{75%,100%{transform:scale(2.6);opacity:0}}
+.hl{margin-top:30px;font-family:var(--f-display);font-weight:400;font-size:clamp(32px,6.4vw,78px);line-height:1.04;letter-spacing:-.05em;font-variation-settings:"opsz" 96}
+.hl .row{display:flex;justify-content:center;align-items:center;flex-wrap:wrap;column-gap:.22em}
+.hl .row>span{display:inline-block}
+.hl .muted{color:var(--ink-3)}
+.pic{display:inline-block;height:.86em;border-radius:.24em;object-fit:cover;vertical-align:middle;box-shadow:0 6px 18px -8px rgba(0,0,0,.4)}
+.pic-face{width:.86em;border-radius:50%}
+.pic-wide{width:1.5em}
+.mini{display:inline-flex;align-items:center;justify-content:center;height:.86em;border-radius:.22em;vertical-align:middle;box-shadow:0 6px 18px -8px rgba(0,0,0,.35)}
+.mini svg{width:100%;height:100%}
+.mini-a{width:1.1em;background:var(--navy);transform:rotate(-6deg)}
+.mini-b{width:1.1em;background:var(--rose);transform:rotate(5deg);margin-left:-.3em}
+.mini-c{width:1.5em;background:var(--surface);border:1px solid var(--line)}
+.lede{max-width:620px;margin:26px auto 0;font-size:clamp(16px,1.6vw,18px);color:var(--ink-2)}
+.cta-row{display:flex;justify-content:center;flex-wrap:wrap;gap:12px;margin-top:30px}
+.proof{display:inline-flex;align-items:center;gap:12px;margin-top:28px;font-size:14px;color:var(--ink-2)}
+.proof b{color:var(--ink);font-weight:600}
+.badge-top{display:inline-grid;place-items:center;width:36px;height:36px;border-radius:50%;background:var(--ink);color:#fff;font:600 13px/1 var(--f-title)}
+
+/* load sequence */
+@media (prefers-reduced-motion:no-preference){
+  .rise{animation:rise .9s cubic-bezier(.2,.8,.2,1) both}
+  .d1{animation-delay:.05s}.d2{animation-delay:.15s}.d3{animation-delay:.25s}.d4{animation-delay:.35s}.d5{animation-delay:.48s}.d6{animation-delay:.6s}
+  @keyframes rise{from{transform:translateY(22px);opacity:.001;filter:blur(6px)}to{transform:none;opacity:1;filter:none}}
+}
+
+/* ---------- ticker ---------- */
+.ticker{padding-block:22px 64px}
+.ticker-label{text-align:center;font-size:13px;color:var(--ink-3);margin-bottom:16px;padding-inline:20px}
+.marquee{overflow:hidden;mask-image:linear-gradient(90deg,transparent,#000 12%,#000 88%,transparent);-webkit-mask-image:linear-gradient(90deg,transparent,#000 12%,#000 88%,transparent)}
+.track{display:flex;gap:56px;width:max-content;animation:scroll 38s linear infinite}
+.track span{font-family:var(--f-title);font-weight:600;font-size:clamp(18px,2.2vw,24px);letter-spacing:-.03em;color:#b5b5b2;white-space:nowrap}
+.track span em{font-style:normal;font-family:var(--f-display);font-weight:500}
+@keyframes scroll{to{transform:translateX(-50%)}}
+@media (prefers-reduced-motion:reduce){.track{animation:none;flex-wrap:wrap;justify-content:center;width:auto}}
+
+/* ---------- section scaffolding ---------- */
+.sec{padding-block:96px}
+.eyebrow{display:inline-flex;align-items:center;gap:8px;font-size:13px;font-weight:500;color:var(--ink-3);letter-spacing:.02em}
+.eyebrow::before{content:"";width:6px;height:6px;border-radius:50%;background:currentColor}
+.h2{font-family:var(--f-title);font-weight:500;font-size:clamp(28px,3.6vw,42px);line-height:1.1;letter-spacing:-.035em;margin-top:12px}
+.h2 .muted{color:var(--ink-3)}
+.sec-head{display:flex;justify-content:space-between;align-items:flex-end;gap:24px;flex-wrap:wrap;margin-bottom:40px}
+.sec-head p{max-width:420px;color:var(--ink-2)}
+
+/* ---------- proof band ---------- */
+.band{background:var(--dark);color:var(--on-dark);border-radius:var(--r-lg);margin-inline:max(12px,env(safe-area-inset-left,0px)) max(12px,env(safe-area-inset-right,0px));padding-block:72px}
+.band .eyebrow{color:var(--on-dark-2)}
+.band .h2 .muted{color:var(--on-dark-2)}
+.stats{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:1px;background:rgba(255,255,255,.1);border-radius:var(--r-md);overflow:hidden;margin-top:40px}
+.stat{background:var(--dark);padding:26px 22px 24px;min-width:0}
+.stat .n{font-family:var(--f-display);font-weight:400;font-size:clamp(40px,5vw,62px);letter-spacing:-.05em;line-height:1;font-variant-numeric:tabular-nums}
+.stat .n small{font-size:.5em;letter-spacing:-.02em;color:var(--on-dark-2)}
+.stat .t{margin-top:14px;font-size:14px;color:var(--on-dark-2);line-height:1.45}
+.stat .t b{color:var(--on-dark);font-weight:500}
+.band-foot{display:flex;flex-wrap:wrap;gap:10px;margin-top:26px}
+.tag-d{font-size:13px;color:var(--on-dark-2);border:1px solid rgba(255,255,255,.14);border-radius:20px;padding:6px 12px}
+@media (max-width:860px){.stats{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:480px){.stat{padding:20px 16px}.stat .n{font-size:38px}.stat .t{font-size:13px}}
+
+/* ---------- work ---------- */
+.filters{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:28px}
+.filters button{font:500 14px/1 var(--f-body);border:1px solid var(--line);background:var(--surface);color:var(--ink-2);padding:10px 15px;border-radius:20px;cursor:pointer;transition:all .2s}
+.filters button:hover{color:var(--ink)}
+.filters button[aria-pressed="true"]{background:var(--ink);color:#fff;border-color:var(--ink)}
+.grid-work{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:22px}
+.case{background:var(--surface);border-radius:var(--r-lg);padding:10px;border:1px solid var(--line);display:flex;flex-direction:column;min-width:0;transition:transform .35s cubic-bezier(.2,.8,.2,1),box-shadow .35s}
+.case:hover{transform:translateY(-4px);box-shadow:0 26px 50px -30px rgba(0,0,0,.4)}
+.case[hidden]{display:none}
+.vis{position:relative;border-radius:20px;aspect-ratio:16/10;overflow:hidden;max-width:100%}
+.vis svg{position:absolute;inset:0;width:100%;height:100%;transition:transform .7s cubic-bezier(.2,.8,.2,1)}
+.case:hover .vis svg{transform:scale(1.035)}
+.vis .chip-k,.gal .chip-k{position:absolute;left:14px;top:14px;z-index:2;font-size:12px;font-weight:500;background:rgba(255,255,255,.88);color:var(--ink);padding:6px 10px;border-radius:14px;backdrop-filter:blur(6px)}
+.case-body{padding:20px 14px 14px;display:flex;flex-direction:column;gap:12px;flex:1}
+.case-top{display:flex;justify-content:space-between;align-items:baseline;gap:12px;flex-wrap:wrap}
+.case h3{font-family:var(--f-title);font-weight:500;font-size:22px;letter-spacing:-.03em;line-height:1.2}
+.case .meta{font-size:13px;color:var(--ink-3)}
+.case .sum{color:var(--ink-2);font-size:15px}
+.kpis{display:flex;flex-wrap:wrap;gap:8px}
+.kpi{background:var(--chip);border-radius:12px;padding:8px 12px;font-size:13px;color:var(--ink-2)}
+.kpi b{font-family:var(--f-title);font-weight:600;color:var(--ink);font-size:15px;margin-right:4px;font-variant-numeric:tabular-nums}
+details.more{margin-top:auto;border-top:1px solid var(--line);padding-top:12px}
+details.more summary{list-style:none;cursor:pointer;display:flex;align-items:center;justify-content:space-between;font-weight:500;font-size:15px;padding:4px 0}
+details.more summary::-webkit-details-marker{display:none}
+.plus{width:30px;height:30px;border-radius:50%;background:var(--ink);color:#fff;display:grid;place-items:center;transition:transform .3s}
+.plus svg{width:14px;height:14px}
+details[open] .plus{transform:none}
+.story{display:grid;gap:14px;padding:14px 0 6px}
+.story div{display:grid;grid-template-columns:120px minmax(0,1fr);gap:14px}
+.story dt,.story .k{font-size:12px;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:var(--ink-3);padding-top:3px}
+.story p{font-size:15px;color:var(--ink-2)}
+@media (max-width:860px){.grid-work{grid-template-columns:minmax(0,1fr)}}
+@media (max-width:480px){.story div{grid-template-columns:minmax(0,1fr);gap:4px}}
+
+
+/* influence feature: full-width card with creator gallery */
+.case-wide{grid-column:1/-1;display:grid;grid-template-columns:minmax(0,1.25fr) minmax(0,1fr);gap:8px;align-items:start}
+.case-wide .case-body{padding:22px 18px 14px}
+.case-wide>.vis{height:100%;min-height:280px;aspect-ratio:auto}
+.gal{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px;background:var(--sand);border-radius:20px;padding:8px;position:relative}
+.gal .chip-k{left:18px;top:18px}
+.gal button{all:unset;cursor:zoom-in;position:relative;border-radius:14px;overflow:hidden;aspect-ratio:4/5;max-width:100%;background:#e4d9c6;display:block}
+.gal button:focus-visible{outline:2px solid var(--ink);outline-offset:2px}
+.gal img{width:100%;height:100%;object-fit:cover;object-position:50% 22%;transition:transform .7s cubic-bezier(.2,.8,.2,1),filter .4s}
+.gal button:hover img{transform:scale(1.06)}
+.gal-cap{font-size:13px;color:var(--ink-3);padding:10px 8px 2px;grid-column:1/-1}
+.lb{position:fixed;inset:0;z-index:80;background:rgba(10,10,10,.86);display:grid;place-items:center;padding:calc(24px + env(safe-area-inset-top,0px)) max(16px,env(safe-area-inset-right,0px)) calc(24px + env(safe-area-inset-bottom,0px)) max(16px,env(safe-area-inset-left,0px))}
+.lb img{max-height:84vh;max-width:min(92vw,620px);border-radius:18px;box-shadow:0 30px 80px -20px rgba(0,0,0,.7)}
+.lb-x{position:absolute;top:calc(16px + env(safe-area-inset-top,0px));right:max(16px,env(safe-area-inset-right,0px));width:44px;height:44px;border-radius:50%;border:0;background:#fff;color:#111;font:500 22px/1 var(--f-body);cursor:pointer}
+.lb-nav{position:absolute;top:50%;transform:translateY(-50%);width:44px;height:44px;border-radius:50%;border:0;background:rgba(255,255,255,.9);color:#111;font:500 20px/1 var(--f-body);cursor:pointer}
+.lb-prev{left:max(16px,env(safe-area-inset-left,0px))}.lb-next{right:max(16px,env(safe-area-inset-right,0px))}
+@media (prefers-reduced-motion:no-preference){.lb:not([hidden]) img{animation:lbIn .35s cubic-bezier(.2,.8,.2,1)}@keyframes lbIn{from{transform:scale(.96);opacity:.4}}}
+@media (max-width:860px){.case-wide{grid-template-columns:minmax(0,1fr)}}
+
+
+/* hero thumbs */
+.pic-t1{width:.78em;transform:rotate(-7deg)}
+.pic-t2{width:.7em;transform:rotate(6deg);margin-left:-.28em}
+/* photo collage inside a case visual */
+.vis-photos{display:grid;grid-template-columns:1fr 1fr;gap:8px;padding:8px;background:var(--navy)}
+.vis-photos img{width:100%;height:100%;object-fit:cover;border-radius:14px;transition:transform .7s cubic-bezier(.2,.8,.2,1)}
+.case:hover .vis-photos img{transform:scale(1.03)}
+.float-k{position:absolute;right:16px;bottom:16px;z-index:2;background:var(--ink);color:#fff;font:400 34px/1 var(--f-display);letter-spacing:-.04em;padding:10px 14px;border-radius:16px}
+.case-link{font-size:14px;font-weight:500;color:var(--ink);text-decoration:none;border-bottom:1px solid var(--line)}
+.case-link:hover{border-color:var(--ink)}
+.gal-dark{background:var(--dark)}
+.gal-dark .gal-cap{color:var(--on-dark-2)}
+.gal.top img{object-position:50% 0}
+.gal.g4{grid-template-columns:repeat(4,minmax(0,1fr))}
+.gal.g5{grid-template-columns:repeat(5,minmax(0,1fr))}
+.gal.plain{background:var(--surface);border:1px solid var(--line)}
+.gal.plain .gal-cap{padding-top:6px}
+.gal.free{padding:10px}
+@media (max-width:700px){.gal.g4,.gal.g5{grid-template-columns:repeat(3,minmax(0,1fr))}}
+/* creations */
+.crea{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:22px;margin-top:22px}
+.vids{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+.vid{position:relative;border-radius:var(--r-md);overflow:hidden;aspect-ratio:9/16;max-width:100%;background:var(--dark)}
+.vid video{width:100%;height:100%;object-fit:cover;display:block}
+.vid .play{position:absolute;inset:0;display:grid;place-items:center;border:0;background:linear-gradient(180deg,rgba(0,0,0,0) 50%,rgba(0,0,0,.55));cursor:pointer;color:#fff}
+.vid .play span.b{width:60px;height:60px;border-radius:50%;background:rgba(255,255,255,.92);color:#111;display:grid;place-items:center;transition:transform .25s}
+.vid .play:hover span.b{transform:scale(1.08)}
+.vid .play span.b svg{width:20px;height:20px;margin-left:3px}
+.vid .vl{position:absolute;left:14px;right:14px;bottom:14px;text-align:left;font-size:13px;line-height:1.35}
+.vid .vl b{display:block;font-family:var(--f-title);font-weight:500;font-size:16px;letter-spacing:-.02em}
+.vid.playing .play{display:none}
+.crea-note{background:var(--surface);border:1px solid var(--line);border-radius:var(--r-md);padding:22px;display:flex;flex-direction:column;gap:12px}
+.crea-note h3{font-family:var(--f-title);font-weight:500;font-size:20px;letter-spacing:-.025em}
+.crea-note p{font-size:15px;color:var(--ink-2)}
+.crea-note ul{margin:0;padding-left:18px;color:var(--ink-2);font-size:15px;display:grid;gap:6px}
+@media (max-width:900px){.crea{grid-template-columns:minmax(0,1fr)}}
+/* platforms */
+.plats{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}
+.plat{background:var(--surface);border:1px solid var(--line);border-radius:var(--r-lg);padding:10px;display:flex;flex-direction:column;min-width:0;transition:transform .35s cubic-bezier(.2,.8,.2,1),box-shadow .35s}
+.plat:hover{transform:translateY(-4px);box-shadow:0 26px 50px -30px rgba(0,0,0,.4)}
+.shot{border-radius:18px;overflow:hidden;aspect-ratio:16/11;max-width:100%;background:var(--chip)}
+.shot img{width:100%;height:100%;object-fit:cover;object-position:top;transition:transform .8s cubic-bezier(.2,.8,.2,1)}
+.plat:hover .shot img{transform:scale(1.04)}
+.plat-b{padding:16px 10px 8px;display:flex;flex-direction:column;gap:8px;flex:1}
+.plat-b small{font-size:12px;color:var(--ink-3)}
+.plat-b h3{font-family:var(--f-title);font-weight:500;font-size:19px;letter-spacing:-.025em}
+.plat-b p{font-size:14px;color:var(--ink-2)}
+.plat-b .case-link{margin-top:auto;align-self:flex-start}
+@media (max-width:900px){.plats{grid-template-columns:minmax(0,1fr)}}
+.sub-t{font-family:var(--f-title);font-weight:500;font-size:18px;letter-spacing:-.02em;margin:34px 0 12px}
+
+
+/* ===== motion layer (after EMANI) ===== */
+html.lenis,html.lenis body{height:auto}
+.lenis.lenis-smooth{scroll-behavior:auto!important}
+.lenis.lenis-smooth [data-lenis-prevent]{overscroll-behavior:contain}
+.vis-photos.v3{grid-template-columns:repeat(3,1fr)}
+.vis-photos.v3 img{object-position:50% 30%}
+/* avatar stack */
+.stack{display:inline-flex;align-items:center}
+.stack img,.stack .badge-top{width:34px;height:34px;border-radius:50%;object-fit:cover;border:2px solid var(--bg);margin-left:-10px;box-shadow:0 2px 6px rgba(0,0,0,.12)}
+.stack img:first-child{margin-left:0}
+.proof-t{text-align:left}
+/* plus icon (two bars that rotate) */
+.plus{position:relative}
+.plus i{position:absolute;left:50%;top:50%;width:12px;height:2px;margin:-1px 0 0 -6px;background:currentColor;border-radius:2px;transition:transform .5s cubic-bezier(.34,1.56,.64,1)}
+.plus i+i{transform:rotate(90deg)}
+details[open] .plus i{transform:rotate(180deg)}
+details[open] .plus i+i{transform:rotate(180deg)}
+@media (prefers-reduced-motion:no-preference){details[open] .story,.qa details[open] p{animation:openIn .5s cubic-bezier(.2,.8,.2,1)}@keyframes openIn{from{opacity:0;transform:translateY(-8px);filter:blur(4px)}}}
+/* history deck */
+.hist{position:relative;gap:0}
+.hist .h-item{position:relative;margin-top:8px;transition:margin .6s cubic-bezier(.34,1.3,.64,1),transform .6s cubic-bezier(.34,1.3,.64,1),opacity .4s;box-shadow:0 8px 20px -16px rgba(0,0,0,.35)}
+.hist .h-item:first-child{margin-top:0;z-index:4}
+.hist .h-item:nth-child(2){z-index:3}.hist .h-item:nth-child(3){z-index:2}.hist .h-item:nth-child(4){z-index:1}
+.hist:not(.open) .h-item:nth-child(2){margin-top:-58px;transform:scale(.95)}
+.hist:not(.open) .h-item:nth-child(3){margin-top:-58px;transform:scale(.9)}
+.hist:not(.open) .h-item:nth-child(4){margin-top:-62px;transform:scale(.85);opacity:0}
+.hist:not(.open) .h-item:nth-child(n+2) *{visibility:hidden}
+/* tilt card */
+.tilt{transform:rotate(3deg);transition:transform .6s cubic-bezier(.34,1.56,.64,1)}
+.tilt:hover{transform:rotate(0) scale(1.02)}
+.tilt svg{transition:transform .8s cubic-bezier(.34,1.56,.64,1);transform:rotate(25deg)}
+.tilt:hover svg{transform:rotate(70deg) scale(1.1)}
+/* footer word cycle: blur cross-fade */
+.rot span{transition:opacity .7s cubic-bezier(.4,0,.2,1),filter .7s cubic-bezier(.4,0,.2,1),transform .7s cubic-bezier(.4,0,.2,1)}
+.rot span.out{transform:translateY(-.25em);opacity:0;filter:blur(5px)}
+.rot span.wait{transform:translateY(.25em);opacity:0;filter:blur(5px)}
+/* big wordmark */
+.mark-big{margin-top:56px;display:flex;justify-content:center;font-family:var(--f-display);font-weight:500;font-size:clamp(56px,15.6vw,200px);line-height:.82;letter-spacing:-.065em;color:var(--ink);overflow:hidden;padding-bottom:.06em;white-space:nowrap;user-select:none}
+.mark-big span{display:inline-block;transition:transform .9s cubic-bezier(.2,.9,.2,1),opacity .9s}
+.mark-big .sp{width:.22em}
+.mark-big.rv-pre span{transform:translateY(105%);opacity:0}
+/* floating contact pill */
+.float-cta{position:fixed;left:50%;bottom:calc(18px + env(safe-area-inset-bottom,0px));z-index:55;display:flex;align-items:center;gap:10px;background:var(--ink);color:#fff;text-decoration:none;border-radius:40px;padding:7px 18px 7px 7px;box-shadow:0 18px 40px -16px rgba(0,0,0,.55);transform:translate(-50%,120px);opacity:0;transition:transform .6s cubic-bezier(.34,1.3,.64,1),opacity .4s;filter:blur(0)}
+.float-cta.on{transform:translate(-50%,0);opacity:1}
+.float-cta img{width:34px;height:34px;border-radius:50%;object-fit:cover}
+.float-cta b{display:block;font-size:14px;font-weight:600;line-height:1.1}
+.float-cta small{font-size:12px;color:#b9b9b6}
+/* cursor pill */
+.cur{position:fixed;left:0;top:0;z-index:70;pointer-events:none;background:var(--ink);color:#fff;font:500 13px/1 var(--f-body);padding:11px 15px;border-radius:30px;transform:translate(-50%,-50%) scale(.4);opacity:0;transition:opacity .25s,transform .35s cubic-bezier(.34,1.56,.64,1);will-change:left,top}
+.cur.on{opacity:1;transform:translate(-50%,-50%) scale(1)}
+/* nav entrance */
+@media (prefers-reduced-motion:no-preference){
+  .nav-in{animation:navIn .8s cubic-bezier(.2,.9,.2,1) both}
+  .nav-links a{animation:fadeL .6s cubic-bezier(.4,0,.2,1) both}
+  .nav-links a:nth-child(1){animation-delay:.25s}.nav-links a:nth-child(2){animation-delay:.35s}.nav-links a:nth-child(3){animation-delay:.45s}.nav-links a:nth-child(4){animation-delay:.55s}.nav-links a:nth-child(5){animation-delay:.65s}
+  @keyframes navIn{from{transform:translateY(-30px);opacity:.001}}
+  @keyframes fadeL{from{transform:translateX(-8px);opacity:.001}}
+  /* hero: spring drop from above, as in the original */
+  .hero .rise{animation:drop 1s cubic-bezier(.22,1.25,.36,1) both}
+  .hero .status.rise{animation:fade .6s cubic-bezier(.4,0,.2,1) .4s both}
+  .hero .hl .row:nth-child(1){animation-delay:.6s}.hero .hl .row:nth-child(2){animation-delay:.7s}.hero .hl .row:nth-child(3),.hero .hl .row:nth-child(4){animation-delay:.8s}
+  .hero .lede.rise{animation:dropSoft 1s cubic-bezier(.22,1.25,.36,1) 1s both}
+  .hero .cta-row.rise{animation:fade .6s cubic-bezier(.4,0,.2,1) .4s both}
+  .hero .proof.rise{animation:none}
+  .stack>*{animation:stackIn .6s cubic-bezier(.34,1.3,.64,1) both}
+  .stack>*:nth-child(1){animation-delay:1.1s}.stack>*:nth-child(2){animation-delay:1.2s}.stack>*:nth-child(3){animation-delay:1.3s}.stack>*:nth-child(4){animation-delay:1.4s}.stack>*:nth-child(5){animation-delay:1.5s}
+  .proof-t{animation:fromR .7s cubic-bezier(.34,1.3,.64,1) 1.4s both}
+  .hero .pic,.hero .mini{transition:transform .5s cubic-bezier(.34,1.56,.64,1)}
+  .hero .pic:hover,.hero .mini:hover{transform:scale(1.18) rotate(-4deg)}
+  .ticker{animation:fade 1s ease 1.2s both}
+  @keyframes drop{from{transform:translateY(-30px);opacity:.001}}
+  @keyframes dropSoft{from{transform:translateY(-30px);opacity:.001}to{opacity:1}}
+  @keyframes fade{from{opacity:.001}}
+  @keyframes stackIn{from{transform:translateX(-14px);opacity:.001}}
+  @keyframes fromR{from{transform:translateX(20px);opacity:.001}}
+  /* scroll reveals (only applied to blocks that start below the fold) */
+  .w{display:inline-block;transition:opacity .7s cubic-bezier(.4,0,.2,1),filter .7s cubic-bezier(.4,0,.2,1),transform .7s cubic-bezier(.2,.9,.3,1);transition-delay:min(calc(var(--i,0)*28ms),.9s)}
+  [data-rv="words"].rv-pre .w{opacity:.001;filter:blur(5px);transform:translateY(10px)}
+  [data-rv="zoom"]{transition:transform .9s cubic-bezier(.2,.9,.2,1),opacity .6s}
+  [data-rv="zoom"].rv-pre{transform:translateY(160px) scale(.86);opacity:.001}
+  #app [data-rv="stagger"]>*{transition:transform .8s cubic-bezier(.34,1.25,.64,1),opacity .6s cubic-bezier(.4,0,.2,1),filter .6s;transition-delay:calc(var(--i,0)*90ms)}
+  [data-rv="stagger"].rv-pre>*{transform:translateY(-30px);opacity:.001}
+  .tools[data-rv].rv-pre>*{transform:translateX(calc(var(--i,0)*-5px - 5px));opacity:0}
+  .socials[data-rv].rv-pre>*{transform:translateX(calc(var(--i,0)*5px + 10px));opacity:0;filter:blur(13px)}
+  .sec-head p,.sec-head .eyebrow{transition:opacity .8s,transform .8s cubic-bezier(.2,.9,.3,1)}
+  .sec-head.rv-pre p,.sec-head.rv-pre .eyebrow{opacity:.001;transform:translateY(-14px)}
+  .ticker .track span{transition:color .3s}.ticker .track span:hover{color:var(--ink)}
+  .marquee:hover .track{animation-play-state:paused}
+  [data-fly]{will-change:transform}
+  #app .rv-done>*{transition-delay:0s}
+  .mark-big span{transition-delay:calc(var(--i,0)*45ms)}
+}
+
+/* ---------- expertise ---------- */
+.exp{display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);gap:56px;align-items:start}
+.tools-label{font-size:14px;color:var(--ink-3);margin:30px 0 14px}
+.tools{display:flex;flex-wrap:wrap;gap:10px}
+.tool{position:relative;width:58px;height:58px;border-radius:var(--r-sm);background:var(--surface);border:1px solid var(--line);display:grid;place-items:center;font:600 14px/1 var(--f-title);letter-spacing:-.02em;color:var(--ink);transition:transform .25s cubic-bezier(.2,.8,.2,1)}
+.tool:hover,.tool:focus-visible{transform:translateY(-4px) rotate(-3deg)}
+.tool .ab{font-weight:600}
+.tool .tl{display:none;width:30px;height:30px;object-fit:contain}
+.tool.has-logo .tl{display:block}.tool.has-logo .ab{display:none}
+.tool .tip{position:absolute;bottom:calc(100% + 8px);left:50%;transform:translate(-50%,4px);background:var(--ink);color:#fff;font:500 12px/1 var(--f-body);padding:7px 10px;border-radius:20px;white-space:nowrap;opacity:0;pointer-events:none;transition:opacity .2s,transform .2s}
+.tool:hover .tip,.tool:focus-visible .tip{opacity:1;transform:translate(-50%,0)}
+.skills{display:grid;gap:10px}
+.skill{display:grid;grid-template-columns:44px minmax(0,1fr);gap:16px;align-items:start;background:var(--surface);border:1px solid var(--line);border-radius:var(--r-md);padding:16px 18px;transition:border-color .2s}
+.skill:hover{border-color:rgba(18,18,18,.25)}
+.ico{width:44px;height:44px;border-radius:14px;background:var(--ink);color:#fff;display:grid;place-items:center}
+.ico svg{width:20px;height:20px}
+.skill h3{font-family:var(--f-title);font-weight:500;font-size:17px;letter-spacing:-.02em}
+.skill p{font-size:14px;color:var(--ink-2);margin-top:4px}
+.skill .ev{display:inline-block;margin-top:8px;font-size:12px;color:var(--ink-3)}
+@media (max-width:900px){.exp{grid-template-columns:minmax(0,1fr);gap:36px}}
+
+/* ---------- about ---------- */
+.about{display:grid;grid-template-columns:minmax(0,.85fr) minmax(0,1.15fr);gap:48px;align-items:start}
+.portrait{position:relative;border-radius:var(--r-lg);overflow:hidden;aspect-ratio:4/5;max-width:100%;background:var(--chip)}
+.portrait img{width:100%;height:100%;object-fit:cover}
+.socials{position:absolute;left:14px;bottom:14px;right:14px;display:flex;flex-wrap:wrap;gap:8px}
+.socials a{background:rgba(0,0,0,.5);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);color:#fff;text-decoration:none;font-size:13px;font-weight:500;padding:9px 13px;border-radius:32px;transition:background .2s}
+.socials a:hover{background:rgba(0,0,0,.75)}
+.who h3{font-family:var(--f-title);font-weight:500;font-size:24px;letter-spacing:-.03em}
+.who .role{color:var(--ink-3);margin-top:2px}
+.hist-t{font-size:14px;color:var(--ink-3);margin:26px 0 12px}
+.hist{display:grid;gap:8px}
+.h-item{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:14px;align-items:center;background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:15px 18px}
+.h-item b{font-family:var(--f-title);font-weight:500;letter-spacing:-.02em;display:block}
+.h-item span{font-size:14px;color:var(--ink-2)}
+.h-item time{font-size:13px;color:var(--ink-3);font-variant-numeric:tabular-nums;white-space:nowrap}
+.toggle{margin-top:10px;display:inline-flex;align-items:center;gap:10px;background:var(--surface);border:1px solid var(--line);border-radius:24px;padding:10px 12px 10px 16px;font:500 14px/1 var(--f-body);cursor:pointer;color:var(--ink)}
+.toggle svg{width:14px;height:14px;transition:transform .3s}
+.toggle[aria-expanded="true"] svg{transform:rotate(180deg)}
+.bio{margin-top:28px;display:grid;gap:14px;color:var(--ink-2);max-width:62ch}
+.bio b{color:var(--ink);font-weight:600}
+.traits{display:flex;flex-wrap:wrap;gap:8px;margin-top:22px}
+.trait{font-size:13px;font-weight:500;background:var(--chip);border-radius:20px;padding:8px 13px}
+@media (max-width:900px){.about{grid-template-columns:minmax(0,1fr)}.portrait{max-width:440px}}
+
+/* ---------- education ---------- */
+.edu{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}
+.deg{background:var(--surface);border:1px solid var(--line);border-radius:var(--r-md);padding:22px;display:flex;flex-direction:column;gap:10px;min-width:0}
+.deg time{font-size:13px;color:var(--ink-3);font-variant-numeric:tabular-nums}
+.deg h3{font-family:var(--f-title);font-weight:500;font-size:19px;letter-spacing:-.025em;line-height:1.25}
+.deg p{font-size:14px;color:var(--ink-2)}
+.deg .st{align-self:flex-start;margin-top:auto;font-size:12px;font-weight:500;padding:5px 10px;border-radius:12px;background:var(--chip)}
+.deg .st.live{background:#e5f6ea;color:#0d7a2c}
+.certs{display:grid;grid-template-columns:minmax(0,1.4fr) minmax(0,1fr);gap:14px;margin-top:14px}
+.cert-box{background:var(--surface);border:1px solid var(--line);border-radius:var(--r-md);padding:22px}
+.cert-box h3{font-size:14px;font-weight:500;color:var(--ink-3);font-family:var(--f-body);margin-bottom:14px}
+.cert-list{display:flex;flex-wrap:wrap;gap:8px}
+.cert{font-size:13px;border:1px solid var(--line);border-radius:12px;padding:8px 11px;color:var(--ink-2)}
+.cert b{color:var(--ink);font-weight:600}
+.award{background:var(--ink);color:#fff;border-radius:var(--r-md);padding:22px;display:flex;flex-direction:column;justify-content:space-between;gap:20px;position:relative;overflow:hidden}
+.award .big{font-family:var(--f-display);font-size:64px;line-height:.9;letter-spacing:-.05em}
+.award p{color:#bdbdba;font-size:14px}
+.award svg{position:absolute;right:-30px;top:-30px;width:170px;height:170px;opacity:.14}
+@media (max-width:900px){.edu{grid-template-columns:minmax(0,1fr)}.certs{grid-template-columns:minmax(0,1fr)}}
+
+/* ---------- method ---------- */
+.steps{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px}
+.step{background:var(--surface);border:1px solid var(--line);border-radius:var(--r-md);padding:22px;min-width:0;position:relative}
+.step .num{width:44px;height:44px;border-radius:50%;background:var(--chip);display:grid;place-items:center;font:600 15px/1 var(--f-title)}
+.step small{display:block;font-size:12px;color:var(--ink-3);margin-top:20px;letter-spacing:.04em;text-transform:uppercase}
+.step h3{font-family:var(--f-title);font-weight:500;font-size:19px;letter-spacing:-.025em;margin-top:4px}
+.step p{font-size:14px;color:var(--ink-2);margin-top:8px}
+@media (max-width:960px){.steps{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:520px){.steps{grid-template-columns:minmax(0,1fr)}}
+
+/* ---------- faq ---------- */
+.faq{display:grid;grid-template-columns:minmax(0,.8fr) minmax(0,1.2fr);gap:48px}
+.qa{display:grid;gap:10px}
+.qa details{background:var(--surface);border:1px solid var(--line);border-radius:var(--r-md);padding:4px 18px}
+.qa summary{list-style:none;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:16px;padding:16px 0;font-weight:500}
+.qa summary::-webkit-details-marker{display:none}
+.qa details p{padding:0 0 18px;color:var(--ink-2);font-size:15px;max-width:62ch}
+@media (max-width:900px){.faq{grid-template-columns:minmax(0,1fr);gap:28px}}
+
+/* ---------- contact ---------- */
+.cta{background:var(--dark);color:var(--on-dark);border-radius:var(--r-lg);padding:clamp(28px,5vw,56px);display:grid;grid-template-columns:minmax(0,1.2fr) minmax(0,1fr);gap:40px;align-items:center;overflow:hidden;position:relative}
+.cta h2{font-family:var(--f-display);font-weight:400;font-size:clamp(32px,4.6vw,56px);letter-spacing:-.05em;line-height:1.02}
+.cta h2 .muted{color:var(--on-dark-2)}
+.cta p{color:var(--on-dark-2);margin-top:16px;max-width:46ch}
+.cards-c{display:grid;gap:10px}
+.c-card{background:var(--dark-2);border:1px solid rgba(255,255,255,.08);border-radius:16px;padding:14px 16px;display:flex;justify-content:space-between;align-items:center;gap:12px;min-width:0}
+.c-card small{display:block;font-size:12px;color:var(--on-dark-2)}
+.c-card .v{font-weight:500;user-select:all;overflow-wrap:anywhere}
+.c-card button,.c-card a.go{flex:none;font:500 13px/1 var(--f-body);background:#fff;color:#111;border:0;border-radius:20px;padding:9px 13px;cursor:pointer;text-decoration:none}
+@media (max-width:860px){.cta{grid-template-columns:minmax(0,1fr)}}
+
+/* ---------- footer ---------- */
+.foot{padding-block:72px 40px}
+.foot-big{font-family:var(--f-display);font-weight:400;font-size:clamp(30px,5vw,60px);letter-spacing:-.05em;line-height:1.08}
+.rot{display:inline-grid;vertical-align:bottom;height:1.08em;overflow:hidden}
+.rot span{grid-area:1/1;transition:transform .6s cubic-bezier(.7,0,.2,1),opacity .6s;color:var(--ink)}
+.rot span.out{transform:translateY(-100%);opacity:0}
+.rot span.wait{transform:translateY(100%);opacity:0}
+.foot-big .muted{color:var(--ink-3)}
+.foot-row{display:flex;justify-content:space-between;flex-wrap:wrap;gap:16px;margin-top:48px;padding-top:22px;border-top:1px solid var(--line);font-size:14px;color:var(--ink-3)}
+.foot-row a{text-decoration:none}
+.foot-row a:hover{color:var(--ink)}
+.foot-links{display:flex;gap:18px;flex-wrap:wrap}
+
+/* scroll lift, from a visible resting state */
+@media (prefers-reduced-motion:no-preference){
+
+}
+@media (prefers-reduced-motion:reduce){*{animation-duration:.01ms!important;transition-duration:.01ms!important}}
+</style>
+
+<div id="app">
+
+<nav class="nav" aria-label="Navigation principale">
+  <div class="nav-in">
+    <a class="brand" href="#top">Fritz ENOLLA</a>
+    <div class="nav-links">
+      <a href="#work"><span data-l="fr">Réalisations</span><span data-l="en">Work</span></a>
+      <a href="#creations"><span data-l="fr">Créations</span><span data-l="en">Creative</span></a>
+      <a href="#expertise"><span data-l="fr">Expertises</span><span data-l="en">Expertise</span></a>
+      <a href="#about"><span data-l="fr">Parcours</span><span data-l="en">Background</span></a>
+      <a href="#faq">FAQ</a>
+    </div>
+    <div class="lang" role="group" aria-label="Langue / Language">
+      <button type="button" id="lang-fr" aria-pressed="true">FR</button>
+      <button type="button" id="lang-en" aria-pressed="false">EN</button>
+    </div>
+    <a class="btn btn-sm" href="#contact">Contact</a>
+  </div>
+</nav>
+
+<header class="hero wrap" id="top">
+  <div class="status rise d1"><span class="pulse"><i></i><i></i></span>
+    <span data-l="fr">Ouvert aux opportunités · Douala &amp; remote</span><span data-l="en">Open to opportunities · Douala &amp; remote</span>
+  </div>
+
+  <h1 class="hl">
+    <span class="row rise d2"><span data-l="fr">Hello, je suis</span><span data-l="en">Hello, I'm</span>
+      <img class="pic pic-face" src="assets/face.jpg" alt="Portrait de Fritz ENOLLA" width="200" height="200">
+      <span>Fritz ENOLLA,</span></span>
+    <span class="row rise d3"><span class="muted"><span data-l="fr">Marketing, Com &amp; Tech</span><span data-l="en">Marketing, Comms &amp; Tech</span></span>
+      <span aria-hidden="true"><img class="pic pic-t1" src="assets/lumina-ad.jpg" alt="" width="900" height="900"><img class="pic pic-t2" src="assets/flyer-majoie.jpg" alt="" width="900" height="1262"></span></span>
+    <span class="row rise d4"><span data-l="fr">qui transforme la stratégie</span><span data-l="en">turning strategy</span></span>
+    <span class="row rise d5"><span class="mini mini-c" aria-hidden="true"><svg viewBox="0 0 60 34"><path d="M6 26 C16 24 20 18 28 18 S40 10 54 7" fill="none" stroke="#121212" stroke-width="2.6" stroke-linecap="round"/><circle cx="54" cy="7" r="3.4" fill="#12b33f"/></svg></span>
+      <span data-l="fr">en croissance mesurable.</span><span data-l="en">into measurable growth.</span></span>
+  </h1>
+
+  <p class="lede rise d5">
+    <span data-l="fr">Ingénieur informatique de formation, diplômé de l'ESSEC Douala, je conçois et pilote des campagnes de bout en bout : terrain, digital, influence et développement commercial. Chaque action a son objectif, son budget et son indicateur.</span>
+    <span data-l="en">An IT engineer by training with a master's from ESSEC Douala, I design and run campaigns end to end: field activations, digital, influencer marketing and business development. Every action has a goal, a budget and a metric.</span>
+  </p>
+
+  <div class="cta-row rise d6">
+    <a class="btn btn-dark" href="#contact"><img class="av" src="assets/face.jpg" alt="" width="34" height="34"><span data-l="fr">Me contacter</span><span data-l="en">Get in touch</span></a>
+    <a class="btn btn-light" href="#work"><span data-l="fr">Voir les réalisations</span><span data-l="en">See my work</span></a>
+  </div>
+
+  <div class="proof rise d6"><span class="stack" aria-hidden="true"><img src="assets/lumina-ad.jpg" alt=""><img src="assets/flyer-majoie.jpg" alt=""><img src="assets/saba2.jpg" alt=""><img src="assets/mboa1.jpg" alt=""><span class="badge-top">3</span></span><span class="proof-t">
+    <span data-l="fr"><b>Top 3 Growth Marketing &amp; Lead Generation</b> · classement Favikon</span>
+    <span data-l="en"><b>Top 3 in Growth Marketing &amp; Lead Generation</b> · Favikon ranking</span></span>
+  </div>
+</header>
+
+<section class="ticker" aria-label="Organisations">
+  <p class="ticker-label"><span data-l="fr">Marques, entreprises et écoles de mon parcours</span><span data-l="en">Brands, companies and schools I have worked with or studied at</span></p>
+  <div class="marquee"><div class="track">
+    <span>Nemalia</span><span><em>Lumina</em> Africa</span><span>Vision Pub</span><span>Majoie Foods</span><span><em>Maison</em> Éclat</span><span>Hublots</span><span>Boost Performers</span><span>ESSEC Douala</span><span>IAI-Cameroun</span><span>Saylor Academy</span>
+    <span aria-hidden="true">Nemalia</span><span aria-hidden="true"><em>Lumina</em> Africa</span><span aria-hidden="true">Vision Pub</span><span aria-hidden="true">Majoie Foods</span><span aria-hidden="true"><em>Maison</em> Éclat</span><span aria-hidden="true">Hublots</span><span aria-hidden="true">Boost Performers</span><span aria-hidden="true">ESSEC Douala</span><span aria-hidden="true">IAI-Cameroun</span><span aria-hidden="true">Saylor Academy</span>
+  </div></div>
+</section>
+
+<section class="band" aria-labelledby="proof-t">
+  <div class="wrap">
+    <span class="eyebrow"><span data-l="fr">En chiffres</span><span data-l="en">By the numbers</span></span>
+    <h2 data-rv="words" class="h2" id="proof-t"><span data-l="fr">Des résultats mesurés, <span class="muted">pas des intentions.</span></span><span data-l="en">Measured results, <span class="muted">not intentions.</span></span></h2>
+    <div class="stats" data-rv="stagger">
+      <div class="stat lift"><div class="n">+<span class="count" data-to="40">40</span><small> %</small></div>
+        <p class="t"><span data-l="fr"><b>de leads qualifiés</b> via Meta, LinkedIn et Google Ads chez Lumina Africa</span><span data-l="en"><b>more qualified leads</b> from Meta, LinkedIn and Google Ads at Lumina Africa</span></p></div>
+      <div class="stat lift"><div class="n"><span class="count" data-to="3870">3870</span></div>
+        <p class="t"><span data-l="fr"><b>gummies distribuées</b> en 9 jours de terrain, dans 11 quartiers de Douala</span><span data-l="en"><b>gummies handed out</b> over 9 field days across 11 Douala districts</span></p></div>
+      <div class="stat lift"><div class="n"><span class="count" data-to="10000">10000</span><small>+</small></div>
+        <p class="t"><span data-l="fr"><b>clientes</b> pour la marque Nemalia, que je pilote en marketing et en vente</span><span data-l="en"><b>customers</b> for Nemalia, the brand whose marketing and sales I lead</span></p></div>
+      <div class="stat lift"><div class="n"><span class="count" data-to="6">6</span><small>+ <span data-l="fr">ans</span><span data-l="en">yrs</span></small></div>
+        <p class="t"><span data-l="fr"><b>d'expérience</b> entre direction marketing, agence et développement B2B</span><span data-l="en"><b>of experience</b> across marketing leadership, agency work and B2B growth</span></p></div>
+    </div>
+    <div class="band-foot">
+      <span class="tag-d"><span data-l="fr">20+ prospects B2B qualifiés (Vision Pub)</span><span data-l="en">20+ qualified B2B prospects (Vision Pub)</span></span>
+      <span class="tag-d"><span data-l="fr">5+ événements partenaires organisés</span><span data-l="en">5+ partner events organised</span></span>
+      <span class="tag-d"><span data-l="fr">3 canaux paid media pilotés en ROI</span><span data-l="en">3 paid media channels run on ROI</span></span>
+    </div>
+  </div>
+</section>
+
+<section class="sec wrap" id="work" aria-labelledby="work-t">
+  <div class="sec-head">
+    <div>
+      <span class="eyebrow"><span data-l="fr">Réalisations</span><span data-l="en">Selected work</span></span>
+      <h2 data-rv="words" class="h2" id="work-t"><span data-l="fr">Campagnes pensées, pilotées <span class="muted">et mesurées.</span></span><span data-l="en">Campaigns designed, run <span class="muted">and measured.</span></span></h2>
+    </div>
+    <p><span data-l="fr">Chaque étude de cas suit la même logique : le contexte, ce que j'ai fait, le résultat et ce que j'en retiens.</span><span data-l="en">Each case study follows the same logic: the context, what I did, the result and what I learned.</span></p>
+  </div>
+
+  <div class="filters" role="group" aria-label="Filtrer">
+    <button type="button" data-f="all" aria-pressed="true"><span data-l="fr">Tout</span><span data-l="en">All</span></button>
+    <button type="button" data-f="terrain" aria-pressed="false"><span data-l="fr">Terrain</span><span data-l="en">Field</span></button>
+    <button type="button" data-f="digital" aria-pressed="false">Digital</button>
+    <button type="button" data-f="influence" aria-pressed="false">Influence</button>
+    <button type="button" data-f="event" aria-pressed="false"><span data-l="fr">Événementiel</span><span data-l="en">Events</span></button>
+    <button type="button" data-f="tech" aria-pressed="false"><span data-l="fr">Tech &amp; outils</span><span data-l="en">Tech &amp; tools</span></button>
+    <button type="button" data-f="b2b" aria-pressed="false"><span data-l="fr">Agence &amp; B2B</span><span data-l="en">Agency &amp; B2B</span></button>
+  </div>
+
+  <div class="grid-work" data-rv="zoom">
+
+    <!-- Mboa Glow -->
+    <article data-cursor class="case case-wide lift" data-cat="terrain">
+      <div class="gal" style="background:var(--rose)">
+        <span class="chip-k"><span data-l="fr">Campagne terrain · Octobre Rose</span><span data-l="en">Field campaign · Pink October</span></span>
+        <button type="button" aria-label="Agrandir"><img src="assets/mboa1.jpg" alt="Foule rassemblée autour du stand Mboa Glow à Douala" loading="lazy"></button><button type="button" aria-label="Agrandir"><img src="assets/mboa2.jpg" alt="Démonstration des gummies Collagène et Vitamine C au stand" loading="lazy"></button><button type="button" aria-label="Agrandir"><img src="assets/mboa3.jpg" alt="Échange entre une ambassadrice Nemalia et des passantes" loading="lazy"></button><button type="button" aria-label="Agrandir"><img src="assets/mboa4.jpg" alt="Fritz ENOLLA sur le terrain, en tenue Mboa Glow" loading="lazy"></button><button type="button" aria-label="Agrandir"><img src="assets/mboa5.jpg" alt="Fritz ENOLLA briefant l'équipe pendant une sortie" loading="lazy"></button><button type="button" aria-label="Agrandir"><img src="assets/mboa6.jpg" alt="Passants attroupés devant le stand Nemalia" loading="lazy"></button>
+        <p class="gal-cap" style="color:var(--rose-ink)"><span data-l="fr">Stand, équipe en rose et rencontres dans les quartiers de Douala.</span><span data-l="en">The stand, the team in pink and street encounters across Douala.</span></p>
+      </div>
+      <div class="case-body">
+        <div class="case-top"><h3>Mboa Glow</h3><span class="meta">Nemalia · <span data-l="fr">oct. 2026</span><span data-l="en">Oct 2026</span></span></div>
+        <p class="sum"><span data-l="fr">La toute première campagne terrain de la marque, que j'ai conçue, nommée et pilotée. Une seule action pour quatre objectifs : sensibiliser au dépistage du cancer du sein, faire découvrir les produits, vendre sur place et produire du contenu.</span><span data-l="en">The brand's first-ever field campaign, which I designed, named and led. One action with four goals: raise breast cancer screening awareness, introduce the products, sell on the spot and create content.</span></p>
+        <div class="kpis"><span class="kpi"><b>3 870</b>gummies</span><span class="kpi"><b>11</b><span data-l="fr">quartiers</span><span data-l="en">districts</span></span><span class="kpi"><b>8/12</b><span data-l="fr">zones</span><span data-l="en">zones</span></span><span class="kpi"><b>9</b><span data-l="fr">jours</span><span data-l="en">days</span></span></div>
+        <details class="more"><summary><span data-l="fr">Lire l'étude de cas</span><span data-l="en">Read the case study</span><span class="plus" aria-hidden="true"><i></i><i></i></span></summary>
+          <div class="story">
+            <div><span class="k"><span data-l="fr">Contexte</span><span data-l="en">Context</span></span><p><span data-l="fr">Octobre Rose, une marque de soins naturels sans présence terrain, et un objectif de notoriété autant que de ventes.</span><span data-l="en">Pink October, a natural skincare brand with no field presence yet, and a goal of awareness as much as sales.</span></p></div>
+            <div><span class="k"><span data-l="fr">Ce que j'ai fait</span><span data-l="en">What I did</span></span><p><span data-l="fr">Parcours de 12 zones, mécanique simple (une question, une bonne réponse, des gummies à gagner), équipe briefée, un indicateur par objectif, captation vidéo et aftermovie.</span><span data-l="en">A 12-zone route, a simple mechanic (one question, one right answer, gummies to win), a briefed team, one metric per goal, video capture and an aftermovie.</span></p></div>
+            <div><span class="k"><span data-l="fr">Résultat</span><span data-l="en">Result</span></span><p><span data-l="fr">3 870 gummies distribuées sur 3 996 prévues, 11 quartiers touchés, 8 zones sur 12 couvertes en 9 jours.</span><span data-l="en">3,870 of 3,996 planned gummies handed out, 11 districts reached, 8 of 12 zones covered in 9 days.</span></p></div>
+            <div><span class="k"><span data-l="fr">Ce que j'en retiens</span><span data-l="en">What I learned</span></span><p><span data-l="fr">Le stock s'est épuisé avant la fin du parcours et certains coûts n'étaient pas budgétés. La 2ᵉ édition prévoit environ 5 200 boîtes et un code promo par quartier dès le premier jour.</span><span data-l="en">Stock ran out before the route ended and some costs were not budgeted. Edition two plans about 5,200 boxes and one promo code per district from day one.</span></p></div>
+          </div>
+        </details>
+      </div>
+    </article>
+
+    <!-- Lumina -->
+    <article data-cursor class="case lift" data-cat="digital">
+      <div class="vis vis-photos">
+        <span class="chip-k"><span data-l="fr">Acquisition digitale</span><span data-l="en">Digital acquisition</span></span>
+        <img src="assets/lumina-ad.jpg" alt="Publicité Lumina Africa pour l'application de réservation" width="900" height="900" loading="lazy">
+        <img src="assets/lumina-app.jpg" alt="Visuel de campagne Lumina Africa Découvrez sans chercher" width="900" height="900" loading="lazy">
+        <span class="float-k">+40 %</span>
+      </div>
+      <div class="case-body">
+        <div class="case-top"><h3>Lumina Africa</h3><span class="meta"><span data-l="fr">Plateforme corporate panafricaine · 2025–2026</span><span data-l="en">Pan-African corporate platform · 2025–2026</span></span></div>
+        <p class="sum"><span data-l="fr">Responsable marketing et communication : de la conception des offres au lancement des campagnes, avec un seul tableau de pilotage KPI et ROI pour trois canaux payants.</span><span data-l="en">Head of marketing and communications: from shaping the offers to launching campaigns, with one KPI and ROI dashboard across three paid channels.</span></p>
+        <a class="case-link" href="https://luminafrica.online" target="_blank" rel="noopener">luminafrica.online ↗</a>
+        <div class="kpis"><span class="kpi"><b>+40 %</b><span data-l="fr">leads qualifiés</span><span data-l="en">qualified leads</span></span><span class="kpi"><b>3</b><span data-l="fr">canaux paid media</span><span data-l="en">paid channels</span></span><span class="kpi"><b>Go-to-market</b></span></div>
+        <details class="more"><summary><span data-l="fr">Lire l'étude de cas</span><span data-l="en">Read the case study</span><span class="plus" aria-hidden="true"><i></i><i></i></span></summary>
+          <div class="story">
+            <div><span class="k"><span data-l="fr">Contexte</span><span data-l="en">Context</span></span><p><span data-l="fr">Une plateforme B2B qui devait générer des contacts qualifiés, pas seulement de la visibilité.</span><span data-l="en">A B2B platform that needed qualified leads, not just visibility.</span></p></div>
+            <div><span class="k"><span data-l="fr">Ce que j'ai fait</span><span data-l="en">What I did</span></span><p><span data-l="fr">Cycle de vie des offres, campagnes Facebook Ads, LinkedIn Ads et Google Ads, veille concurrentielle et encadrement d'une équipe marketing orientée résultats.</span><span data-l="en">Offer lifecycle, Facebook, LinkedIn and Google Ads campaigns, competitive benchmarking and leading a results-driven marketing team.</span></p></div>
+            <div><span class="k"><span data-l="fr">Résultat</span><span data-l="en">Result</span></span><p><span data-l="fr">+40 % de leads qualifiés, avec des budgets réalloués chaque semaine selon le coût par contact.</span><span data-l="en">+40% qualified leads, with budgets reallocated weekly based on cost per lead.</span></p></div>
+          </div>
+        </details>
+      </div>
+    </article>
+
+    <!-- SABA -->
+    <article data-cursor class="case lift" data-cat="event">
+      <div class="vis vis-photos v3" style="background:var(--sage)">
+        <span class="chip-k"><span data-l="fr">Salon · Événementiel</span><span data-l="en">Trade show · Events</span></span>
+        <img src="assets/saba1.jpg" alt="Fritz ENOLLA devant le mur de partenaires du Salon de la Beauté Africaine" width="720" height="960" loading="lazy">
+        <img src="assets/saba2.jpg" alt="Le stand Nemalia au Salon de la Beauté Africaine, Castel Hall" width="720" height="960" loading="lazy">
+        <img src="assets/saba3.jpg" alt="Visiteuses au stand Nemalia pendant le salon" width="720" height="960" loading="lazy">
+      </div>
+      <div class="case-body">
+        <div class="case-top"><h3>SABA 2026</h3><span class="meta"><span data-l="fr">Salon de la Beauté Africaine · Douala</span><span data-l="en">African Beauty Fair · Douala</span></span></div>
+        <p class="sum"><span data-l="fr">4ᵉ édition, au Castel Hall de Douala. Présence de Nemalia parmi près d'une centaine de marques : brief créatif du visuel d'annonce, coordination du graphiste, animation du stand et deux jours d'observation des consommatrices et de l'offre locale.</span><span data-l="en">4th edition, at Castel Hall in Douala. Nemalia's presence among nearly a hundred brands: creative brief for the announcement visual, designer coordination, running the stand and two days observing shoppers and the local offer.</span></p>
+        <div class="kpis"><span class="kpi"><b>~100</b><span data-l="fr">marques</span><span data-l="en">brands</span></span><span class="kpi"><b>2</b><span data-l="fr">jours</span><span data-l="en">days</span></span><span class="kpi"><b>Brief</b><span data-l="fr">créatif</span><span data-l="en">creative</span></span></div>
+        <details class="more"><summary><span data-l="fr">Lire l'étude de cas</span><span data-l="en">Read the case study</span><span class="plus" aria-hidden="true"><i></i><i></i></span></summary>
+          <div class="story">
+            <div><span class="k"><span data-l="fr">Ce que j'ai fait</span><span data-l="en">What I did</span></span><p><span data-l="fr">Un brief d'une page associant la charte de la marque et l'univers du salon, deux pistes créatives et un planning tenu pour une annonce trois jours avant l'événement.</span><span data-l="en">A one-page brief blending the brand guidelines with the fair's look, two creative routes and a schedule met for an announcement three days ahead.</span></p></div>
+            <div><span class="k"><span data-l="fr">Ce que j'en retiens</span><span data-l="en">What I learned</span></span><p><span data-l="fr">Sur un stand, on voit ce qu'aucun tableau de bord ne montre : le produit qu'on repose, la question sur la composition, l'hésitation devant le prix.</span><span data-l="en">A stand shows what no dashboard does: the product put back down, the question about ingredients, the hesitation at the price.</span></p></div>
+          </div>
+        </details>
+      </div>
+    </article>
+
+    <!-- Influence -->
+    <article data-cursor class="case case-wide lift" data-cat="influence">
+      <div class="gal">
+        <span class="chip-k"><span data-l="fr">Marketing d'influence · 2027</span><span data-l="en">Influencer marketing · 2027</span></span>
+        <button type="button" data-i="0" aria-label="Agrandir la photo 1"><img src="assets/inf1.jpg" alt="Fritz ENOLLA avec une créatrice de contenu en boutique Nemalia" width="600" height="800"></button><button type="button" data-i="1" aria-label="Agrandir la photo 2"><img src="assets/inf2.jpg" alt="Fritz ENOLLA avec une créatrice de contenu à l'accueil Nemalia" width="600" height="800"></button><button type="button" data-i="2" aria-label="Agrandir la photo 3"><img src="assets/inf3.jpg" alt="Fritz ENOLLA avec un créateur de contenu devant les produits Nemalia" width="600" height="800"></button><button type="button" data-i="3" aria-label="Agrandir la photo 4"><img src="assets/inf4.jpg" alt="Fritz ENOLLA avec un créateur de contenu en rendez-vous" width="600" height="800"></button><button type="button" data-i="4" aria-label="Agrandir la photo 5"><img src="assets/inf5.jpg" alt="Fritz ENOLLA avec une créatrice de contenu en rendez-vous" width="600" height="800"></button><button type="button" data-i="5" aria-label="Agrandir la photo 6"><img src="assets/inf6.jpg" alt="Fritz ENOLLA avec une créatrice de contenu dans l'espace spa Nemalia" width="600" height="800"></button>
+        <p class="gal-cap"><span data-l="fr">Rencontres avec des créatrices et créateurs de contenu camerounais, en boutique et en rendez-vous.</span><span data-l="en">Meetings with Cameroonian content creators, in store and in meetings.</span></p>
+      </div>
+      <div class="case-body">
+        <div class="case-top"><h3><span data-l="fr">Programme d'influence</span><span data-l="en">Influencer programme</span></h3><span class="meta">Nemalia · <span data-l="fr">en cours</span><span data-l="en">ongoing</span></span></div>
+        <p class="sum"><span data-l="fr">Je construis le marketing d'influence comme l'un des leviers des objectifs commerciaux 2027 : repérage et rencontres avec des créateurs locaux, sélection par audience et par valeurs, contrats, calendrier de publication et rémunération liée aux résultats.</span><span data-l="en">I am building influencer marketing as one of the levers for 2027 sales goals: scouting and meeting local creators, selecting them by audience and values, contracts, a posting calendar and pay linked to results.</span></p>
+        <div class="kpis"><span class="kpi"><b>1</b><span data-l="fr">KPI vérifiable</span><span data-l="en">verifiable KPI</span></span><span class="kpi"><b><span data-l="fr">Fixe + prime</span><span data-l="en">Fixed + bonus</span></b></span><span class="kpi"><b><span data-l="fr">Code dédié</span><span data-l="en">Dedicated code</span></b></span><span class="kpi"><b>6+</b><span data-l="fr">créateurs rencontrés</span><span data-l="en">creators met</span></span></div>
+        <details class="more"><summary><span data-l="fr">Lire l'étude de cas</span><span data-l="en">Read the case study</span><span class="plus" aria-hidden="true"><i></i><i></i></span></summary>
+          <div class="story">
+            <div><span class="k"><span data-l="fr">Principe</span><span data-l="en">Principle</span></span><p><span data-l="fr">L'audience compte plus que le nombre d'abonnés, et un créateur doit partager l'engagement de la marque contre la dépigmentation pour porter son message de façon crédible.</span><span data-l="en">Audience matters more than follower count, and a creator must share the brand's stand against skin bleaching to carry its message credibly.</span></p></div>
+            <div><span class="k"><span data-l="fr">Ce que j'ai fait</span><span data-l="en">What I did</span></span><p><span data-l="fr">Rencontres en boutique pour faire découvrir la marque, négociation d'une rémunération fixe avec prime à l'objectif, paiement échelonné, suppression des commissions sur codes promo, et un seul KPI : le chiffre d'affaires réalisé avec le code du créateur.</span><span data-l="en">In-store meetings to introduce the brand, a negotiated fixed fee with a target bonus, staged payments, no promo-code commission, and a single KPI: revenue generated with the creator's code.</span></p></div>
+            <div><span class="k"><span data-l="fr">Préparation</span><span data-l="en">Groundwork</span></span><p><span data-l="fr">Pack découverte de soins corps, examen de peau avant tout soin visage, et vérification des stocks des produits phares avant le lancement.</span><span data-l="en">A body-care discovery pack, a skin assessment before any face product, and stock checks on hero products before launch.</span></p></div>
+          </div>
+        </details>
+      </div>
+    </article>
+
+    <!-- Tech -->
+    <article data-cursor class="case case-wide lift" data-cat="tech">
+      <div class="vis" style="background:#ececea">
+        <span class="chip-k"><span data-l="fr">Outils · Data</span><span data-l="en">Tools · Data</span></span>
+        <svg viewBox="0 0 400 250" aria-hidden="true">
+          <rect x="40" y="34" width="320" height="190" rx="16" fill="#fff" stroke="#dcdcda"/>
+          <rect x="40" y="34" width="320" height="30" rx="16" fill="#f4f4f2"/><circle cx="58" cy="49" r="4" fill="#d6d6d3"/><circle cx="72" cy="49" r="4" fill="#d6d6d3"/><circle cx="86" cy="49" r="4" fill="#d6d6d3"/>
+          <rect x="58" y="80" width="88" height="46" rx="10" fill="#f4f4f2"/><rect x="156" y="80" width="88" height="46" rx="10" fill="#f4f4f2"/><rect x="254" y="80" width="88" height="46" rx="10" fill="#121212"/>
+          <rect x="68" y="92" width="40" height="6" rx="3" fill="#bdbdba"/><rect x="68" y="106" width="56" height="9" rx="4" fill="#121212"/>
+          <rect x="166" y="92" width="40" height="6" rx="3" fill="#bdbdba"/><rect x="166" y="106" width="48" height="9" rx="4" fill="#121212"/>
+          <rect x="264" y="92" width="40" height="6" rx="3" fill="#6b6b68"/><rect x="264" y="106" width="60" height="9" rx="4" fill="#fff"/>
+          <path d="M60 196 L100 180 L140 186 L180 160 L220 166 L260 146 L300 150 L340 132" fill="none" stroke="#121212" stroke-width="2.4" stroke-linecap="round"/>
+          <path d="M60 196 L100 180 L140 186 L180 160 L220 166 L260 146 L300 150 L340 132 L340 206 L60 206Z" fill="rgba(18,18,18,.05)"/>
+          <rect x="240" y="168" width="104" height="24" rx="12" fill="#fde7e7"/><text x="292" y="184" text-anchor="middle" font-family="Inter, sans-serif" font-size="11" font-weight="600" fill="#b42318">Rupture J-6</text>
+        </svg>
+      </div>
+      <div class="case-body">
+        <div class="case-top"><h3><span data-l="fr">Outils de pilotage commercial</span><span data-l="en">Sales management tools</span></h3><span class="meta">Nemalia · 2026</span></div>
+        <p class="sum"><span data-l="fr">Mon double profil d'ingénieur et de marketeur en pratique : un CRM omnicanal sur mesure, un système de gestion des ventes et une consultation dermo-conseil en ligne.</span><span data-l="en">My engineer-and-marketer profile in practice: a custom omnichannel CRM, a sales management system and an online skin consultation service.</span></p>
+        <div class="kpis"><span class="kpi"><b>CRM</b><span data-l="fr">omnicanal</span><span data-l="en">omnichannel</span></span><span class="kpi"><b><span data-l="fr">Ventes</span><span data-l="en">Sales</span></b><span data-l="fr">stock · clientes</span><span data-l="en">stock · customers</span></span><span class="kpi"><b><span data-l="fr">Alertes</span><span data-l="en">Alerts</span></b><span data-l="fr">de rupture</span><span data-l="en">for stock-outs</span></span></div>
+        <details class="more"><summary><span data-l="fr">Lire l'étude de cas</span><span data-l="en">Read the case study</span><span class="plus" aria-hidden="true"><i></i><i></i></span></summary>
+          <div class="story">
+            <div><span class="k"><span data-l="fr">Problème</span><span data-l="en">Problem</span></span><p><span data-l="fr">Le suivi des ventes passait par des messages et des carnets : des jours sans données, des écarts de saisie, des rapports qui prenaient une soirée.</span><span data-l="en">Sales tracking relied on messages and notebooks: days with no data, entry gaps, and reports that took an evening.</span></p></div>
+            <div><span class="k"><span data-l="fr">Ce que j'ai fait</span><span data-l="en">What I did</span></span><p><span data-l="fr">Un outil qui enregistre chaque vente avec la cliente et son quartier, suit le stock, calcule le chiffre d'affaires, prévoit les ruptures et donne un accès en lecture seule à une partenaire revendeuse.</span><span data-l="en">A tool that logs each sale with the customer and district, tracks stock, computes revenue, forecasts stock-outs and gives a reseller partner read-only access.</span></p></div>
+            <div><span class="k"><span data-l="fr">Résultat</span><span data-l="en">Result</span></span><p><span data-l="fr">Des décisions prises sur des chiffres du jour, et des rapports produits en quelques minutes.</span><span data-l="en">Decisions made on same-day numbers, and reports produced in minutes.</span></p></div>
+          </div>
+        </details>
+      </div>
+    </article>
+
+    <!-- Vision Pub -->
+    <article data-cursor class="case case-wide lift" data-cat="b2b">
+      <div class="gal gal-dark">
+        <span class="chip-k"><span data-l="fr">Agence · Cofondateur</span><span data-l="en">Agency · Co-founder</span></span>
+        <button type="button" aria-label="Agrandir"><img src="assets/vp-sign4.jpg" alt="Signature d'un contrat client Vision Pub" loading="lazy"></button><button type="button" aria-label="Agrandir"><img src="assets/flyer-majoie.jpg" alt="Flyer menu Mood Fest pour Majoie Foods" loading="lazy"></button><button type="button" aria-label="Agrandir"><img src="assets/vp-team.jpg" alt="Équipe et partenaires réunis lors d'une mission Vision Pub" loading="lazy"></button><button type="button" aria-label="Agrandir"><img src="assets/flyer-eclat.jpg" alt="Flyer services à domicile pour Maison Éclat" loading="lazy"></button><button type="button" aria-label="Agrandir"><img src="assets/vp-terrain1.jpg" alt="Finalisation de dossier avant signature" loading="lazy"></button><button type="button" aria-label="Agrandir"><img src="assets/flyer-semaine.jpg" alt="Visuel hebdomadaire Vision Pub pour les réseaux sociaux" loading="lazy"></button>
+        <p class="gal-cap"><span data-l="fr">Signatures de contrats, coordination d'équipe et supports produits pour les clients de l'agence.</span><span data-l="en">Contract signings, team coordination and assets produced for agency clients.</span></p>
+      </div>
+      <div class="case-body">
+        <div class="case-top"><h3>Vision Pub</h3><span class="meta"><span data-l="fr">Agence marketing &amp; communication · 2022–2025</span><span data-l="en">Marketing &amp; comms agency · 2022–2025</span></span></div>
+        <p class="sum"><span data-l="fr">Agence que j'ai cofondée : direction de campagnes 360 et digitales pour Nemalia, Majoie Foods ou Maison Éclat, développement commercial, négociation et signature des contrats.</span><span data-l="en">An agency I co-founded: leading 360 and digital campaigns for clients like Nemalia, Majoie Foods and Maison Éclat, plus business development, negotiation and contract signing.</span></p>
+        <div class="kpis"><span class="kpi"><b>20+</b><span data-l="fr">prospects B2B qualifiés</span><span data-l="en">qualified B2B prospects</span></span><span class="kpi"><b>5+</b><span data-l="fr">événements partenaires</span><span data-l="en">partner events</span></span><span class="kpi"><b>5</b><span data-l="fr">secteurs</span><span data-l="en">sectors</span></span></div>
+        <details class="more"><summary><span data-l="fr">Lire l'étude de cas</span><span data-l="en">Read the case study</span><span class="plus" aria-hidden="true"><i></i><i></i></span></summary>
+          <div class="story">
+            <div><span class="k"><span data-l="fr">Ce que j'ai fait</span><span data-l="en">What I did</span></span><p><span data-l="fr">Stratégie, production et suivi de campagnes pour des clients de cinq secteurs (cosmétique, BTP, finance, restauration, services), offres sur mesure pour des entreprises et des TPE, rendez-vous de closing et encadrement d'équipes pluridisciplinaires.</span><span data-l="en">Strategy, production and tracking of campaigns for clients in five sectors (beauty, construction, finance, food, services), tailored offers for companies and small businesses, closing meetings and leading multidisciplinary teams.</span></p></div>
+            <div><span class="k"><span data-l="fr">Ce que j'en retiens</span><span data-l="en">What I learned</span></span><p><span data-l="fr">Être entrepreneur m'a appris à vendre ce que je recommande, à tenir un budget et à rendre des comptes sur les résultats.</span><span data-l="en">Running a business taught me to sell what I recommend, keep to a budget and be accountable for results.</span></p></div>
+          </div>
+        </details>
+      </div>
+    </article>
+
+  </div>
+</section>
+
+
+<section class="sec wrap" id="creations" aria-labelledby="cr-t" style="padding-top:24px">
+  <div class="sec-head"><div>
+    <span class="eyebrow"><span data-l="fr">Créations &amp; contenus</span><span data-l="en">Creative &amp; content</span></span>
+    <h2 data-rv="words" class="h2" id="cr-t"><span data-l="fr">Je produis aussi <span class="muted">ce que je recommande.</span></span><span data-l="en">I also produce <span class="muted">what I recommend.</span></span></h2>
+  </div><p><span data-l="fr">Flyers, visuels réseaux sociaux et vidéos conçus pour des clients de secteurs variés. Touchez une image pour l'agrandir.</span><span data-l="en">Flyers, social visuals and videos made for clients across sectors. Tap an image to enlarge it.</span></p></div>
+  <div class="gal g5 top plain free"><button type="button" aria-label="Agrandir"><img src="assets/flyer-majoie.jpg" alt="Flyer Restauration · Majoie Foods" loading="lazy"></button><button type="button" aria-label="Agrandir"><img src="assets/flyer-eclat.jpg" alt="Flyer Services · Maison Éclat" loading="lazy"></button><button type="button" aria-label="Agrandir"><img src="assets/flyer-semaine.jpg" alt="Flyer Réseaux sociaux · Vision Pub" loading="lazy"></button><button type="button" aria-label="Agrandir"><img src="assets/flyer-cm.jpg" alt="Flyer Offre community management" loading="lazy"></button><button type="button" aria-label="Agrandir"><img src="assets/flyer-boost.jpg" alt="Flyer Acquisition B2B · Boost Performers" loading="lazy"></button><p class="gal-cap"><span data-l="fr">Supports print et réseaux sociaux : restauration, services à domicile, agence et acquisition B2B.</span><span data-l="en">Print and social assets: food, home services, agency and B2B acquisition.</span></p></div>
+  <div class="crea">
+    <div class="crea-note lift">
+      <h3><span data-l="fr">Vidéo &amp; motion design</span><span data-l="en">Video &amp; motion design</span></h3>
+      <p><span data-l="fr">Des formats courts verticaux pensés pour capter en quelques secondes et pousser à l'action, du script au montage.</span><span data-l="en">Short vertical formats built to grab attention in seconds and drive action, from script to edit.</span></p>
+      <ul>
+        <li><span data-l="fr">Capsules de conversion et brand motions pour des offres de services</span><span data-l="en">Conversion capsules and brand motions for service offers</span></li>
+        <li><span data-l="fr">Aftermovie et contenus de terrain de la campagne Mboa Glow</span><span data-l="en">Aftermovie and field content for the Mboa Glow campaign</span></li>
+        <li><span data-l="fr">Production accélérée par l'IA, direction créative gardée en main</span><span data-l="en">AI-accelerated production, with creative direction kept in-house</span></li>
+      </ul>
+    </div>
+    <div class="vids">
+      <div class="vid lift"><video src="assets/spot-pub.mp4" poster="assets/spot-pub-poster.jpg" preload="none" playsinline controls></video><button class="play" type="button" aria-label="Lire la vidéo"><span class="b"><svg viewBox="0 0 20 20"><path d="M5 3l12 7-12 7z" fill="currentColor"/></svg></span><span class="vl"><b><span data-l="fr">Capsule de conversion</span><span data-l="en">Conversion capsule</span></b><span data-l="fr">« Entrepreneur au Cameroun ? » · 15 s</span><span data-l="en">"Entrepreneur in Cameroon?" · 15 s</span></span></button></div>
+      <div class="vid lift"><video src="assets/boost-performers.mp4" poster="assets/boost-performers-poster.jpg" preload="none" playsinline controls></video><button class="play" type="button" aria-label="Lire la vidéo"><span class="b"><svg viewBox="0 0 20 20"><path d="M5 3l12 7-12 7z" fill="currentColor"/></svg></span><span class="vl"><b><span data-l="fr">Brand motion commercial</span><span data-l="en">Commercial brand motion</span></b><span data-l="fr">Campagne publicitaire · 29 s</span><span data-l="en">Ad campaign · 29 s</span></span></button></div>
+    </div>
+  </div>
+
+  <h3 class="sub-t"><span data-l="fr">Sites et plateformes pilotés</span><span data-l="en">Websites and platforms I led</span></h3>
+  <div class="plats" data-rv="stagger"><article data-cursor class="plat lift"><div class="shot"><img src="assets/web-sawa.jpg" alt="Capture du site Sawa RH" loading="lazy"></div><div class="plat-b"><small><span data-l="fr">Plateforme RH B2B</span><span data-l="en">B2B HR platform</span></small><h3>Sawa RH</h3><p><span data-l="fr">Communication orientée confiance pour rendre les services lisibles et rassurer les entreprises.</span><span data-l="en">Trust-led communication that makes the services clear and reassures companies.</span></p><a class="case-link" href="https://sawa-rh-web.vercel.app/fr" target="_blank" rel="noopener">sawa-rh-web.vercel.app ↗</a></div></article><article data-cursor class="plat lift"><div class="shot"><img src="assets/web-hublots.jpg" alt="Capture du site Hublots" loading="lazy"></div><div class="plat-b"><small><span data-l="fr">Plateforme pour indépendants</span><span data-l="en">Platform for freelancers</span></small><h3>Hublots</h3><p><span data-l="fr">Présentation produit et parcours client repensés pour soutenir la désirabilité et la conversion.</span><span data-l="en">Product presentation and customer journey reworked to support desirability and conversion.</span></p><a class="case-link" href="https://hublots.co" target="_blank" rel="noopener">hublots.co ↗</a></div></article><article data-cursor class="plat lift"><div class="shot"><img src="assets/web-lnfoot.jpg" alt="Capture du site LN Foot" loading="lazy"></div><div class="plat-b"><small><span data-l="fr">Média éditorial sport</span><span data-l="en">Sports editorial media</span></small><h3>LN Foot</h3><p><span data-l="fr">Hiérarchie éditoriale et rythme de publication pensés pour l'engagement de l'audience.</span><span data-l="en">Editorial hierarchy and publishing rhythm designed for audience engagement.</span></p><a class="case-link" href="https://ln-foot.com" target="_blank" rel="noopener">ln-foot.com ↗</a></div></article></div>
+</section>
+
+<section class="sec wrap" id="expertise" aria-labelledby="exp-t" style="padding-top:24px">
+  <div class="exp">
+    <div>
+      <span class="eyebrow"><span data-l="fr">Expertises</span><span data-l="en">Expertise</span></span>
+      <h2 data-rv="words" class="h2" id="exp-t"><span data-l="fr">Ce que j'apporte <span class="muted">à une équipe.</span></span><span data-l="en">What I bring <span class="muted">to a team.</span></span></h2>
+      <p style="margin-top:16px;color:var(--ink-2);max-width:44ch"><span data-l="fr">Un profil hybride : la stratégie d'un responsable marketing, l'exécution d'un chef de projet et la culture technique d'un ingénieur. Je peux cadrer une campagne, la vendre, la produire et la mesurer.</span><span data-l="en">A hybrid profile: the strategy of a marketing lead, the execution of a project manager and the technical grounding of an engineer. I can scope a campaign, sell it, produce it and measure it.</span></p>
+      <p class="tools-label"><span data-l="fr">Mes outils au quotidien</span><span data-l="en">Tools I use daily</span></p>
+      <div class="tools" data-rv="stagger">
+        <span class="tool" tabindex="0"><img class="tl" data-src="assets/tools/meta-business-suite.svg" alt=""><b class="ab">Me</b><span class="tip">Meta Business Suite</span></span>
+        <span class="tool" tabindex="0"><img class="tl" data-src="assets/tools/google-ads.svg" alt=""><b class="ab">Ga</b><span class="tip">Google Ads</span></span>
+        <span class="tool" tabindex="0"><img class="tl" data-src="assets/tools/google-analytics.svg" alt=""><b class="ab">An</b><span class="tip">Google Analytics</span></span>
+        <span class="tool" tabindex="0"><img class="tl" data-src="assets/tools/linkedin.svg" alt=""><b class="ab">Li</b><span class="tip">LinkedIn Ads</span></span>
+        <span class="tool" tabindex="0"><img class="tl" data-src="assets/tools/hubspot.svg" alt=""><b class="ab">Hs</b><span class="tip">HubSpot</span></span>
+        <span class="tool" tabindex="0"><img class="tl" data-src="assets/tools/salesforce.svg" alt=""><b class="ab">Sf</b><span class="tip">Salesforce</span></span>
+        <span class="tool" tabindex="0"><img class="tl" data-src="assets/tools/photoshop.svg" alt=""><b class="ab">Ps</b><span class="tip">Photoshop</span></span>
+        <span class="tool" tabindex="0"><img class="tl" data-src="assets/tools/premiere-pro.svg" alt=""><b class="ab">Pr</b><span class="tip">Premiere Pro</span></span>
+        <span class="tool" tabindex="0"><img class="tl" data-src="assets/tools/microsoft-365.svg" alt=""><b class="ab">Of</b><span class="tip">Office 365</span></span>
+        <span class="tool" tabindex="0"><img class="tl" data-src="assets/tools/claude-chatgpt.svg" alt=""><b class="ab">IA</b><span class="tip"><span data-l="fr">Claude &amp; ChatGPT</span><span data-l="en">Claude &amp; ChatGPT</span></span></span>
+      </div>
+    </div>
+
+    <div class="skills" data-rv="stagger">
+      <div class="skill lift"><span class="ico"><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="10" cy="10" r="7.5"/><circle cx="10" cy="10" r="3.5"/><circle cx="10" cy="10" r=".8" fill="currentColor"/></svg></span>
+        <div><h3><span data-l="fr">Stratégie marketing 360 &amp; marque</span><span data-l="en">360 marketing strategy &amp; brand</span></h3><p><span data-l="fr">Positionnement, plateforme de communication, go-to-market et structuration de l'offre.</span><span data-l="en">Positioning, messaging platform, go-to-market and offer design.</span></p><span class="ev"><span data-l="fr">Preuve : repositionnement Nemalia</span><span data-l="en">Proof: Nemalia repositioning</span></span></div></div>
+      <div class="skill lift"><span class="ico"><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M3 15l4.5-5 3.5 3L17 5"/><path d="M12.5 5H17v4.5"/></svg></span>
+        <div><h3><span data-l="fr">Acquisition digitale &amp; paid media</span><span data-l="en">Digital acquisition &amp; paid media</span></h3><p><span data-l="fr">Funnels de conversion, Meta, LinkedIn et Google Ads, génération de leads, pilotage KPI et ROI.</span><span data-l="en">Conversion funnels, Meta, LinkedIn and Google Ads, lead generation, KPI and ROI tracking.</span></p><span class="ev"><span data-l="fr">Preuve : +40 % de leads qualifiés</span><span data-l="en">Proof: +40% qualified leads</span></span></div></div>
+      <div class="skill lift"><span class="ico"><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"><path d="M10 18s6-5.2 6-10A6 6 0 004 8c0 4.8 6 10 6 10z"/><circle cx="10" cy="8" r="2.2"/></svg></span>
+        <div><h3><span data-l="fr">Activations terrain &amp; trade marketing</span><span data-l="en">Field activations &amp; trade marketing</span></h3><p><span data-l="fr">Parcours, mécanique, équipe, logistique et indicateurs par objectif.</span><span data-l="en">Routes, mechanics, team, logistics and one metric per goal.</span></p><span class="ev"><span data-l="fr">Preuve : Mboa Glow, 11 quartiers</span><span data-l="en">Proof: Mboa Glow, 11 districts</span></span></div></div>
+      <div class="skill lift"><span class="ico"><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.8"><circle cx="10" cy="7" r="3"/><path d="M4 17c.8-3 3.2-4.5 6-4.5s5.2 1.5 6 4.5" stroke-linecap="round"/><circle cx="16.5" cy="4.5" r="1.6"/><circle cx="3.5" cy="4.5" r="1.6"/></svg></span>
+        <div><h3><span data-l="fr">Marketing d'influence</span><span data-l="en">Influencer marketing</span></h3><p><span data-l="fr">Sélection par audience et valeurs, contrats, brief, rémunération à la performance.</span><span data-l="en">Selection by audience and values, contracts, briefs, performance-based pay.</span></p><span class="ev"><span data-l="fr">Preuve : programme 2027</span><span data-l="en">Proof: 2027 programme</span></span></div></div>
+      <div class="skill lift"><span class="ico"><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"><path d="M2.5 10.5l3-3 3 2 3-3"/><path d="M11.5 6.5l2-1.5 4 4-5 5-3-2"/><path d="M8.5 9.5l-3 3 2.5 2.5 3-3"/></svg></span>
+        <div><h3><span data-l="fr">Développement commercial B2B</span><span data-l="en">B2B business development</span></h3><p><span data-l="fr">Prospection, négociation, partenariats de distribution, conditions commerciales et pipeline.</span><span data-l="en">Prospecting, negotiation, distribution partnerships, commercial terms and pipeline.</span></p><span class="ev"><span data-l="fr">Preuve : 20+ prospects qualifiés</span><span data-l="en">Proof: 20+ qualified prospects</span></span></div></div>
+      <div class="skill lift"><span class="ico"><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><path d="M7 6l-4 4 4 4M13 6l4 4-4 4M11 4l-2 12"/></svg></span>
+        <div><h3><span data-l="fr">Data, CRM &amp; outils</span><span data-l="en">Data, CRM &amp; tools</span></h3><p><span data-l="fr">Tableaux de bord, CRM, automatisation et outils internes, grâce à ma formation d'ingénieur.</span><span data-l="en">Dashboards, CRM, automation and internal tools, thanks to my engineering background.</span></p><span class="ev"><span data-l="fr">Preuve : système de gestion des ventes</span><span data-l="en">Proof: sales management system</span></span></div></div>
+      <div class="skill lift"><span class="ico"><svg viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"><rect x="2.5" y="4.5" width="11" height="11" rx="2.5"/><path d="M13.5 8.5l4-2.5v8l-4-2.5"/></svg></span>
+        <div><h3><span data-l="fr">Contenu, design &amp; vidéo avec l'IA</span><span data-l="en">Content, design &amp; video with AI</span></h3><p><span data-l="fr">Copywriting FR/EN, visuels, montages vidéo, présentations et rapports produits en quelques heures.</span><span data-l="en">FR/EN copywriting, visuals, video edits, decks and reports produced in hours.</span></p><span class="ev"><span data-l="fr">Preuve : aftermovie Mboa Glow</span><span data-l="en">Proof: Mboa Glow aftermovie</span></span></div></div>
+    </div>
+  </div>
+</section>
+
+<section class="sec wrap" id="about" aria-labelledby="about-t" style="padding-top:24px">
+  <div class="sec-head"><div>
+    <span class="eyebrow"><span data-l="fr">Parcours</span><span data-l="en">Background</span></span>
+    <h2 data-rv="words" class="h2" id="about-t"><span data-l="fr">La rigueur d'un ingénieur, <span class="muted">le sens du marché d'un marketeur.</span></span><span data-l="en">An engineer's rigour, <span class="muted">a marketer's feel for the market.</span></span></h2>
+  </div></div>
+  <div class="about">
+    <div class="portrait lift">
+      <img src="assets/portrait.jpg" alt="Fritz ENOLLA, bras croisés, chemise et cravate" width="720" height="900" >
+      <div class="socials" data-rv="stagger">
+        <a href="https://www.linkedin.com/in/fritzenolla" target="_blank" rel="noopener">LinkedIn</a>
+        <a href="#contact">Email</a>
+        <a href="#contact"><span data-l="fr">Téléphone</span><span data-l="en">Phone</span></a>
+      </div>
+    </div>
+    <div class="who">
+      <h3>ENOLLA Elie Fritz Delangue</h3>
+      <p class="role"><span data-l="fr">Responsable Marketing &amp; Commercial</span><span data-l="en">Head of Marketing &amp; Sales</span></p>
+      <p class="hist-t"><span data-l="fr">Mon parcours professionnel</span><span data-l="en">Career</span></p>
+      <div class="hist" id="hist">
+        <div class="h-item"><div><b>Nemalia</b><span><span data-l="fr">Responsable Marketing &amp; Commercial · marque de soins naturels premium</span><span data-l="en">Head of Marketing &amp; Sales · premium natural skincare brand</span></span></div><time>2026 – <span data-l="fr">auj.</span><span data-l="en">now</span></time></div>
+        <div class="h-item"><div><b>Lumina Africa</b><span><span data-l="fr">Responsable Marketing &amp; Communication · plateforme corporate</span><span data-l="en">Head of Marketing &amp; Communications · corporate platform</span></span></div><time>2025 – 2026</time></div>
+        <div class="h-item"><div><b>Vision Pub</b><span><span data-l="fr">Cofondateur &amp; Responsable Stratégie · agence</span><span data-l="en">Co-founder &amp; Head of Strategy · agency</span></span></div><time>2022 – 2025</time></div>
+        <div class="h-item"><div><b><span data-l="fr">Projets d'ingénierie</span><span data-l="en">Engineering projects</span></b><span><span data-l="fr">Site e-commerce, système de sécurité IoT, réseau sécurisé, contrôle d'accès biométrique</span><span data-l="en">E-commerce site, IoT security system, secure network, biometric access control</span></span></div><time>2019 – 2022</time></div>
+      </div>
+      <button class="toggle" type="button" id="hist-btn" aria-expanded="false" aria-controls="hist"><span data-l="fr">Afficher tout</span><span data-l="en">Show all</span><svg viewBox="0 0 14 14" fill="none"><path d="M3 5l4 4 4-4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg></button>
+
+      <div class="bio" data-rv="words">
+        <p><span data-l="fr">Marketeur basé à Douala, j'ai commencé par l'informatique : un diplôme d'ingénieur des travaux en administration systèmes et réseaux à l'IAI-Cameroun. Cette formation m'a donné une façon de travailler : <b>poser le problème, mesurer, puis décider.</b></span><span data-l="en">A Douala-based marketer, I started in IT with an engineering degree in systems and network administration from IAI-Cameroun. It gave me a way of working: <b>frame the problem, measure, then decide.</b></span></p>
+        <p><span data-l="fr">Je l'ai mise au service de la communication avec un Master 2 à l'ESSEC Business School Douala, puis dans une agence que j'ai cofondée et dans des postes de direction marketing. Je complète aujourd'hui ce parcours par un MBA en marketing international, parce que <b>je considère la formation comme une discipline, pas comme une étape.</b></span><span data-l="en">I brought it to communications with a master's from ESSEC Business School Douala, then to an agency I co-founded and to marketing leadership roles. I am now adding an MBA in international marketing, because <b>I treat learning as a discipline, not a phase.</b></span></p>
+        <p><span data-l="fr">Je passe autant de temps sur le terrain qu'en réunion : salons, quartiers, points de vente. C'est là que je comprends ce que les chiffres ne disent pas.</span><span data-l="en">I spend as much time in the field as in meetings: trade fairs, neighbourhoods, points of sale. That is where I learn what the numbers don't say.</span></p>
+      </div>
+      <div class="traits">
+        <span class="trait"><span data-l="fr">Rigueur d'ingénieur</span><span data-l="en">Engineering rigour</span></span>
+        <span class="trait"><span data-l="fr">Discipline d'exécution</span><span data-l="en">Disciplined execution</span></span>
+        <span class="trait"><span data-l="fr">Culture de la preuve</span><span data-l="en">Evidence-driven</span></span>
+        <span class="trait"><span data-l="fr">Formation continue</span><span data-l="en">Continuous learning</span></span>
+        <span class="trait"><span data-l="fr">Français · Anglais professionnel</span><span data-l="en">French · Professional English</span></span>
+      </div>
+      <p class="hist-t"><span data-l="fr">Avant le marketing : l'ingénierie de terrain</span><span data-l="en">Before marketing: hands-on engineering</span></p>
+      <div class="gal g4 plain free"><button type="button" aria-label="Agrandir"><img src="assets/net1.jpg" alt="Baie réseau et brassage" loading="lazy"></button><button type="button" aria-label="Agrandir"><img src="assets/net2.jpg" alt="Intervention sur site industriel" loading="lazy"></button><button type="button" aria-label="Agrandir"><img src="assets/net3.jpg" alt="Coordination technique terrain" loading="lazy"></button><button type="button" aria-label="Agrandir"><img src="assets/net4.jpg" alt="Installation et maintenance d'équipements" loading="lazy"></button><p class="gal-cap"><span data-l="fr">Baies réseau, sites industriels, coordination technique et maintenance.</span><span data-l="en">Network racks, industrial sites, technical coordination and maintenance.</span></p></div>
+    </div>
+  </div>
+</section>
+
+<section class="sec wrap" id="education" aria-labelledby="edu-t" style="padding-top:24px">
+  <div class="sec-head"><div>
+    <span class="eyebrow"><span data-l="fr">Formation</span><span data-l="en">Education</span></span>
+    <h2 data-rv="words" class="h2" id="edu-t"><span data-l="fr">Trois diplômes, <span class="muted">un fil conducteur.</span></span><span data-l="en">Three degrees, <span class="muted">one thread.</span></span></h2>
+  </div><p><span data-l="fr">La technique, puis le marketing, puis l'international.</span><span data-l="en">Technology, then marketing, then international business.</span></p></div>
+  <div class="edu" data-rv="stagger">
+    <div class="deg lift"><time>2025 – <span data-l="fr">en cours</span><span data-l="en">ongoing</span></time><h3><span data-l="fr">MBA, Marketing international</span><span data-l="en">MBA, International Marketing</span></h3><p>Saylor Academy</p><span class="st live"><span data-l="fr">En cours</span><span data-l="en">In progress</span></span></div>
+    <div class="deg lift"><time>2022 – 2024</time><h3><span data-l="fr">Master 2, Marketing &amp; Communication d'entreprise</span><span data-l="en">Master's, Marketing &amp; Corporate Communication</span></h3><p>ESSEC Business School, Douala</p><span class="st"><span data-l="fr">Diplômé</span><span data-l="en">Graduated</span></span></div>
+    <div class="deg lift"><time>2019 – 2022</time><h3><span data-l="fr">Ingénieur des travaux informatiques</span><span data-l="en">IT Engineering degree</span></h3><p><span data-l="fr">IAI-Cameroun · Administration systèmes &amp; réseaux</span><span data-l="en">IAI-Cameroun · Systems &amp; network administration</span></p><span class="st"><span data-l="fr">Diplômé</span><span data-l="en">Graduated</span></span></div>
+  </div>
+  <div class="certs">
+    <div class="cert-box">
+      <h3>Certifications</h3>
+      <div class="cert-list">
+        <span class="cert"><b>Meta</b> · Marketing Science Specialist</span>
+        <span class="cert"><b>Meta</b> · Media Buyer Specialist</span>
+        <span class="cert"><b>Google</b> · Analytics</span>
+        <span class="cert"><b>Google</b> · Ateliers Numériques</span>
+        <span class="cert"><b>HubSpot</b> · Inbound &amp; Social Media Marketing</span>
+        <span class="cert"><b>Saylor</b> · <span data-l="fr">Marketing stratégique</span><span data-l="en">Strategic Marketing</span></span>
+        <span class="cert"><b>Saylor</b> · Management &amp; Leadership</span>
+        <span class="cert"><b>Cisco</b> · IoT Fundamentals &amp; IoT Security</span>
+      </div>
+    </div>
+    <div class="award tilt">
+      <svg viewBox="0 0 100 100" aria-hidden="true"><path d="M50 6l12 26 28 3-21 19 6 28-25-14-25 14 6-28L10 35l28-3z" fill="#fff"/></svg>
+      <div class="big">Top 3</div>
+      <p><span data-l="fr">Growth Marketing &amp; Lead Generation, classement des créateurs de contenu Favikon.</span><span data-l="en">Growth Marketing &amp; Lead Generation, Favikon creator ranking.</span></p>
+    </div>
+  </div>
+</section>
+
+
+<section class="sec wrap" id="training" aria-labelledby="tr-t" style="padding-top:24px">
+  <div class="sec-head"><div>
+    <span class="eyebrow"><span data-l="fr">Formateur</span><span data-l="en">Trainer</span></span>
+    <h2 data-rv="words" class="h2" id="tr-t"><span data-l="fr">Je transmets <span class="muted">ce que je pratique.</span></span><span data-l="en">I teach <span class="muted">what I practise.</span></span></h2>
+  </div><p><span data-l="fr">J'anime des sessions de formation en marketing, en communication et en ingénierie logicielle : ateliers pratiques, masterclass et accompagnement de cohortes jusqu'à la remise des attestations.</span><span data-l="en">I run training sessions in marketing, communications and software engineering: hands-on workshops, masterclasses and cohort coaching through to certificates.</span></p></div>
+  <div class="gal g5 plain free"><button type="button" aria-label="Agrandir"><img src="assets/train1.jpg" alt="Animation d'une session interactive" loading="lazy"></button><button type="button" aria-label="Agrandir"><img src="assets/train2.jpg" alt="Remise d'attestations en fin de session" loading="lazy"></button><button type="button" aria-label="Agrandir"><img src="assets/train3.jpg" alt="Cohorte en ingénierie logicielle" loading="lazy"></button><button type="button" aria-label="Agrandir"><img src="assets/train4.jpg" alt="Atelier pratique" loading="lazy"></button><button type="button" aria-label="Agrandir"><img src="assets/train5.jpg" alt="Session masterclass" loading="lazy"></button><p class="gal-cap"><span data-l="fr">Sessions interactives, ateliers, masterclass et remises d'attestations.</span><span data-l="en">Interactive sessions, workshops, masterclasses and certificate ceremonies.</span></p></div>
+</section>
+
+<section class="sec wrap" id="method" aria-labelledby="m-t" style="padding-top:24px">
+  <div class="sec-head"><div>
+    <span class="eyebrow"><span data-l="fr">Méthode</span><span data-l="en">Method</span></span>
+    <h2 data-rv="words" class="h2" id="m-t"><span data-l="fr">Comment je mène <span class="muted">une campagne.</span></span><span data-l="en">How I run <span class="muted">a campaign.</span></span></h2>
+  </div><p><span data-l="fr">Les mêmes quatre étapes, qu'il s'agisse d'un salon, d'une campagne digitale ou d'un lancement.</span><span data-l="en">The same four steps, whether it is a trade fair, a digital campaign or a launch.</span></p></div>
+  <div class="steps" data-rv="stagger">
+    <div class="step lift"><span class="num">1</span><small><span data-l="fr">Comprendre</span><span data-l="en">Understand</span></small><h3><span data-l="fr">Terrain &amp; données</span><span data-l="en">Field &amp; data</span></h3><p><span data-l="fr">Clients, concurrents, chiffres existants. J'écoute avant de proposer.</span><span data-l="en">Customers, competitors, existing numbers. I listen before I propose.</span></p></div>
+    <div class="step lift"><span class="num">2</span><small><span data-l="fr">Cadrer</span><span data-l="en">Scope</span></small><h3><span data-l="fr">Objectifs &amp; KPI</span><span data-l="en">Goals &amp; KPIs</span></h3><p><span data-l="fr">Un indicateur vérifiable par objectif, un budget et un calendrier écrits.</span><span data-l="en">One verifiable metric per goal, a written budget and schedule.</span></p></div>
+    <div class="step lift"><span class="num">3</span><small><span data-l="fr">Exécuter</span><span data-l="en">Execute</span></small><h3><span data-l="fr">Équipe &amp; production</span><span data-l="en">Team &amp; production</span></h3><p><span data-l="fr">Brief clair, équipe alignée, contenus produits rapidement, suivi quotidien.</span><span data-l="en">Clear brief, aligned team, fast content production, daily follow-up.</span></p></div>
+    <div class="step lift"><span class="num">4</span><small><span data-l="fr">Mesurer</span><span data-l="en">Measure</span></small><h3><span data-l="fr">Bilan &amp; ajustement</span><span data-l="en">Review &amp; adjust</span></h3><p><span data-l="fr">Ce qui a marché, ce qui a coûté plus que prévu, et ce que l'on change.</span><span data-l="en">What worked, what cost more than planned, and what changes next time.</span></p></div>
+  </div>
+</section>
+
+<section class="sec wrap" id="faq" aria-labelledby="faq-t" style="padding-top:24px">
+  <div class="faq">
+    <div>
+      <span class="eyebrow">FAQ</span>
+      <h2 data-rv="words" class="h2" id="faq-t"><span data-l="fr">Les questions <span class="muted">des recruteurs.</span></span><span data-l="en">Questions <span class="muted">recruiters ask.</span></span></h2>
+    </div>
+    <div class="qa" data-rv="stagger">
+      <details><summary><span data-l="fr">Quels postes visez-vous ?</span><span data-l="en">What roles are you looking for?</span><span class="plus" aria-hidden="true"><i></i><i></i></span></summary>
+        <p><span data-l="fr">Responsable marketing, marketing et commercial, communication, growth ou marque, en priorité dans la finance (banque, assurance, microfinance, fintech) et dans les secteurs proches comme les télécoms et les services aux entreprises.</span><span data-l="en">Head of marketing, marketing and sales, communications, growth or brand roles, mainly in finance (banking, insurance, microfinance, fintech) and related sectors such as telecoms and business services.</span></p></details>
+      <details><summary><span data-l="fr">Pourquoi la finance ?</span><span data-l="en">Why finance?</span><span class="plus" aria-hidden="true"><i></i><i></i></span></summary>
+        <p><span data-l="fr">Parce que la confiance s'y construit avec de la clarté et des preuves, ce qui correspond à ma façon de travailler. Ma formation d'ingénieur m'aide à comprendre des produits techniques et à les expliquer simplement.</span><span data-l="en">Because trust there is built with clarity and evidence, which matches how I work. My engineering background helps me understand technical products and explain them simply.</span></p></details>
+      <details><summary><span data-l="fr">Où êtes-vous basé ?</span><span data-l="en">Where are you based?</span><span class="plus" aria-hidden="true"><i></i><i></i></span></summary>
+        <p><span data-l="fr">À Douala. Je suis ouvert à un poste à Yaoundé et aux missions en remote pour des entreprises à l'international.</span><span data-l="en">In Douala. I am open to roles in Yaoundé and to remote work for international companies.</span></p></details>
+      <details><summary><span data-l="fr">Comment utilisez-vous l'IA ?</span><span data-l="en">How do you use AI?</span><span class="plus" aria-hidden="true"><i></i><i></i></span></summary>
+        <p><span data-l="fr">Comme un accélérateur de production : vidéos, présentations, rapports, outils internes. Je garde la stratégie et les décisions, et je livre en quelques heures ce qui prenait des jours.</span><span data-l="en">As a production accelerator: videos, decks, reports, internal tools. I keep the strategy and the decisions, and deliver in hours what used to take days.</span></p></details>
+      <details><summary><span data-l="fr">Pouvez-vous gérer une équipe ?</span><span data-l="en">Can you manage a team?</span><span class="plus" aria-hidden="true"><i></i><i></i></span></summary>
+        <p><span data-l="fr">Oui. J'ai encadré une équipe marketing chez Lumina Africa, des équipes pluridisciplinaires chez Vision Pub et une équipe terrain sur Mboa Glow. J'anime aussi des formations, ce qui m'oblige à expliquer clairement et à faire progresser les autres.</span><span data-l="en">Yes. I led a marketing team at Lumina Africa, multidisciplinary teams at Vision Pub and a field team on Mboa Glow. I also run training sessions, which forces me to explain clearly and help others grow.</span></p></details>
+    </div>
+  </div>
+</section>
+
+<section class="wrap" id="contact" aria-labelledby="c-t" style="padding-block:24px">
+  <div class="cta lift">
+    <div>
+      <img src="assets/about-desk.jpg" alt="" width="900" height="1600" loading="lazy" style="width:64px;height:64px;border-radius:50%;object-fit:cover;object-position:50% 30%;margin-bottom:18px;border:2px solid rgba(255,255,255,.2)">
+      <h2 id="c-t"><span data-l="fr">Un poste à pourvoir ? <span class="muted">Parlons-en.</span></span><span data-l="en">Hiring? <span class="muted">Let's talk.</span></span></h2>
+      <p><span data-l="fr">Je réponds sous 24 heures. Mon CV détaillé est disponible sur demande.</span><span data-l="en">I reply within 24 hours. A detailed CV is available on request.</span></p>
+    </div>
+    <div class="cards-c">
+      <div class="c-card"><div style="min-width:0"><small>Email</small><span class="v" id="mail">enollafritz@gmail.com</span></div><button type="button" id="copy-mail"><span data-l="fr">Copier</span><span data-l="en">Copy</span></button></div>
+      <div class="c-card"><div style="min-width:0"><small><span data-l="fr">Téléphone · WhatsApp</span><span data-l="en">Phone · WhatsApp</span></small><span class="v" id="tel">+237 655 750 746</span></div><button type="button" id="copy-tel"><span data-l="fr">Copier</span><span data-l="en">Copy</span></button></div>
+      <div class="c-card"><div style="min-width:0"><small>LinkedIn</small><span class="v">linkedin.com/in/fritzenolla</span></div><a class="go" href="https://www.linkedin.com/in/fritzenolla" target="_blank" rel="noopener"><span data-l="fr">Ouvrir</span><span data-l="en">Open</span></a></div>
+    </div>
+  </div>
+</section>
+
+<footer class="foot wrap">
+  <p class="foot-big"><span data-l="fr">Je <span class="rot" data-words="pense|pilote|mesure"><span>pense</span></span></span><span data-l="en">I <span class="rot" data-words="plan|run|measure"><span>plan</span></span></span><br><span class="muted"><span data-l="fr">vos campagnes, de la stratégie au terrain.</span><span data-l="en">your campaigns, from strategy to the field.</span></span></p>
+  <div class="mark-big" aria-hidden="true"><span>F</span><span>r</span><span>i</span><span>t</span><span>z</span><span class="sp">&nbsp;</span><span>E</span><span>N</span><span>O</span><span>L</span><span>L</span><span>A</span></div>
+  <div class="foot-row">
+    <span>© 2026 ENOLLA Elie Fritz Delangue · Douala, Cameroun</span>
+    <div class="foot-links"><a href="#work"><span data-l="fr">Réalisations</span><span data-l="en">Work</span></a><a href="#about"><span data-l="fr">Parcours</span><span data-l="en">Background</span></a><a href="https://www.linkedin.com/in/fritzenolla" target="_blank" rel="noopener">LinkedIn</a><a href="#top"><span data-l="fr">Haut de page ↑</span><span data-l="en">Back to top ↑</span></a></div>
+  </div>
+</footer>
+<a class="float-cta" id="float-cta" href="#contact"><img src="assets/face.jpg" alt="" width="30" height="30"><span><b><span data-l="fr">Contactez-moi</span><span data-l="en">Get in touch</span></b><small><span data-l="fr">Par email ou téléphone</span><span data-l="en">By email or phone</span></small></span></a>
+<div class="cur" id="cur" aria-hidden="true"><span data-l="fr">Voir</span><span data-l="en">View</span></div>
+<div class="lb" id="lb" hidden role="dialog" aria-modal="true" aria-label="Photo">
+  <img id="lb-img" alt="">
+  <button type="button" class="lb-x" id="lb-x" aria-label="Fermer">×</button>
+  <button type="button" class="lb-nav lb-prev" id="lb-prev" aria-label="Photo précédente">‹</button>
+  <button type="button" class="lb-nav lb-next" id="lb-next" aria-label="Photo suivante">›</button>
+</div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/lenis@1.1.13/dist/lenis.min.js"></script>
+<script>
+(function(){
+  var app=document.getElementById('app');
+  var reduce=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  /* language */
+  function setLang(l){
+    app.classList.toggle('en',l==='en');
+    document.documentElement.lang=l;
+    document.getElementById('lang-fr').setAttribute('aria-pressed',String(l==='fr'));
+    document.getElementById('lang-en').setAttribute('aria-pressed',String(l==='en'));
+    try{localStorage.setItem('pf-lang',l)}catch(e){}
+    document.querySelectorAll('.count').forEach(function(el){if(!el.dataset.running)el.textContent=fmt(+el.dataset.to)});
+  }
+  function fmt(n){return n.toLocaleString(app.classList.contains('en')?'en-US':'fr-FR')}
+  document.getElementById('lang-fr').addEventListener('click',function(){setLang('fr')});
+  document.getElementById('lang-en').addEventListener('click',function(){setLang('en')});
+  var saved=null;try{saved=localStorage.getItem('pf-lang')}catch(e){}
+  if(!saved && (navigator.language||'').slice(0,2)==='en') saved='en';
+  setLang(saved==='en'?'en':'fr');
+
+  /* SABA grid: ~100 brands, one highlighted */
+  var g=document.getElementById('saba-grid');
+  if(g){var s='',k=0;for(var r=0;r<7;r++)for(var c=0;c<14;c++){var x=40+c*23,y=52+r*24;var hi=(r===3&&c===9);s+='<rect x="'+x+'" y="'+y+'" width="17" height="17" rx="4" fill="'+(hi?'#121212':(k%5===0?'#b9c9b6':'#cfdccc'))+'"/>';k++}
+    s+='<text data-l="fr" x="40" y="236" font-family="Inter, sans-serif" font-size="12" fill="#4f6b4b">≈ 100 marques · 1 stand Nemalia</text><text data-l="en" x="40" y="236" font-family="Inter, sans-serif" font-size="12" fill="#4f6b4b">≈ 100 brands · 1 Nemalia stand</text>';g.innerHTML=s}
+
+  /* ===== motion ===== */
+  var fine=window.matchMedia('(hover: hover) and (pointer: fine)').matches;
+  var vh=function(){return window.innerHeight||800};
+  var below=function(el){return el.getBoundingClientRect().top>vh()*0.92};
+
+  /* smooth scroll (Lenis), desktop only */
+  var lenis=null;
+  if(!reduce && fine && window.Lenis){try{lenis=new window.Lenis({duration:1.15,easing:function(t){return Math.min(1,1.001-Math.pow(2,-10*t))},smoothWheel:true});
+    document.documentElement.classList.add('lenis');
+    (function raf(t){lenis.raf(t);requestAnimationFrame(raf)})(performance.now());
+    document.querySelectorAll('a[href^="#"]').forEach(function(a){a.addEventListener('click',function(e){var id=a.getAttribute('href');var t=id.length>1&&document.querySelector(id);if(t){e.preventDefault();lenis.scrollTo(t,{offset:-80})}else if(id==='#top'||id==='#'){e.preventDefault();lenis.scrollTo(0)}})});
+  }catch(e){lenis=null}}
+
+  /* split text into words for the blur reveal */
+  function split(root){var tw=document.createTreeWalker(root,NodeFilter.SHOW_TEXT,null),nodes=[],n;while(n=tw.nextNode())if(n.nodeValue.trim())nodes.push(n);
+    var i=0;nodes.forEach(function(t){var f=document.createDocumentFragment();t.nodeValue.split(/(\s+)/).forEach(function(p){if(!p)return;if(/^\s+$/.test(p)){f.appendChild(document.createTextNode(p));return}var w=document.createElement('span');w.className='w';w.style.setProperty('--i',i++);w.textContent=p;f.appendChild(w)});t.parentNode.replaceChild(f,t)})}
+
+  /* counters */
+  var counters=[].slice.call(document.querySelectorAll('.count'));
+  function run(el){var to=+el.dataset.to,t0=null,d=1600;el.dataset.running='1';
+    function step(t){if(!t0)t0=t;var p=Math.min(1,(t-t0)/d),e=1-Math.pow(1-p,4);el.textContent=fmt(Math.round(to*e));if(p<1)requestAnimationFrame(step);else delete el.dataset.running}
+    requestAnimationFrame(step)}
+
+  if('IntersectionObserver' in window && !reduce){
+    var io=new IntersectionObserver(function(es){es.forEach(function(e){if(!e.isIntersecting)return;var el=e.target;
+      if(el.classList.contains('count'))run(el);else{el.classList.remove('rv-pre');setTimeout(function(){el.classList.add('rv-done')},2200)}io.unobserve(el)})},{threshold:.15,rootMargin:'0px 0px -8% 0px'});
+    counters.forEach(function(el){if(below(el)){el.textContent='0';io.observe(el)}});
+    document.querySelectorAll('[data-rv="words"]').forEach(function(el){split(el);if(below(el)){el.classList.add('rv-pre');io.observe(el)}});
+    document.querySelectorAll('[data-rv="stagger"]').forEach(function(el){[].slice.call(el.children).forEach(function(c,i){c.style.setProperty('--i',i)});if(below(el)){el.classList.add('rv-pre');io.observe(el)}});
+    [].slice.call(document.querySelectorAll('.mark-big span')).forEach(function(c,i){c.style.setProperty('--i',i)});
+    document.querySelectorAll('[data-rv="zoom"], .sec-head, .mark-big').forEach(function(el){if(below(el)){el.classList.add('rv-pre');io.observe(el)}});
+  }
+
+  /* images that fly in rotated and settle as you scroll (scroll-linked) */
+  var flyCfg=[[.55,-.9,.7,10],[.15,-1,.7,15],[.45,-1.1,.7,-5],[.08,-1,.6,5],[.35,-.85,.65,-8],[.6,-1.05,.7,12]];
+  var flies=[];
+  if(!reduce){[].slice.call(document.querySelectorAll('.vis img, .gal button, .shot img')).forEach(function(el,i){if(!below(el))return;var c=flyCfg[i%flyCfg.length].slice(),k=el.matches('.vis img')?1:.6;c[0]*=k;c[1]*=k;el.setAttribute('data-fly','');flies.push({el:el,c:c})})}
+  function ease(t){return 1-Math.pow(1-t,3)}
+  function flyFrame(){var h=vh();for(var k=0;k<flies.length;k++){var f=flies[k],el=f.el,r=(el.parentElement||el).getBoundingClientRect();
+      if(r.bottom<-200||r.top>h+400)continue;var p=Math.min(1,Math.max(0,(h-r.top)/(h*0.68)));var e=ease(p),q=1-e,c=f.c,w=r.width||300,hh=r.height||300;
+      el.style.transform=q<0.002?'':'perspective(1200px) translate('+(c[0]*w*q).toFixed(1)+'px,'+(c[1]*hh*q).toFixed(1)+'px) scale('+(c[2]+(1-c[2])*e).toFixed(3)+') rotate('+(c[3]*q).toFixed(2)+'deg)'}}
+  var ticking=false;function onScroll(){if(!ticking){ticking=true;requestAnimationFrame(function(){ticking=false;flyFrame();floatCta()})}}
+  window.addEventListener('scroll',onScroll,{passive:true});window.addEventListener('resize',onScroll);if(lenis)lenis.on('scroll',onScroll);
+
+  /* floating contact pill: visible after the hero, hidden over the contact block */
+  var fc=document.getElementById('float-cta'),heroEl=document.getElementById('top'),ctEl=document.getElementById('contact');
+  function floatCta(){var hb=heroEl.getBoundingClientRect().bottom,cr=ctEl.getBoundingClientRect();var show=hb<0&&!(cr.top<vh()&&cr.bottom>0)&&lbx_hidden();fc.classList.toggle('on',show)}
+  function lbx_hidden(){var l=document.getElementById('lb');return !l||l.hidden}
+  flyFrame();floatCta();
+
+  /* cursor pill over case studies and sites */
+  if(fine && !reduce){var curEl=document.getElementById('cur'),mx=0,my=0,cx=0,cy=0;
+    document.addEventListener('mousemove',function(e){mx=e.clientX;my=e.clientY});
+    (function loop(){cx+=(mx-cx)*.2;cy+=(my-cy)*.2;curEl.style.left=cx+'px';curEl.style.top=cy+'px';requestAnimationFrame(loop)})();
+    document.querySelectorAll('[data-cursor]').forEach(function(el){el.addEventListener('mouseenter',function(e){cx=mx=e.clientX;cy=my=e.clientY;curEl.classList.add('on')});el.addEventListener('mouseleave',function(){curEl.classList.remove('on')})});
+    document.querySelectorAll('[data-cursor] a,[data-cursor] summary,[data-cursor] button,[data-cursor] video').forEach(function(el){el.addEventListener('mouseenter',function(){curEl.classList.remove('on')});el.addEventListener('mouseleave',function(){curEl.classList.add('on')})});
+  }
+
+  /* tool logos: official files dropped in assets/tools/ replace the initials */
+  document.querySelectorAll('.tool .tl').forEach(function(im){im.addEventListener('load',function(){im.parentNode.classList.add('has-logo')});im.addEventListener('error',function(){im.remove()});im.src=im.getAttribute('data-src')});
+
+  /* work filters */
+  var fbtn=[].slice.call(document.querySelectorAll('.filters button')),cases=[].slice.call(document.querySelectorAll('.case'));
+  fbtn.forEach(function(b){b.addEventListener('click',function(){var f=b.dataset.f;fbtn.forEach(function(x){x.setAttribute('aria-pressed',String(x===b))});
+    cases.forEach(function(c){c.hidden=!(f==='all'||c.dataset.cat===f)})})});
+
+  /* history deck */
+  var hb=document.getElementById('hist-btn'),hist=document.getElementById('hist');
+  hb.addEventListener('click',function(){var open=!hist.classList.contains('open');hist.classList.toggle('open',open);hb.setAttribute('aria-expanded',String(open));
+    hb.querySelector('[data-l="fr"]').textContent=open?'Réduire':'Afficher tout';hb.querySelector('[data-l="en"]').textContent=open?'Show less':'Show all'});
+
+  /* copy */
+  function copy(btn,id){btn.addEventListener('click',function(){var t=document.getElementById(id).textContent.trim();
+    function ok(){var fr=btn.querySelector('[data-l="fr"]'),en=btn.querySelector('[data-l="en"]');fr.textContent='Copié';en.textContent='Copied';setTimeout(function(){fr.textContent='Copier';en.textContent='Copy'},1600)}
+    function sel(){var r=document.createRange();r.selectNodeContents(document.getElementById(id));var s=window.getSelection();s.removeAllRanges();s.addRange(r)}
+    try{navigator.clipboard.writeText(t).then(ok,sel)}catch(e){sel()}})}
+  copy(document.getElementById('copy-mail'),'mail');copy(document.getElementById('copy-tel'),'tel');
+
+
+  /* gallery lightbox, one set per gallery */
+  var lbx=document.getElementById('lb'),lbi=document.getElementById('lb-img'),grp=[],cur=0,last=null;
+  function show(i){cur=(i+grp.length)%grp.length;var im=grp[cur].querySelector('img');lbi.src=im.src;lbi.alt=im.alt}
+  [].slice.call(document.querySelectorAll('.gal')).forEach(function(g){var bs=[].slice.call(g.querySelectorAll('button'));
+    bs.forEach(function(b,i){b.addEventListener('click',function(){grp=bs;last=b;show(i);lbx.hidden=false;document.getElementById('float-cta').classList.remove('on');document.getElementById('lb-x').focus()})})});
+  function close(){lbx.hidden=true;if(last)last.focus();floatCta()}
+  document.getElementById('lb-x').addEventListener('click',close);
+  document.getElementById('lb-prev').addEventListener('click',function(){show(cur-1)});
+  document.getElementById('lb-next').addEventListener('click',function(){show(cur+1)});
+  lbx.addEventListener('click',function(e){if(e.target===lbx)close()});
+  document.addEventListener('keydown',function(e){if(lbx.hidden)return;if(e.key==='Escape')close();if(e.key==='ArrowLeft')show(cur-1);if(e.key==='ArrowRight')show(cur+1)});
+
+  /* videos */
+  [].slice.call(document.querySelectorAll('.vid')).forEach(function(v){var vd=v.querySelector('video');
+    v.querySelector('.play').addEventListener('click',function(){document.querySelectorAll('.vid video').forEach(function(o){if(o!==vd)o.pause()});v.classList.add('playing');var p=vd.play();if(p&&p.catch)p.catch(function(){})});
+    vd.addEventListener('ended',function(){v.classList.remove('playing')})});
+
+  /* rotating words in footer */
+  if(!reduce){document.querySelectorAll('.rot').forEach(function(box){var words=box.dataset.words.split('|'),i=0;
+    box.innerHTML='';var spans=words.map(function(w,j){var s=document.createElement('span');s.textContent=w;if(j)s.className='wait';box.appendChild(s);return s});
+    setInterval(function(){var cur=spans[i];i=(i+1)%spans.length;var nx=spans[i];cur.className='out';nx.className='';setTimeout(function(){cur.className='wait'},750)},2400)})}
+})();
+</script>
+
+</body>
+</html>
