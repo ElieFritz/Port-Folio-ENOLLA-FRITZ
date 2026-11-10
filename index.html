@@ -1011,6 +1011,7 @@ details[open] .plus i+i{transform:rotate(180deg)}
     <div class="cards-c">
       <div class="c-card"><div style="min-width:0"><small>Email</small><span class="v" id="mail">enollafritz@gmail.com</span></div><button type="button" id="copy-mail"><span data-l="fr">Copier</span><span data-l="en">Copy</span></button></div>
       <div class="c-card"><div style="min-width:0"><small><span data-l="fr">Téléphone · WhatsApp</span><span data-l="en">Phone · WhatsApp</span></small><span class="v" id="tel">+237 655 750 746</span></div><button type="button" id="copy-tel"><span data-l="fr">Copier</span><span data-l="en">Copy</span></button></div>
+      <div class="c-card"><div style="min-width:0"><small><span data-l="fr">Autre numéro</span><span data-l="en">Other number</span></small><span class="v" id="tel2">+237 695 034 025</span></div><button type="button" id="copy-tel2"><span data-l="fr">Copier</span><span data-l="en">Copy</span></button></div>
       <div class="c-card"><div style="min-width:0"><small>LinkedIn</small><span class="v">linkedin.com/in/fritzenolla</span></div><a class="go" href="https://www.linkedin.com/in/fritzenolla" target="_blank" rel="noopener"><span data-l="fr">Ouvrir</span><span data-l="en">Open</span></a></div>
     </div>
   </div>
@@ -1137,7 +1138,7 @@ details[open] .plus i+i{transform:rotate(180deg)}
     function ok(){var fr=btn.querySelector('[data-l="fr"]'),en=btn.querySelector('[data-l="en"]');fr.textContent='Copié';en.textContent='Copied';setTimeout(function(){fr.textContent='Copier';en.textContent='Copy'},1600)}
     function sel(){var r=document.createRange();r.selectNodeContents(document.getElementById(id));var s=window.getSelection();s.removeAllRanges();s.addRange(r)}
     try{navigator.clipboard.writeText(t).then(ok,sel)}catch(e){sel()}})}
-  copy(document.getElementById('copy-mail'),'mail');copy(document.getElementById('copy-tel'),'tel');
+  copy(document.getElementById('copy-mail'),'mail');copy(document.getElementById('copy-tel'),'tel');copy(document.getElementById('copy-tel2'),'tel2');
 
 
   /* gallery lightbox, one set per gallery */
