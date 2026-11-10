@@ -341,7 +341,7 @@ details[open] .plus i+i{transform:rotate(180deg)}
   /* scroll reveals (only applied to blocks that start below the fold) */
   .w{display:inline-block;transition:opacity .7s cubic-bezier(.4,0,.2,1),filter .7s cubic-bezier(.4,0,.2,1),transform .7s cubic-bezier(.2,.9,.3,1);transition-delay:min(calc(var(--i,0)*28ms),.9s)}
   [data-rv="words"].rv-pre .w{opacity:.001;filter:blur(5px);transform:translateY(10px)}
-  [data-rv="zoom"]{transition:transform .9s cubic-bezier(.2,.9,.2,1),opacity .6s}
+  [data-rv="zoom"]{transform-origin:50% 0;transition:transform .9s cubic-bezier(.2,.9,.2,1),opacity .6s}
   [data-rv="zoom"].rv-pre{transform:translateY(160px) scale(.86);opacity:.001}
   #app [data-rv="stagger"]>*{transition:transform .8s cubic-bezier(.34,1.25,.64,1),opacity .6s cubic-bezier(.4,0,.2,1),filter .6s;transition-delay:calc(var(--i,0)*90ms)}
   [data-rv="stagger"].rv-pre>*{transform:translateY(-30px);opacity:.001}
@@ -587,7 +587,7 @@ details[open] .plus i+i{transform:rotate(180deg)}
     <button type="button" data-f="b2b" aria-pressed="false"><span data-l="fr">Agence &amp; B2B</span><span data-l="en">Agency &amp; B2B</span></button>
   </div>
 
-  <div class="grid-work" data-rv="zoom">
+  <div class="grid-work">
 
     <!-- Mboa Glow -->
     <article data-cursor class="case case-wide lift" data-cat="terrain">
@@ -1088,14 +1088,22 @@ details[open] .plus i+i{transform:rotate(180deg)}
     function step(t){if(!t0)t0=t;var p=Math.min(1,(t-t0)/d),e=1-Math.pow(1-p,4);el.textContent=fmt(Math.round(to*e));if(p<1)requestAnimationFrame(step);else delete el.dataset.running}
     requestAnimationFrame(step)}
 
+  /* scroll reveals. A block taller than the screen (the work grid is several screens high on mobile) can
+     never be 15 % visible, so it is revealed as soon as it enters; checkPend() on scroll catches anything
+     the observer misses, so nothing can stay hidden. */
+  var pend=[],io=null;
+  function reveal(el){var k=pend.indexOf(el);if(k<0)return;pend.splice(k,1);if(io)io.unobserve(el);
+    if(el.classList.contains('count'))run(el);else{el.classList.remove('rv-pre');setTimeout(function(){el.classList.add('rv-done')},2200)}}
+  function watch(el){pend.push(el);if(io)io.observe(el)}
+  function checkPend(){var h=vh();for(var i=pend.length-1;i>=0;i--){var r=pend[i].getBoundingClientRect();if(r.top<h*.85&&r.bottom>0)reveal(pend[i])}}
   if('IntersectionObserver' in window && !reduce){
-    var io=new IntersectionObserver(function(es){es.forEach(function(e){if(!e.isIntersecting)return;var el=e.target;
-      if(el.classList.contains('count'))run(el);else{el.classList.remove('rv-pre');setTimeout(function(){el.classList.add('rv-done')},2200)}io.unobserve(el)})},{threshold:.15,rootMargin:'0px 0px -8% 0px'});
-    counters.forEach(function(el){if(below(el)){el.textContent='0';io.observe(el)}});
-    document.querySelectorAll('[data-rv="words"]').forEach(function(el){split(el);if(below(el)){el.classList.add('rv-pre');io.observe(el)}});
-    document.querySelectorAll('[data-rv="stagger"]').forEach(function(el){[].slice.call(el.children).forEach(function(c,i){c.style.setProperty('--i',i)});if(below(el)){el.classList.add('rv-pre');io.observe(el)}});
+    io=new IntersectionObserver(function(es){es.forEach(function(e){if(!e.isIntersecting)return;
+      if(e.intersectionRatio>=.15||e.boundingClientRect.height>vh()*.6)reveal(e.target)})},{threshold:[0,.15],rootMargin:'0px 0px -8% 0px'});
+    counters.forEach(function(el){if(below(el)){el.textContent='0';watch(el)}});
+    document.querySelectorAll('[data-rv="words"]').forEach(function(el){split(el);if(below(el)){el.classList.add('rv-pre');watch(el)}});
+    document.querySelectorAll('[data-rv="stagger"]').forEach(function(el){[].slice.call(el.children).forEach(function(c,i){c.style.setProperty('--i',i)});if(below(el)){el.classList.add('rv-pre');watch(el)}});
     [].slice.call(document.querySelectorAll('.mark-big span')).forEach(function(c,i){c.style.setProperty('--i',i)});
-    document.querySelectorAll('[data-rv="zoom"], .sec-head, .mark-big').forEach(function(el){if(below(el)){el.classList.add('rv-pre');io.observe(el)}});
+    document.querySelectorAll('[data-rv="zoom"], .sec-head, .mark-big').forEach(function(el){if(below(el)){el.classList.add('rv-pre');watch(el)}});
   }
 
   /* images that fly in rotated and settle as you scroll (scroll-linked) */
@@ -1106,7 +1114,7 @@ details[open] .plus i+i{transform:rotate(180deg)}
   function flyFrame(){var h=vh();for(var k=0;k<flies.length;k++){var f=flies[k],el=f.el,r=(el.parentElement||el).getBoundingClientRect();
       if(r.bottom<-200||r.top>h+400)continue;var p=Math.min(1,Math.max(0,(h-r.top)/(h*0.68)));var e=ease(p),q=1-e,c=f.c,w=r.width||300,hh=r.height||300;
       el.style.transform=q<0.002?'':'perspective(1200px) translate('+(c[0]*w*q).toFixed(1)+'px,'+(c[1]*hh*q).toFixed(1)+'px) scale('+(c[2]+(1-c[2])*e).toFixed(3)+') rotate('+(c[3]*q).toFixed(2)+'deg)'}}
-  var ticking=false;function onScroll(){if(!ticking){ticking=true;requestAnimationFrame(function(){ticking=false;flyFrame();floatCta()})}}
+  var ticking=false;function onScroll(){if(!ticking){ticking=true;requestAnimationFrame(function(){ticking=false;flyFrame();floatCta();checkPend()})}}
   window.addEventListener('scroll',onScroll,{passive:true});window.addEventListener('resize',onScroll);if(lenis)lenis.on('scroll',onScroll);
 
   /* floating contact pill: visible after the hero, hidden over the contact block */
@@ -1114,6 +1122,10 @@ details[open] .plus i+i{transform:rotate(180deg)}
   function floatCta(){var hb=heroEl.getBoundingClientRect().bottom,cr=ctEl.getBoundingClientRect();var show=hb<0&&!(cr.top<vh()&&cr.bottom>0)&&lbx_hidden();fc.classList.toggle('on',show)}
   function lbx_hidden(){var l=document.getElementById('lb');return !l||l.hidden}
   flyFrame();floatCta();
+  /* safety net: reveal on a timer too (no dependency on scroll events or the observer), and force everything after 5 s */
+  setInterval(checkPend,300);
+  setTimeout(function(){pend.slice().forEach(reveal)},5000);
+  window.addEventListener('pageshow',function(){pend.slice().forEach(reveal)});
 
   /* cursor pill over case studies and sites */
   if(fine && !reduce){var curEl=document.getElementById('cur'),mx=0,my=0,cx=0,cy=0;
