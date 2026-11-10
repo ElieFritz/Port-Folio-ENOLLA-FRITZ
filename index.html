@@ -223,8 +223,15 @@ details[open] .plus{transform:none}
 .gal.free{padding:10px}
 @media (max-width:700px){.gal.g4,.gal.g5{grid-template-columns:repeat(3,minmax(0,1fr))}}
 /* creations */
-.crea{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:22px;margin-top:22px}
-.vids{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}
+.crea{display:grid;grid-template-columns:minmax(0,1fr);gap:22px;margin-top:22px}
+.vids{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px}
+.vid.fit{background:#f38ac2}
+.vid.fit video{object-fit:contain}
+/* phone screenshot inside a case visual (opens in the lightbox) */
+.vis-shot{background:var(--navy)}
+.vis-shot button{all:unset;position:absolute;inset:0;cursor:zoom-in}
+.vis-shot button:focus-visible{outline:2px solid #fff;outline-offset:-6px;border-radius:20px}
+.vis-shot img{position:absolute;top:14px;bottom:14px;left:0;right:0;margin:auto;height:calc(100% - 28px);width:auto;max-width:none;border-radius:14px;box-shadow:0 18px 40px -16px rgba(0,0,0,.6)}
 .vid{position:relative;border-radius:var(--r-md);overflow:hidden;aspect-ratio:9/16;max-width:100%;background:var(--dark)}
 .vid video{width:100%;height:100%;object-fit:cover;display:block}
 .vid .play{position:absolute;inset:0;display:grid;place-items:center;border:0;background:linear-gradient(180deg,rgba(0,0,0,0) 50%,rgba(0,0,0,.55));cursor:pointer;color:#fff}
@@ -238,7 +245,7 @@ details[open] .plus{transform:none}
 .crea-note h3{font-family:var(--f-title);font-weight:500;font-size:20px;letter-spacing:-.025em}
 .crea-note p{font-size:15px;color:var(--ink-2)}
 .crea-note ul{margin:0;padding-left:18px;color:var(--ink-2);font-size:15px;display:grid;gap:6px}
-@media (max-width:900px){.crea{grid-template-columns:minmax(0,1fr)}}
+@media (max-width:900px){.vids{grid-template-columns:repeat(2,minmax(0,1fr))}}
 /* platforms */
 .plats{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}
 .plat{background:var(--surface);border:1px solid var(--line);border-radius:var(--r-lg);padding:10px;display:flex;flex-direction:column;min-width:0;transition:transform .35s cubic-bezier(.2,.8,.2,1),box-shadow .35s}
@@ -659,6 +666,28 @@ details[open] .plus i+i{transform:rotate(180deg)}
       </div>
     </article>
 
+    <!-- Meta Ads · conversations -->
+    <article data-cursor class="case lift" data-cat="digital">
+      <div class="vis vis-shot">
+        <span class="chip-k"><span data-l="fr">Résultats Meta Ads</span><span data-l="en">Meta Ads results</span></span>
+        <button type="button" aria-label="Agrandir la capture Ads Manager"><img src="assets/meta-conversations-resultats.jpg" data-full="assets/meta-conversations.jpg" alt="Capture Ads Manager : 1 088 conversations démarrées, 0,31 $ par conversation, 342,49 $ dépensés, 103 541 personnes touchées, 254 319 impressions" width="511" height="466" loading="lazy"></button>
+        <span class="float-k">0,31 $</span>
+      </div>
+      <div class="case-body">
+        <div class="case-top"><h3><span data-l="fr">1 088 conversations à 0,31 $</span><span data-l="en">1,088 conversations at $0.31</span></h3><span class="meta"><span data-l="fr">Campagne Meta Ads · juil.–déc. 2025</span><span data-l="en">Meta Ads campaign · Jul–Dec 2025</span></span></div>
+        <p class="sum"><span data-l="fr">Campagne de social ads orientée conversations, lancée le 1er juillet 2025 avec 5 $ par jour : 1 088 conversations démarrées pour 342 $ dépensés, et plus de 100 000 personnes touchées. Chiffres relevés dans Ads Manager.</span><span data-l="en">A conversation-focused social ads campaign, launched on 1 July 2025 at $5 a day: 1,088 conversations started for $342 spent, and more than 100,000 people reached. Figures taken from Ads Manager.</span></p>
+        <a class="case-link" href="https://www.linkedin.com/posts/fritzenolla_marketingstrataezgique-entrepreneuriat-publicitaezdigitale-activity-7412076451312594944-RKCE" target="_blank" rel="noopener"><span data-l="fr">Voir mon bilan 2025 sur LinkedIn ↗</span><span data-l="en">See my 2025 review on LinkedIn ↗</span></a>
+        <div class="kpis"><span class="kpi"><b>1 088</b>conversations</span><span class="kpi"><b>0,31 $</b><span data-l="fr">par conversation</span><span data-l="en">per conversation</span></span><span class="kpi"><b>103 541</b><span data-l="fr">personnes touchées</span><span data-l="en">people reached</span></span><span class="kpi"><b>254 319</b>impressions</span></div>
+        <details class="more"><summary><span data-l="fr">Lire l'étude de cas</span><span data-l="en">Read the case study</span><span class="plus" aria-hidden="true"><i></i><i></i></span></summary>
+          <div class="story">
+            <div><span class="k"><span data-l="fr">Ce que j'ai fait</span><span data-l="en">What I did</span></span><p><span data-l="fr">Une cible clairement définie, des messages construits sur ses freins réels et ses aspirations, un ciblage finement segmenté et un processus de closing structuré dans la conversation.</span><span data-l="en">A clearly defined audience, messages built on its real fears and aspirations, finely segmented targeting and a structured closing process inside the conversation.</span></p></div>
+            <div><span class="k"><span data-l="fr">Résultat</span><span data-l="en">Result</span></span><p><span data-l="fr">1 088 conversations démarrées à 0,31 $ l'une, 103 541 personnes touchées et 254 319 impressions, pour 342,49 $ dépensés.</span><span data-l="en">1,088 conversations started at $0.31 each, 103,541 people reached and 254,319 impressions, for $342.49 spent.</span></p></div>
+            <div><span class="k"><span data-l="fr">Ce que j'en retiens</span><span data-l="en">What I learned</span></span><p><span data-l="fr">L'humain reste le levier de conversion le plus puissant.</span><span data-l="en">People remain the most powerful conversion lever.</span></p></div>
+          </div>
+        </details>
+      </div>
+    </article>
+
     <!-- SABA -->
     <article data-cursor class="case lift" data-cat="event">
       <div class="vis vis-photos v3" style="background:var(--sage)">
@@ -675,6 +704,30 @@ details[open] .plus i+i{transform:rotate(180deg)}
           <div class="story">
             <div><span class="k"><span data-l="fr">Ce que j'ai fait</span><span data-l="en">What I did</span></span><p><span data-l="fr">Un brief d'une page associant la charte de la marque et l'univers du salon, deux pistes créatives et un planning tenu pour une annonce trois jours avant l'événement.</span><span data-l="en">A one-page brief blending the brand guidelines with the fair's look, two creative routes and a schedule met for an announcement three days ahead.</span></p></div>
             <div><span class="k"><span data-l="fr">Ce que j'en retiens</span><span data-l="en">What I learned</span></span><p><span data-l="fr">Sur un stand, on voit ce qu'aucun tableau de bord ne montre : le produit qu'on repose, la question sur la composition, l'hésitation devant le prix.</span><span data-l="en">A stand shows what no dashboard does: the product put back down, the question about ingredients, the hesitation at the price.</span></p></div>
+          </div>
+        </details>
+      </div>
+    </article>
+
+    <!-- Va au bout -->
+    <article data-cursor class="case lift" data-cat="terrain digital">
+      <div class="vis vis-photos" style="background:var(--rose)">
+        <span class="chip-k"><span data-l="fr">Plateforme de marque · Communauté</span><span data-l="en">Brand platform · Community</span></span>
+        <img src="assets/va-au-bout-defi.jpg" alt="Visuel Nemalia : le défi, aller au bout de sa cure de gummies" width="720" height="900" loading="lazy">
+        <img src="assets/va-au-bout-90-femmes.jpg" alt="Visuel Nemalia : près de 90 femmes ont relevé le défi et rejoint la communauté Va au bout" width="720" height="900" loading="lazy">
+        <span class="float-k">~90</span>
+      </div>
+      <div class="case-body">
+        <div class="case-top"><h3>« Va au bout »</h3><span class="meta">Nemalia · <span data-l="fr">mai–août 2026</span><span data-l="en">May–Aug 2026</span></span></div>
+        <p class="sum"><span data-l="fr">Une plateforme de marque bâtie sur une phrase : « Va au bout. Tu en es capable. » D'abord des roses offertes dans la rue avec ce mot écrit à la main, puis un défi communautaire : aller au bout de sa cure de gummies.</span><span data-l="en">A brand platform built on one line: "Go all the way. You can do it." First, roses handed out in the street with that note handwritten, then a community challenge: going all the way with a gummies course.</span></p>
+        <a class="case-link" href="https://www.linkedin.com/posts/fritzenolla_vaaubout-nemalia-marketingaezmotionnel-activity-7465348550223269888-xWAo" target="_blank" rel="noopener"><span data-l="fr">Voir le post LinkedIn ↗</span><span data-l="en">See the LinkedIn post ↗</span></a>
+        <div class="kpis"><span class="kpi"><b>~90</b><span data-l="fr">femmes ont relevé le défi</span><span data-l="en">women took the challenge</span></span><span class="kpi"><b>3</b><span data-l="fr">mois de cure</span><span data-l="en">month course</span></span><span class="kpi"><b>Roses</b><span data-l="fr">et mots manuscrits</span><span data-l="en">and handwritten notes</span></span></div>
+        <details class="more"><summary><span data-l="fr">Lire l'étude de cas</span><span data-l="en">Read the case study</span><span class="plus" aria-hidden="true"><i></i><i></i></span></summary>
+          <div class="story">
+            <div><span class="k"><span data-l="fr">Principe</span><span data-l="en">Principle</span></span><p><span data-l="fr">Montrer les valeurs de la marque au lieu de les dire, et toucher les femmes dans leur quotidien plutôt que dans un fil d'actualité.</span><span data-l="en">Show the brand's values instead of stating them, and reach women in their daily lives rather than in a feed.</span></p></div>
+            <div><span class="k"><span data-l="fr">Ce que j'ai fait</span><span data-l="en">What I did</span></span><p><span data-l="fr">Une activation de rue : des roses offertes à des femmes croisées au fil de la journée (une enseignante, une agente de sécurité, une mère de famille, une étudiante…), chacune avec un mot manuscrit. Puis un défi en ligne autour de la cure de gummies, raconté en carrousels : le défi, les témoignages, l'invitation à rejoindre la communauté.</span><span data-l="en">A street activation: roses handed to women met through the day (a teacher, a security guard, a mother, a student…), each with a handwritten note. Then an online challenge around the gummies course, told in carousels: the challenge, the testimonials, the invitation to join the community.</span></p></div>
+            <div><span class="k"><span data-l="fr">Résultat</span><span data-l="en">Result</span></span><p><span data-l="fr">Près de 90 femmes ont relevé le défi et rejoint la communauté « Va au bout », et leurs témoignages (cheveux, ongles, éclat de la peau) ont nourri la suite de la campagne.</span><span data-l="en">Nearly 90 women took the challenge and joined the "Va au bout" community, and their testimonials (hair, nails, skin glow) fed the rest of the campaign.</span></p></div>
+            <div><span class="k"><span data-l="fr">Ce que j'en retiens</span><span data-l="en">What I learned</span></span><p><span data-l="fr">Ce qui reste, c'est l'humain : les réactions comptent plus que les chiffres.</span><span data-l="en">What stays is the human side: reactions matter more than numbers.</span></p></div>
           </div>
         </details>
       </div>
@@ -760,20 +813,27 @@ details[open] .plus i+i{transform:rotate(180deg)}
     <span class="eyebrow"><span data-l="fr">Créations &amp; contenus</span><span data-l="en">Creative &amp; content</span></span>
     <h2 data-rv="words" class="h2" id="cr-t"><span data-l="fr">Je produis aussi <span class="muted">ce que je recommande.</span></span><span data-l="en">I also produce <span class="muted">what I recommend.</span></span></h2>
   </div><p><span data-l="fr">Flyers, visuels réseaux sociaux et vidéos conçus pour des clients de secteurs variés. Touchez une image pour l'agrandir.</span><span data-l="en">Flyers, social visuals and videos made for clients across sectors. Tap an image to enlarge it.</span></p></div>
-  <div class="gal g5 top plain free"><button type="button" aria-label="Agrandir"><img src="assets/flyer-majoie.jpg" alt="Flyer Restauration · Majoie Foods" loading="lazy"></button><button type="button" aria-label="Agrandir"><img src="assets/flyer-eclat.jpg" alt="Flyer Services · Maison Éclat" loading="lazy"></button><button type="button" aria-label="Agrandir"><img src="assets/flyer-semaine.jpg" alt="Flyer Réseaux sociaux · Vision Pub" loading="lazy"></button><button type="button" aria-label="Agrandir"><img src="assets/flyer-cm.jpg" alt="Flyer Offre community management" loading="lazy"></button><button type="button" aria-label="Agrandir"><img src="assets/flyer-boost.jpg" alt="Flyer Acquisition B2B · Boost Performers" loading="lazy"></button><p class="gal-cap"><span data-l="fr">Supports print et réseaux sociaux : restauration, services à domicile, agence et acquisition B2B.</span><span data-l="en">Print and social assets: food, home services, agency and B2B acquisition.</span></p></div>
+  <div class="gal g5 top plain free"><button type="button" aria-label="Agrandir"><img src="assets/flyer-majoie.jpg" alt="Flyer Restauration · Majoie Foods" loading="lazy"></button><button type="button" aria-label="Agrandir"><img src="assets/flyer-eclat.jpg" alt="Flyer Services · Maison Éclat" loading="lazy"></button><button type="button" aria-label="Agrandir"><img src="assets/flyer-semaine.jpg" alt="Flyer Réseaux sociaux · Vision Pub" loading="lazy"></button><button type="button" aria-label="Agrandir"><img src="assets/flyer-cm.jpg" alt="Flyer Offre community management" loading="lazy"></button><button type="button" aria-label="Agrandir"><img src="assets/flyer-boost.jpg" alt="Flyer Acquisition B2B · Boost Performers" loading="lazy"></button><button type="button" aria-label="Agrandir"><img src="assets/mboa-indice.jpg" alt="Teasing Mboa Glow · Voici l'indice" width="720" height="900" loading="lazy"></button><button type="button" aria-label="Agrandir"><img src="assets/mboa-carte-rose.jpg" alt="Mboa Glow · La Carte rose, épisode 1 sur 12" width="540" height="960" loading="lazy"></button><button type="button" aria-label="Agrandir"><img src="assets/mboa-croises.jpg" alt="Mboa Glow · On s'est croisés ?" width="720" height="900" loading="lazy"></button><button type="button" aria-label="Agrandir"><img src="assets/mboa-octobre-rose.jpg" alt="Nemalia · Octobre rose" width="720" height="900" loading="lazy"></button><button type="button" aria-label="Agrandir"><img src="assets/nemalia-routine.jpg" alt="Nemalia · Routine éclat peau" width="720" height="720" loading="lazy"></button><p class="gal-cap"><span data-l="fr">Supports print et réseaux sociaux : restauration, services à domicile, agence, acquisition B2B, puis le teasing de Mboa Glow et les routines Nemalia.</span><span data-l="en">Print and social assets: food, home services, agency, B2B acquisition, plus the Mboa Glow teasers and Nemalia routines.</span></p></div>
   <div class="crea">
     <div class="crea-note lift">
       <h3><span data-l="fr">Vidéo &amp; motion design</span><span data-l="en">Video &amp; motion design</span></h3>
       <p><span data-l="fr">Des formats courts verticaux pensés pour capter en quelques secondes et pousser à l'action, du script au montage.</span><span data-l="en">Short vertical formats built to grab attention in seconds and drive action, from script to edit.</span></p>
       <ul>
-        <li><span data-l="fr">Capsules de conversion et brand motions pour des offres de services</span><span data-l="en">Conversion capsules and brand motions for service offers</span></li>
-        <li><span data-l="fr">Aftermovie et contenus de terrain de la campagne Mboa Glow</span><span data-l="en">Aftermovie and field content for the Mboa Glow campaign</span></li>
+        <li><span data-l="fr">Capsules de conversion et brand motions pour des offres de services (Boost Performers, Visibility, Studio Motion IA)</span><span data-l="en">Conversion capsules and brand motions for service offers (Boost Performers, Visibility, Studio Motion IA)</span></li>
+        <li><span data-l="fr">Teaser, aftermovie et contenus de terrain de la campagne Mboa Glow</span><span data-l="en">Teaser, aftermovie and field content for the Mboa Glow campaign</span></li>
+        <li><span data-l="fr">Spots boutique et routines soin pour Nemalia</span><span data-l="en">Store spots and skincare routines for Nemalia</span></li>
         <li><span data-l="fr">Production accélérée par l'IA, direction créative gardée en main</span><span data-l="en">AI-accelerated production, with creative direction kept in-house</span></li>
       </ul>
     </div>
     <div class="vids">
+      <div class="vid lift"><video src="assets/mboa-glow-aftermovie.mp4" poster="assets/mboa-glow-aftermovie-poster.jpg" preload="none" playsinline controls></video><button class="play" type="button" aria-label="Lire la vidéo"><span class="b"><svg viewBox="0 0 20 20"><path d="M5 3l12 7-12 7z" fill="currentColor"/></svg></span><span class="vl"><b><span data-l="fr">Aftermovie Mboa Glow</span><span data-l="en">Mboa Glow aftermovie</span></b><span data-l="fr">Campagne terrain Octobre Rose · 1 min 29</span><span data-l="en">Pink October field campaign · 1 min 29</span></span></button></div>
+      <div class="vid fit lift"><video src="assets/mboa-glow-teaser.mp4" poster="assets/mboa-glow-teaser-poster.jpg" preload="none" playsinline controls></video><button class="play" type="button" aria-label="Lire la vidéo"><span class="b"><svg viewBox="0 0 20 20"><path d="M5 3l12 7-12 7z" fill="currentColor"/></svg></span><span class="vl"><b><span data-l="fr">Teaser « L'indice du jour »</span><span data-l="en">"Clue of the day" teaser</span></b>Mboa Glow · 12 s</span></button></div>
+      <div class="vid lift"><video src="assets/nemalia-spot.mp4" poster="assets/nemalia-spot-poster.jpg" preload="none" playsinline controls></video><button class="play" type="button" aria-label="Lire la vidéo"><span class="b"><svg viewBox="0 0 20 20"><path d="M5 3l12 7-12 7z" fill="currentColor"/></svg></span><span class="vl"><b><span data-l="fr">Spot boutique Nemalia</span><span data-l="en">Nemalia store spot</span></b><span data-l="fr">Routines soin · 32 s</span><span data-l="en">Skincare routines · 32 s</span></span></button></div>
       <div class="vid lift"><video src="assets/spot-pub.mp4" poster="assets/spot-pub-poster.jpg" preload="none" playsinline controls></video><button class="play" type="button" aria-label="Lire la vidéo"><span class="b"><svg viewBox="0 0 20 20"><path d="M5 3l12 7-12 7z" fill="currentColor"/></svg></span><span class="vl"><b><span data-l="fr">Capsule de conversion</span><span data-l="en">Conversion capsule</span></b><span data-l="fr">« Entrepreneur au Cameroun&nbsp;? » · 15 s</span><span data-l="en">"Entrepreneur in Cameroon?" · 15 s</span></span></button></div>
       <div class="vid lift"><video src="assets/boost-performers.mp4" poster="assets/boost-performers-poster.jpg" preload="none" playsinline controls></video><button class="play" type="button" aria-label="Lire la vidéo"><span class="b"><svg viewBox="0 0 20 20"><path d="M5 3l12 7-12 7z" fill="currentColor"/></svg></span><span class="vl"><b><span data-l="fr">Brand motion commercial</span><span data-l="en">Commercial brand motion</span></b><span data-l="fr">Campagne publicitaire · 29 s</span><span data-l="en">Ad campaign · 29 s</span></span></button></div>
+      <div class="vid lift"><video src="assets/boost-performers-v3.mp4" poster="assets/boost-performers-v3-poster.jpg" preload="none" playsinline controls></video><button class="play" type="button" aria-label="Lire la vidéo"><span class="b"><svg viewBox="0 0 20 20"><path d="M5 3l12 7-12 7z" fill="currentColor"/></svg></span><span class="vl"><b>Brand motion v3</b><span data-l="fr">Boost Performers · voix off · 19 s</span><span data-l="en">Boost Performers · voice-over · 19 s</span></span></button></div>
+      <div class="vid lift"><video src="assets/visibility-pub.mp4" poster="assets/visibility-pub-poster.jpg" preload="none" playsinline controls></video><button class="play" type="button" aria-label="Lire la vidéo"><span class="b"><svg viewBox="0 0 20 20"><path d="M5 3l12 7-12 7z" fill="currentColor"/></svg></span><span class="vl"><b><span data-l="fr">Spot produit</span><span data-l="en">Product spot</span></b>Visibility · 30 s</span></button></div>
+      <div class="vid lift"><video src="assets/studio-motion-pub.mp4" poster="assets/studio-motion-pub-poster.jpg" preload="none" playsinline controls></video><button class="play" type="button" aria-label="Lire la vidéo"><span class="b"><svg viewBox="0 0 20 20"><path d="M5 3l12 7-12 7z" fill="currentColor"/></svg></span><span class="vl"><b><span data-l="fr">Pub motion design</span><span data-l="en">Motion design ad</span></b>Studio Motion IA · 30 s</span></button></div>
     </div>
   </div>
 
@@ -1065,7 +1125,7 @@ details[open] .plus i+i{transform:rotate(180deg)}
   /* work filters */
   var fbtn=[].slice.call(document.querySelectorAll('.filters button')),cases=[].slice.call(document.querySelectorAll('.case'));
   fbtn.forEach(function(b){b.addEventListener('click',function(){var f=b.dataset.f;fbtn.forEach(function(x){x.setAttribute('aria-pressed',String(x===b))});
-    cases.forEach(function(c){c.hidden=!(f==='all'||c.dataset.cat===f)})})});
+    cases.forEach(function(c){c.hidden=!(f==='all'||c.dataset.cat.split(' ').indexOf(f)>-1)})})});
 
   /* history deck */
   var hb=document.getElementById('hist-btn'),hist=document.getElementById('hist');
@@ -1082,8 +1142,8 @@ details[open] .plus i+i{transform:rotate(180deg)}
 
   /* gallery lightbox, one set per gallery */
   var lbx=document.getElementById('lb'),lbi=document.getElementById('lb-img'),grp=[],cur=0,last=null;
-  function show(i){cur=(i+grp.length)%grp.length;var im=grp[cur].querySelector('img');lbi.src=im.src;lbi.alt=im.alt}
-  [].slice.call(document.querySelectorAll('.gal')).forEach(function(g){var bs=[].slice.call(g.querySelectorAll('button'));
+  function show(i){cur=(i+grp.length)%grp.length;var im=grp[cur].querySelector('img');lbi.src=im.getAttribute('data-full')||im.src;lbi.alt=im.alt}
+  [].slice.call(document.querySelectorAll('.gal, .vis-shot')).forEach(function(g){var bs=[].slice.call(g.querySelectorAll('button'));
     bs.forEach(function(b,i){b.addEventListener('click',function(){grp=bs;last=b;show(i);lbx.hidden=false;document.getElementById('float-cta').classList.remove('on');document.getElementById('lb-x').focus()})})});
   function close(){lbx.hidden=true;if(last)last.focus();floatCta()}
   document.getElementById('lb-x').addEventListener('click',close);
