@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://enollafritz.me/sitemap.xml

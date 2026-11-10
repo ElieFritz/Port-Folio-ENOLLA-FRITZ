@@ -1,0 +1,10 @@
+{
+  "framework": null,
+  "buildCommand": null,
+  "outputDirectory": ".",
+  "cleanUrls": true,
+  "redirects": [
+    { "source": "/projects/:path*", "destination": "/#work", "permanent": true },
+    { "source": "/admin", "destination": "/#work", "permanent": true }
+  ]
+}
